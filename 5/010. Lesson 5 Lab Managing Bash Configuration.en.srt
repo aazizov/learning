@@ -1,0 +1,53 @@
+1
+00:00:06,690 --> 00:00:07,523
+- All right.
+
+2
+00:00:07,523 --> 00:00:09,120
+Once again, we are at
+the end of the lesson.
+
+3
+00:00:09,120 --> 00:00:10,740
+Let's do a lab.
+
+4
+00:00:10,740 --> 00:00:13,230
+In this lab, to start
+with, set a variable color
+
+5
+00:00:13,230 --> 00:00:15,180
+to the value red and
+ensure that the setting
+
+6
+00:00:15,180 --> 00:00:18,780
+is available every time your
+current user account logs in.
+
+7
+00:00:18,780 --> 00:00:22,800
+Also, create an alias that
+runs the command ls-ltr
+
+8
+00:00:22,800 --> 00:00:25,170
+while executing the dir command.
+
+9
+00:00:25,170 --> 00:00:28,020
+And ensure that the Bash
+History file can grow
+
+10
+00:00:28,020 --> 00:00:31,110
+to a maximum size of 2,500 entries.
+
+11
+00:00:31,110 --> 00:00:31,943
+That's all.
+
+12
+00:00:31,943 --> 00:00:32,776
+Enjoy.

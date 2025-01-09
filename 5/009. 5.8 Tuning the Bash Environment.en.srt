@@ -1,0 +1,334 @@
+1
+00:00:06,810 --> 00:00:08,100
+- While working with bash,
+
+2
+00:00:08,100 --> 00:00:10,650
+the bash environment is pretty important.
+
+3
+00:00:10,650 --> 00:00:12,660
+This is a couple of configuration files
+
+4
+00:00:12,660 --> 00:00:15,600
+that is stored to offer generic options
+
+5
+00:00:15,600 --> 00:00:17,160
+that apply to everybody,
+
+6
+00:00:17,160 --> 00:00:19,890
+as well as use user specific options.
+
+7
+00:00:19,890 --> 00:00:21,890
+So there's a couple of files
+you should be aware of.
+
+8
+00:00:21,890 --> 00:00:25,770
+/etc/profile is a
+generic bash startup file
+
+9
+00:00:25,770 --> 00:00:27,330
+containing all systems settings
+
+10
+00:00:27,330 --> 00:00:29,133
+that are processed in a login shell.
+
+11
+00:00:29,987 --> 00:00:33,930
+/etc/bashrc is processed
+while opening a subshell.
+
+12
+00:00:33,930 --> 00:00:36,240
+And in case you are wondering
+what's the difference,
+
+13
+00:00:36,240 --> 00:00:38,520
+while the login shell is what is happening
+
+14
+00:00:38,520 --> 00:00:42,540
+when a user authenticates,
+and a subshell is any time
+
+15
+00:00:42,540 --> 00:00:45,180
+a command is opening its
+temporary environment
+
+16
+00:00:45,180 --> 00:00:46,200
+to do its work.
+
+17
+00:00:46,200 --> 00:00:50,580
+So in fact, the subshell is
+probably far more important.
+
+18
+00:00:50,580 --> 00:00:55,580
+Then we have ~/.bash_profile,
+~ is the home directory,
+
+19
+00:00:56,010 --> 00:00:57,960
+so you can guess what this is about.
+
+20
+00:00:57,960 --> 00:01:01,860
+This is about use a specific
+version of /etc/profile.
+
+21
+00:01:01,860 --> 00:01:05,970
+Use it for anything that
+applies to specific users only.
+
+22
+00:01:05,970 --> 00:01:09,120
+Likewise for ~/.bashrc.
+
+23
+00:01:09,120 --> 00:01:10,890
+If at any time you want to make sure
+
+24
+00:01:10,890 --> 00:01:13,440
+that variables and alias are persistent,
+
+25
+00:01:13,440 --> 00:01:16,650
+it's a good idea to use
+custom startup files.
+
+26
+00:01:16,650 --> 00:01:18,693
+Let's go check out some of these files.
+
+27
+00:01:22,320 --> 00:01:24,450
+So to start with /etc/profile,
+
+28
+00:01:24,450 --> 00:01:27,000
+it's the mother of all environment files.
+
+29
+00:01:27,000 --> 00:01:31,470
+As you can see right here, it
+contains bash scripting code.
+
+30
+00:01:31,470 --> 00:01:34,590
+And this is really not
+something that you should be
+
+31
+00:01:34,590 --> 00:01:36,093
+tuning for yourself.
+
+32
+00:01:37,230 --> 00:01:40,710
+Also interesting is that
+in this /etc/profile
+
+33
+00:01:40,710 --> 00:01:43,140
+what we see right here,
+if it can find a file
+
+34
+00:01:43,140 --> 00:01:46,920
+with the name /etc/bashrc then /etc/bashrc
+
+35
+00:01:46,920 --> 00:01:50,485
+is going to be sourced, it's
+going to be included as well.
+
+36
+00:01:50,485 --> 00:01:53,550
+/etc/bashrc is for all of these settings
+
+37
+00:01:53,550 --> 00:01:55,380
+that you want to be available
+
+38
+00:01:55,380 --> 00:01:56,730
+in all of your subshells.
+
+39
+00:01:56,730 --> 00:02:01,500
+And as you can see, we have
+even more comments and settings,
+
+40
+00:02:01,500 --> 00:02:04,500
+and stuff that is being created.
+
+41
+00:02:04,500 --> 00:02:07,950
+Now in current Red Hat Enterprise Linux,
+
+42
+00:02:07,950 --> 00:02:10,800
+you will deal with
+configuration files a lot,
+
+43
+00:02:10,800 --> 00:02:12,720
+but many of these configuration files
+
+44
+00:02:12,720 --> 00:02:15,420
+are managed through rpm packages.
+
+45
+00:02:15,420 --> 00:02:18,900
+And in order to deal with
+changes through the packages
+
+46
+00:02:18,900 --> 00:02:22,230
+you are supposed to keep your
+own changes somewhere else.
+
+47
+00:02:22,230 --> 00:02:24,501
+Normally you will find
+it directly with the name
+
+48
+00:02:24,501 --> 00:02:27,120
+/etc/name of the file.d
+
+49
+00:02:27,120 --> 00:02:29,520
+So if I go there and I use ls,
+
+50
+00:02:29,520 --> 00:02:32,100
+and then I can see some
+of these dropping files
+
+51
+00:02:32,100 --> 00:02:35,223
+that further tune the behavior
+of your bash environment.
+
+52
+00:02:36,450 --> 00:02:38,520
+If you want to make your own changes,
+
+53
+00:02:38,520 --> 00:02:40,860
+you should do that in the .bash files
+
+54
+00:02:40,860 --> 00:02:42,180
+in your home directory.
+
+55
+00:02:42,180 --> 00:02:44,070
+Let me type vim .bash,
+
+56
+00:02:44,070 --> 00:02:47,040
+and then use step completion
+to show you what we have.
+
+57
+00:02:47,040 --> 00:02:50,310
+So that's bash_profile and bashrc.
+
+58
+00:02:50,310 --> 00:02:53,130
+So in my bashrc, we can see,
+
+59
+00:02:53,130 --> 00:02:56,040
+oh, it's globally importing something
+
+60
+00:02:56,040 --> 00:02:57,630
+and it's doing more stuff.
+
+61
+00:02:57,630 --> 00:03:01,770
+And well, if I want to
+put my alias in here,
+
+62
+00:03:01,770 --> 00:03:06,770
+alias hello='hello world',
+for instance, then here we go.
+
+63
+00:03:09,690 --> 00:03:12,030
+Does that also make it effective?
+
+64
+00:03:12,030 --> 00:03:14,640
+Well, let's have a look, alias,
+
+65
+00:03:14,640 --> 00:03:17,310
+and I don't see my alias hello.
+
+66
+00:03:17,310 --> 00:03:20,940
+And that is because this
+bashrc is really included
+
+67
+00:03:20,940 --> 00:03:22,980
+when we start a new shell.
+
+68
+00:03:22,980 --> 00:03:25,710
+Like I use bash and there we go,
+
+69
+00:03:25,710 --> 00:03:28,470
+hello, and oh no, hello command not found.
+
+70
+00:03:28,470 --> 00:03:29,400
+Does that make sense?
+
+71
+00:03:29,400 --> 00:03:33,090
+Yes that made sense because I had a typo.
+
+72
+00:03:33,090 --> 00:03:34,920
+Alias hello='hello world'.
+
+73
+00:03:34,920 --> 00:03:36,060
+What is hello world?
+
+74
+00:03:36,060 --> 00:03:37,350
+That's not a command.
+
+75
+00:03:37,350 --> 00:03:39,540
+Shall we make that 'echo hello world'?
+
+76
+00:03:39,540 --> 00:03:41,580
+So that at least it can do something.
+
+77
+00:03:41,580 --> 00:03:42,930
+That's how you would do it.

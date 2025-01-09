@@ -1,0 +1,504 @@
+1
+00:00:06,600 --> 00:00:08,280
+- In this video, I will tell you about
+
+2
+00:00:08,280 --> 00:00:10,530
+another great of the feature bash shell.
+
+3
+00:00:10,530 --> 00:00:11,363
+History.
+
+4
+00:00:12,480 --> 00:00:16,290
+So, bash registers recently used commands
+
+5
+00:00:16,290 --> 00:00:18,693
+and you can type history for an overview.
+
+6
+00:00:19,620 --> 00:00:22,110
+Now, the commands that
+are stored in history
+
+7
+00:00:22,110 --> 00:00:23,460
+are kept in a file,
+
+8
+00:00:23,460 --> 00:00:25,350
+which is in the home directory till this
+
+9
+00:00:25,350 --> 00:00:27,120
+the home directory and
+the name of the file
+
+10
+00:00:27,120 --> 00:00:29,160
+is .bash_history.
+
+11
+00:00:29,160 --> 00:00:32,280
+And that makes them
+available beyond sessions.
+
+12
+00:00:32,280 --> 00:00:35,010
+So once you log out,
+you restart your server,
+
+13
+00:00:35,010 --> 00:00:37,650
+you can still access
+your previous history.
+
+14
+00:00:37,650 --> 00:00:40,710
+The size of the history
+is set by two variables,
+
+15
+00:00:40,710 --> 00:00:42,630
+HISTSIZE and HISTFILESIZE.
+
+16
+00:00:42,630 --> 00:00:44,970
+By default they are set to 1000
+
+17
+00:00:44,970 --> 00:00:46,710
+and that means that if you are not doing
+
+18
+00:00:46,710 --> 00:00:48,390
+very much on the Linux shell
+
+19
+00:00:48,390 --> 00:00:51,573
+you might even find commands
+that you've used a year ago.
+
+20
+00:00:52,500 --> 00:00:54,780
+Now history is convenient,
+
+21
+00:00:54,780 --> 00:00:59,010
+but what it's all about is to
+repeat commands from history.
+
+22
+00:00:59,010 --> 00:01:02,790
+There are different ways to
+repeat commands from history.
+
+23
+00:01:02,790 --> 00:01:04,320
+You can use the up arrow
+
+24
+00:01:04,320 --> 00:01:08,490
+to easily repeat commands
+by scrolling backwards.
+
+25
+00:01:08,490 --> 00:01:10,260
+You can also use Control R
+
+26
+00:01:10,260 --> 00:01:11,880
+which performs a reverse search
+
+27
+00:01:11,880 --> 00:01:14,250
+based on the pattern that you've entered.
+
+28
+00:01:14,250 --> 00:01:17,910
+Or !nn where NN is the number.
+
+29
+00:01:17,910 --> 00:01:19,080
+This will repeat a command
+
+30
+00:01:19,080 --> 00:01:21,630
+from history based on its number.
+
+31
+00:01:21,630 --> 00:01:24,570
+And !a repeats the last command
+
+32
+00:01:24,570 --> 00:01:26,340
+that starts with the letter A.
+
+33
+00:01:26,340 --> 00:01:28,233
+Before, moving on, let me show you.
+
+34
+00:01:31,950 --> 00:01:33,630
+So here we have the history command
+
+35
+00:01:33,630 --> 00:01:36,873
+and as you can see, I have
+used 63 commands already.
+
+36
+00:01:37,800 --> 00:01:41,400
+Now I can use my arrow key and scroll up
+
+37
+00:01:41,400 --> 00:01:44,760
+and repeat commands.
+
+38
+00:01:44,760 --> 00:01:48,900
+I can also use exclamation
+mark command number.
+
+39
+00:01:48,900 --> 00:01:52,920
+And in fact, I like this
+exclamation mark command number
+
+40
+00:01:52,920 --> 00:01:54,600
+because that allows me to repeat
+
+41
+00:01:54,600 --> 00:01:57,300
+a command very specifically.
+
+42
+00:01:57,300 --> 00:02:01,770
+Alternatively, you can use
+control R, the reverse I search.
+
+43
+00:02:01,770 --> 00:02:04,620
+So if I'm searching on user,
+
+44
+00:02:04,620 --> 00:02:08,550
+now you can see that on my prompt
+
+45
+00:02:08,550 --> 00:02:12,510
+I automatically get the last
+command that had user in it.
+
+46
+00:02:12,510 --> 00:02:16,680
+So I'm pressing Enter on
+it and then I repeat it.
+
+47
+00:02:16,680 --> 00:02:19,500
+Now, repeating commands
+from history is nice
+
+48
+00:02:19,500 --> 00:02:21,780
+but the fact that everything
+is stored in history
+
+49
+00:02:21,780 --> 00:02:23,760
+is not always that convenient.
+
+50
+00:02:23,760 --> 00:02:25,760
+Let's talk a little bit more about that.
+
+51
+00:02:28,140 --> 00:02:31,470
+So every now and then you
+need to manage history
+
+52
+00:02:31,470 --> 00:02:34,800
+and there are a couple
+of commands involved.
+
+53
+00:02:34,800 --> 00:02:37,680
+History -w synchronizes current history
+
+54
+00:02:37,680 --> 00:02:40,680
+from memory to the history file.
+
+55
+00:02:40,680 --> 00:02:44,310
+Normally your history is
+synchronized if you log out
+
+56
+00:02:44,310 --> 00:02:47,070
+or if you exit your shell properly.
+
+57
+00:02:47,070 --> 00:02:48,300
+But if you wanna make sure
+
+58
+00:02:48,300 --> 00:02:50,640
+that you keep important modifications
+
+59
+00:02:50,640 --> 00:02:53,430
+it doesn't hurt using history -w
+
+60
+00:02:53,430 --> 00:02:56,490
+so that if one minute
+later your server crashes
+
+61
+00:02:56,490 --> 00:02:57,890
+you still have your history.
+
+62
+00:02:58,800 --> 00:03:02,610
+History -c clears your
+current history, all of it.
+
+63
+00:03:02,610 --> 00:03:04,950
+And if you really want
+to remove everything
+
+64
+00:03:04,950 --> 00:03:09,210
+then you should not forget
+to also use history -w
+
+65
+00:03:09,210 --> 00:03:13,410
+to commit this to the history file.
+
+66
+00:03:13,410 --> 00:03:14,880
+Much more convenient
+
+67
+00:03:14,880 --> 00:03:16,800
+and this is something
+that you are probably
+
+68
+00:03:16,800 --> 00:03:21,720
+going to use a lot is history
+-d followed by a line number.
+
+69
+00:03:21,720 --> 00:03:25,170
+This will remove the specific
+line from current history.
+
+70
+00:03:25,170 --> 00:03:26,103
+Let me show you.
+
+71
+00:03:29,400 --> 00:03:31,530
+So here we have the history command
+
+72
+00:03:31,530 --> 00:03:35,490
+and I think command number
+56 did not make sense.
+
+73
+00:03:35,490 --> 00:03:39,150
+So I'm using !56.
+
+74
+00:03:39,150 --> 00:03:43,170
+Well, no, I don't want
+to keep that command
+
+75
+00:03:43,170 --> 00:03:47,370
+so I'm using history -d on 56.
+
+76
+00:03:47,370 --> 00:03:50,340
+And now if I'm using history again,
+
+77
+00:03:50,340 --> 00:03:51,540
+now, what do we see?
+
+78
+00:03:51,540 --> 00:03:56,520
+We see that the previous LS
+whatever has been removed.
+
+79
+00:03:56,520 --> 00:04:01,140
+And hey, just a detail, if
+it's really that important,
+
+80
+00:04:01,140 --> 00:04:04,560
+we should also repeat 66
+which has the same command.
+
+81
+00:04:04,560 --> 00:04:06,810
+Again, be careful to remove whatever
+
+82
+00:04:06,810 --> 00:04:09,280
+you want to remove using history -d
+
+83
+00:04:10,270 --> 00:04:13,380
+but history -d definitely is convenient
+
+84
+00:04:13,380 --> 00:04:17,790
+especially if you have typed
+your password by accident
+
+85
+00:04:17,790 --> 00:04:20,130
+then it's stored in history as well.
+
+86
+00:04:20,130 --> 00:04:21,420
+Now there's one little thing,
+
+87
+00:04:21,420 --> 00:04:24,780
+if I open a second tab in my terminal
+
+88
+00:04:24,780 --> 00:04:29,780
+and I type history in this
+second tab, then what do we see?
+
+89
+00:04:30,000 --> 00:04:32,070
+And as you can see, we don't have
+
+90
+00:04:32,070 --> 00:04:35,100
+the 60 something commands
+from my other terminal,
+
+91
+00:04:35,100 --> 00:04:37,890
+this is only a limited number of commands.
+
+92
+00:04:37,890 --> 00:04:41,040
+Now, if I type echo hello world
+
+93
+00:04:41,040 --> 00:04:45,630
+and then I get back to my first
+terminal and I use history,
+
+94
+00:04:45,630 --> 00:04:47,880
+do I see echo hello world?
+
+95
+00:04:47,880 --> 00:04:49,470
+Well, the answer is no
+
+96
+00:04:49,470 --> 00:04:51,510
+because normally history is kept
+
+97
+00:04:51,510 --> 00:04:54,183
+local to your terminal session.
+
+98
+00:04:55,830 --> 00:04:58,320
+There are two ways to write your history,
+
+99
+00:04:58,320 --> 00:05:02,190
+history -w or if you
+just close your terminal
+
+100
+00:05:02,190 --> 00:05:04,590
+the decent way by typing exit,
+
+101
+00:05:04,590 --> 00:05:06,930
+then your history is merged as well.
+
+102
+00:05:06,930 --> 00:05:10,680
+Notice that right now I see
+69 commands in my history.
+
+103
+00:05:10,680 --> 00:05:13,500
+And right now, oh, it's still 69 commands
+
+104
+00:05:13,500 --> 00:05:15,120
+that did not change anything.
+
+105
+00:05:15,120 --> 00:05:17,373
+Well I'm going to exit this terminal.
+
+106
+00:05:18,750 --> 00:05:22,203
+And now I'm going to
+enter my terminal again.
+
+107
+00:05:25,020 --> 00:05:28,050
+And once more, history,
+and what do we see?
+
+108
+00:05:28,050 --> 00:05:29,610
+78 commands.
+
+109
+00:05:29,610 --> 00:05:32,760
+That's because the two
+histories have now been merged,
+
+110
+00:05:32,760 --> 00:05:36,000
+they've been written to the history file.
+
+111
+00:05:36,000 --> 00:05:39,180
+This is something that you
+should definitely remember
+
+112
+00:05:39,180 --> 00:05:42,600
+if you have multiple
+terminals that you work from
+
+113
+00:05:42,600 --> 00:05:45,930
+your history might be saved out of order.
+
+114
+00:05:45,930 --> 00:05:47,430
+And this is how you can work
+
+115
+00:05:47,430 --> 00:05:49,773
+even if your history
+is saved out of order.

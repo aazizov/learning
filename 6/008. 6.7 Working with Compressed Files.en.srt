@@ -1,0 +1,119 @@
+1
+00:00:06,720 --> 00:00:08,100
+- All right, in the previous video,
+
+2
+00:00:08,100 --> 00:00:11,400
+you've already seen how you
+can use compression with tar,
+
+3
+00:00:11,400 --> 00:00:12,960
+but the compression utilities
+
+4
+00:00:12,960 --> 00:00:16,440
+are available as separate
+utilities as well.
+
+5
+00:00:16,440 --> 00:00:18,450
+So, let's just list them.
+
+6
+00:00:18,450 --> 00:00:19,283
+The thing is that
+
+7
+00:00:19,283 --> 00:00:22,770
+there are so many compression
+utilities available for Linux.
+
+8
+00:00:22,770 --> 00:00:24,960
+Each of them is a better combination
+
+9
+00:00:24,960 --> 00:00:28,920
+between time it takes
+and compression ratio.
+
+10
+00:00:28,920 --> 00:00:31,560
+gzip, use -z in tar,
+
+11
+00:00:31,560 --> 00:00:34,710
+is still the most common
+compression utility around.
+
+12
+00:00:34,710 --> 00:00:38,130
+And that is because the
+results are quite convincing
+
+13
+00:00:38,130 --> 00:00:39,510
+and it's fast.
+
+14
+00:00:39,510 --> 00:00:44,510
+bzip2, use minus lowercase
+j, is an alternative utility.
+
+15
+00:00:45,420 --> 00:00:48,360
+zip is sometimes used, not so very often,
+
+16
+00:00:48,360 --> 00:00:49,290
+but it's mainly used
+
+17
+00:00:49,290 --> 00:00:53,700
+because it is compatible to
+the old Windows zip syntax.
+
+18
+00:00:53,700 --> 00:00:56,250
+Nowadays, the Windows
+compression utilities
+
+19
+00:00:56,250 --> 00:00:59,010
+can also read Linux compress files.
+
+20
+00:00:59,010 --> 00:01:03,090
+So, that is why you hardly see
+zip around on Linux anymore.
+
+21
+00:01:03,090 --> 00:01:05,970
+An xz or minus uppercase J
+
+22
+00:01:05,970 --> 00:01:08,190
+is showing up more often as well.
+
+23
+00:01:08,190 --> 00:01:12,360
+Most commonly used,
+definitely gzip and xz.
+
+24
+00:01:12,360 --> 00:01:16,110
+The cool thing about xz is that
+it's giving amazing results.
+
+25
+00:01:16,110 --> 00:01:17,730
+The cool thing about gzip
+
+26
+00:01:17,730 --> 00:01:19,650
+is that it's the fastest one around.
+
+27
+00:01:19,650 --> 00:01:20,793
+Choice is up to you.

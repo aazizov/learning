@@ -1,0 +1,42 @@
+1
+00:00:07,050 --> 00:00:08,670
+- In this lesson, we'll do a lab.
+
+2
+00:00:08,670 --> 00:00:11,910
+The lab is about using
+essential file management tools.
+
+3
+00:00:11,910 --> 00:00:14,670
+To start it, you start to
+create a compressed archive
+
+4
+00:00:14,670 --> 00:00:17,760
+for all the files in the
+etc and opt directories.
+
+5
+00:00:17,760 --> 00:00:20,370
+And write this archive
+to your home directory.
+
+6
+00:00:20,370 --> 00:00:22,350
+Then, create a symbolic
+link to the archive
+
+7
+00:00:22,350 --> 00:00:25,380
+you've just created in the tmp directory,
+
+8
+00:00:25,380 --> 00:00:27,720
+and remove the archive
+from the home directory,
+
+9
+00:00:27,720 --> 00:00:30,053
+and check what happens
+through the symbolic link.

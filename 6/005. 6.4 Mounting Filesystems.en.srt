@@ -1,0 +1,325 @@
+1
+00:00:05,967 --> 00:00:07,110
+- In this video,
+
+2
+00:00:07,110 --> 00:00:10,113
+I will tell you about
+mounting file systems.
+
+3
+00:00:10,113 --> 00:00:13,050
+So mounting file systems is essential
+
+4
+00:00:13,050 --> 00:00:15,113
+for the file system hierarchy.
+
+5
+00:00:15,113 --> 00:00:16,590
+What is it about?
+
+6
+00:00:16,590 --> 00:00:19,170
+Well, if you are using a device,
+
+7
+00:00:19,170 --> 00:00:21,240
+it must be connected to a directory.
+
+8
+00:00:21,240 --> 00:00:24,630
+So, if you have a USB
+thumb drive, for instance,
+
+9
+00:00:24,630 --> 00:00:25,800
+you need to plug it in.
+
+10
+00:00:25,800 --> 00:00:27,720
+And before you can use it on Linux
+
+11
+00:00:27,720 --> 00:00:30,690
+you need to mount it on a directory.
+
+12
+00:00:30,690 --> 00:00:32,670
+And that is what this is about.
+
+13
+00:00:32,670 --> 00:00:35,340
+We call it mounting the device.
+
+14
+00:00:35,340 --> 00:00:38,362
+Now the Linux file system
+typically uses multiple mounts,
+
+15
+00:00:38,362 --> 00:00:40,290
+and different types of data
+
+16
+00:00:40,290 --> 00:00:43,380
+typically are on different
+devices for multiple reasons,
+
+17
+00:00:43,380 --> 00:00:45,810
+like security, like manageability
+
+18
+00:00:45,810 --> 00:00:48,600
+and like specific mount options.
+
+19
+00:00:48,600 --> 00:00:50,820
+You may remember that
+earlier in this course
+
+20
+00:00:50,820 --> 00:00:53,940
+we have installed a server
+with custom partitioning.
+
+21
+00:00:53,940 --> 00:00:55,470
+And custom partitioning means that
+
+22
+00:00:55,470 --> 00:00:58,322
+you create a partition that you
+mount on a specific location
+
+23
+00:00:58,322 --> 00:01:02,610
+to provide some additional
+protection for your data.
+
+24
+00:01:02,610 --> 00:01:04,920
+Now, in order to mount a device manually
+
+25
+00:01:04,920 --> 00:01:07,560
+you can use a mount command that looks
+
+26
+00:01:07,560 --> 00:01:09,720
+like mount/dev/devicename,
+
+27
+00:01:09,720 --> 00:01:11,760
+and you mount it on a directory
+
+28
+00:01:11,760 --> 00:01:14,671
+like mount/dev/sdb1/mnt.
+
+29
+00:01:14,671 --> 00:01:17,280
+You insert a USB thumb drive,
+
+30
+00:01:17,280 --> 00:01:19,380
+typically you will see a device popping up
+
+31
+00:01:19,380 --> 00:01:22,084
+with the name sdb1, and
+you want to access it,
+
+32
+00:01:22,084 --> 00:01:24,210
+put it on a directory
+
+33
+00:01:24,210 --> 00:01:27,324
+and mnt, /mnt is the most common directory
+
+34
+00:01:27,324 --> 00:01:30,243
+that is often used for mounting devices.
+
+35
+00:01:31,080 --> 00:01:34,404
+Convenient in this context
+is to findmnt command.
+
+36
+00:01:34,404 --> 00:01:37,890
+Findmnt finds all that is
+mounted at this moment.
+
+37
+00:01:37,890 --> 00:01:40,170
+And will give you a nice insight
+
+38
+00:01:40,170 --> 00:01:42,480
+of which device is on which directory
+
+39
+00:01:42,480 --> 00:01:45,240
+and it'll show you how your
+current file system hierarchy
+
+40
+00:01:45,240 --> 00:01:46,380
+which shows as one,
+
+41
+00:01:46,380 --> 00:01:50,130
+is really spread over multiple
+devices on your system.
+
+42
+00:01:50,130 --> 00:01:51,390
+Let's have a quick look
+
+43
+00:01:51,390 --> 00:01:53,670
+and do notice that
+these topics are covered
+
+44
+00:01:53,670 --> 00:01:55,953
+in much more depth later in this course.
+
+45
+00:01:58,454 --> 00:02:00,570
+Let me show you findmnt
+
+46
+00:02:00,570 --> 00:02:02,910
+What do we find in findmnt?
+
+47
+00:02:02,910 --> 00:02:05,070
+We see in the left column directories,
+
+48
+00:02:05,070 --> 00:02:07,080
+and then we see what is mounted
+
+49
+00:02:07,080 --> 00:02:09,300
+on that specific directory.
+
+50
+00:02:09,300 --> 00:02:11,730
+In the output, there's
+a lot of system mounts,
+
+51
+00:02:11,730 --> 00:02:15,030
+but there's also the /boot directory,
+
+52
+00:02:15,030 --> 00:02:17,940
+which is using /dev/sda1.
+
+53
+00:02:17,940 --> 00:02:18,990
+That means that if you go
+
+54
+00:02:18,990 --> 00:02:22,590
+to the /boot directory
+and I type ls there,
+
+55
+00:02:22,590 --> 00:02:26,610
+then really we are on a
+different device /dev/sda1.
+
+56
+00:02:26,610 --> 00:02:29,430
+If there are devices
+that are not mounted yet,
+
+57
+00:02:29,430 --> 00:02:31,920
+another way to have look at them is lsblk,
+
+58
+00:02:31,920 --> 00:02:33,573
+for list block devices.
+
+59
+00:02:37,140 --> 00:02:41,370
+And this will show all the
+devices available on this system.
+
+60
+00:02:41,370 --> 00:02:42,690
+There aren't very many,
+
+61
+00:02:42,690 --> 00:02:45,344
+because this is a very basic system
+
+62
+00:02:45,344 --> 00:02:48,210
+without much additional configuration,
+
+63
+00:02:48,210 --> 00:02:50,610
+but by the time you
+start creating partitions
+
+64
+00:02:50,610 --> 00:02:51,960
+and logical volumes,
+
+65
+00:02:51,960 --> 00:02:55,734
+this lsblk command is going to
+be a very important command.
+
+66
+00:02:55,734 --> 00:02:57,120
+And you know what?
+
+67
+00:02:57,120 --> 00:03:01,414
+You can even try to do a
+manual mount, mount /dev/sda1.
+
+68
+00:03:01,414 --> 00:03:04,080
+/sda1 is already mounted on /boot.
+
+69
+00:03:04,080 --> 00:03:07,290
+I am going to mount it again on /mnt.
+
+70
+00:03:07,290 --> 00:03:09,360
+And as you can see, that is something
+
+71
+00:03:09,360 --> 00:03:12,930
+that is just allowed by
+the Linux operating system.
+
+72
+00:03:12,930 --> 00:03:14,760
+But before this is giving me anything
+
+73
+00:03:14,760 --> 00:03:17,940
+that I am not expecting,
+let me umount it again
+
+74
+00:03:17,940 --> 00:03:21,210
+to disconnect the mount,
+which is required,
+
+75
+00:03:21,210 --> 00:03:23,943
+if ever you need to remove
+the device, for instance.

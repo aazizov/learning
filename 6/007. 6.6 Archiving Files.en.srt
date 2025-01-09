@@ -1,0 +1,392 @@
+1
+00:00:07,050 --> 00:00:08,370
+- In this video, you will learn
+
+2
+00:00:08,370 --> 00:00:11,070
+how to use tar, the tape archiver.
+
+3
+00:00:11,070 --> 00:00:14,070
+So tar, as I said, is a tape archiver
+
+4
+00:00:14,070 --> 00:00:16,440
+and it was created a long time ago
+
+5
+00:00:16,440 --> 00:00:19,470
+when backups were still written to tape.
+
+6
+00:00:19,470 --> 00:00:23,012
+Nowadays, it doesn't and you
+use it to compress files.
+
+7
+00:00:23,012 --> 00:00:26,040
+But in the original days,
+when tar was created,
+
+8
+00:00:26,040 --> 00:00:28,740
+it didn't compress anything at all.
+
+9
+00:00:28,740 --> 00:00:31,050
+It was an archiving utility
+
+10
+00:00:31,050 --> 00:00:34,050
+or better, a tape streaming utility.
+
+11
+00:00:34,050 --> 00:00:37,170
+You can do so many things
+with this tar utility
+
+12
+00:00:37,170 --> 00:00:40,410
+but the basic usage is
+to compress or extract.
+
+13
+00:00:40,410 --> 00:00:43,830
+And you can use it to list
+the contents of an archive.
+
+14
+00:00:43,830 --> 00:00:46,830
+So I have three different
+command examples for you.
+
+15
+00:00:46,830 --> 00:00:49,840
+'tar -cvf', which will create an archive,
+
+16
+00:00:49,840 --> 00:00:53,340
+'tar -tvf', which will show the contents,
+
+17
+00:00:53,340 --> 00:00:57,900
+and 'tar -xvf', which extracts
+the current directory.
+
+18
+00:00:57,900 --> 00:01:01,350
+By default extraction happens
+to the current directory.
+
+19
+00:01:01,350 --> 00:01:03,030
+If you don't like it, you can use
+
+20
+00:01:03,030 --> 00:01:06,420
+minus uppercase C to
+switch the output path.
+
+21
+00:01:06,420 --> 00:01:08,640
+And if you wanna use compression,
+
+22
+00:01:08,640 --> 00:01:12,660
+you can use '-z', '-j', or '-J'
+
+23
+00:01:12,660 --> 00:01:16,050
+depending on the compression
+utility that you wanna use.
+
+24
+00:01:16,050 --> 00:01:20,250
+That's for Dzip, Bzip too or xz.
+
+25
+00:01:20,250 --> 00:01:22,053
+Let's go create some archives.
+
+26
+00:01:25,470 --> 00:01:27,330
+All right, so I am going to create
+
+27
+00:01:27,330 --> 00:01:28,740
+a couple of archives for you
+
+28
+00:01:28,740 --> 00:01:31,710
+and I want to apply
+compression at the same time.
+
+29
+00:01:31,710 --> 00:01:35,573
+So I'm using 'tar -cvf'.
+
+30
+00:01:37,860 --> 00:01:40,260
+'c' is for create, 'v' is four verbose,
+
+31
+00:01:40,260 --> 00:01:42,000
+so that you will show what's happening,
+
+32
+00:01:42,000 --> 00:01:46,770
+and 'f' specifies the name of the archive.
+
+33
+00:01:46,770 --> 00:01:51,060
+So I'm calling it 'tmp/archive.tar'.
+
+34
+00:01:54,450 --> 00:01:57,450
+Next, I need to specify what
+I wanna have in this archive.
+
+35
+00:01:57,450 --> 00:02:00,183
+Well, I wanna have '/home'
+and '/etc' in there.
+
+36
+00:02:01,620 --> 00:02:02,610
+There we go.
+
+37
+00:02:02,610 --> 00:02:05,100
+And that was number one.
+
+38
+00:02:05,100 --> 00:02:10,100
+If I use 'ls -l/tmp/archive.tar'
+
+39
+00:02:10,230 --> 00:02:12,570
+when using 'ls-l' on this archive
+
+40
+00:02:12,570 --> 00:02:15,090
+we can see the size and
+we can see it's quite big.
+
+41
+00:02:15,090 --> 00:02:17,087
+That's because nothing
+has been compressed.
+
+42
+00:02:17,087 --> 00:02:19,710
+And I am going to do that right now
+
+43
+00:02:19,710 --> 00:02:23,340
+to start with by using the G Z utility.
+
+44
+00:02:23,340 --> 00:02:25,590
+G Z for Gzip.
+
+45
+00:02:25,590 --> 00:02:29,160
+If you want to use it,
+use the '-z' option.
+
+46
+00:02:29,160 --> 00:02:30,630
+You can insert it anywhere
+
+47
+00:02:30,630 --> 00:02:32,760
+as long as it is not between the '-f'
+
+48
+00:02:32,760 --> 00:02:35,730
+and the name of the file
+that you want to create.
+
+49
+00:02:35,730 --> 00:02:39,090
+Now, I'm also going to
+change my extension.
+
+50
+00:02:39,090 --> 00:02:41,460
+I mentioned before that
+extensions on Linux
+
+51
+00:02:41,460 --> 00:02:43,110
+don't really have a meaning.
+
+52
+00:02:43,110 --> 00:02:46,740
+But extensions make it easier
+to see what is going on.
+
+53
+00:02:46,740 --> 00:02:50,700
+So T G Z is what's
+commonly used for archives
+
+54
+00:02:50,700 --> 00:02:53,883
+that have been compressed
+using the Gzip utility.
+
+55
+00:02:54,870 --> 00:02:56,670
+I'm going to change my command again
+
+56
+00:02:56,670 --> 00:03:01,670
+this time I'm making
+the extension 'tar.bz2'
+
+57
+00:03:01,710 --> 00:03:05,343
+and I'm going to use lowercase J.
+
+58
+00:03:10,590 --> 00:03:11,700
+And now one more time,
+
+59
+00:03:11,700 --> 00:03:12,720
+so that we have seen all
+
+60
+00:03:12,720 --> 00:03:14,850
+the different compression solutions
+
+61
+00:03:14,850 --> 00:03:16,740
+and we can compare the results.
+
+62
+00:03:16,740 --> 00:03:19,620
+So I'm creating an X Z command this time
+
+63
+00:03:19,620 --> 00:03:23,907
+and we are using uppercase
+J as a compression option.
+
+64
+00:03:23,907 --> 00:03:27,750
+Did you notice that it really
+slows down at this point?
+
+65
+00:03:27,750 --> 00:03:30,630
+So it is X Z compression
+engine is probably
+
+66
+00:03:30,630 --> 00:03:34,383
+not so very fast, but hopefully
+we get something in return.
+
+67
+00:03:37,726 --> 00:03:39,600
+So now it'll be interesting to have a look
+
+68
+00:03:39,600 --> 00:03:44,227
+at 'ls- l /tmp/archive.t*'.
+
+69
+00:03:46,800 --> 00:03:48,930
+And here you can see the differences.
+
+70
+00:03:48,930 --> 00:03:50,430
+So what is the difference?
+
+71
+00:03:50,430 --> 00:03:55,430
+Well, X Z compression is twice
+is good as Gzip compression
+
+72
+00:03:57,480 --> 00:03:59,730
+but it's also a lot slower.
+
+73
+00:03:59,730 --> 00:04:02,790
+That's all you need to know
+about creation of the archives.
+
+74
+00:04:02,790 --> 00:04:04,980
+Now, two more commands,
+
+75
+00:04:04,980 --> 00:04:07,980
+because you might come across archives
+
+76
+00:04:07,980 --> 00:04:09,360
+that somebody has created
+
+77
+00:04:09,360 --> 00:04:11,130
+and you wanna know what's inside.
+
+78
+00:04:11,130 --> 00:04:14,400
+Then you use 'tar -tvf /tmp'
+
+79
+00:04:14,400 --> 00:04:16,320
+followed by the name of the archive.
+
+80
+00:04:16,320 --> 00:04:17,820
+Let's just use a tar archive.
+
+81
+00:04:17,820 --> 00:04:20,520
+It really doesn't matter
+which one you are using
+
+82
+00:04:20,520 --> 00:04:22,920
+because tar recognizes compression,
+
+83
+00:04:22,920 --> 00:04:25,080
+will automatically extract.
+
+84
+00:04:25,080 --> 00:04:26,730
+Here we can see the contents,
+
+85
+00:04:26,730 --> 00:04:28,950
+and if you want to extract the file,
+
+86
+00:04:28,950 --> 00:04:33,690
+well then we are going
+to make that 'tar -xvf'
+
+87
+00:04:35,130 --> 00:04:36,930
+and I can press enter.
+
+88
+00:04:36,930 --> 00:04:39,330
+And by pressing enter,
+we can see the result.
+
+89
+00:04:39,330 --> 00:04:40,897
+And the result is that the archive
+
+90
+00:04:40,897 --> 00:04:43,503
+has been extracted to
+the current directory.

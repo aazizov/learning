@@ -1,0 +1,280 @@
+1
+00:00:06,641 --> 00:00:09,723
+- In this video, we are
+going to explore variables.
+
+2
+00:00:10,920 --> 00:00:14,010
+The mission of a variable is
+to separate site specific data
+
+3
+00:00:14,010 --> 00:00:15,930
+from generic code
+
+4
+00:00:15,930 --> 00:00:18,300
+and the shell comes with
+standard system variables
+
+5
+00:00:18,300 --> 00:00:19,920
+in the environment
+
+6
+00:00:19,920 --> 00:00:20,820
+to get an overview
+
+7
+00:00:20,820 --> 00:00:23,340
+of these system variables you can type env
+
+8
+00:00:23,340 --> 00:00:24,780
+for environment.
+
+9
+00:00:24,780 --> 00:00:27,300
+Users can define variables
+themselves as well.
+
+10
+00:00:27,300 --> 00:00:30,540
+Using export key is value.
+
+11
+00:00:30,540 --> 00:00:32,760
+Defining your own
+variables is mainly useful
+
+12
+00:00:32,760 --> 00:00:34,140
+in scripting
+
+13
+00:00:34,140 --> 00:00:35,610
+to make variables persistent,
+
+14
+00:00:35,610 --> 00:00:37,800
+they should be stored in
+the Bash startup files.
+
+15
+00:00:37,800 --> 00:00:40,350
+I'll tell you more about those later.
+
+16
+00:00:40,350 --> 00:00:42,123
+Let's go check out some variables.
+
+17
+00:00:44,730 --> 00:00:46,887
+So let's start with the command env
+
+18
+00:00:46,887 --> 00:00:48,630
+env for environment.
+
+19
+00:00:48,630 --> 00:00:50,160
+And in the environment we say
+
+20
+00:00:50,160 --> 00:00:51,900
+we can see different settings,
+
+21
+00:00:51,900 --> 00:00:54,090
+like no terminal session
+
+22
+00:00:54,090 --> 00:00:55,422
+and user,
+
+23
+00:00:55,422 --> 00:00:56,670
+the current user,
+
+24
+00:00:56,670 --> 00:00:58,500
+and so many more
+
+25
+00:00:58,500 --> 00:01:01,620
+which all relates to the
+current state of the system.
+
+26
+00:01:01,620 --> 00:01:03,240
+This is where the operating system is
+
+27
+00:01:03,240 --> 00:01:04,953
+getting its own values from.
+
+28
+00:01:05,850 --> 00:01:09,000
+And we have seen already
+a couple of them like HIST
+
+29
+00:01:09,000 --> 00:01:10,980
+if I use echo dollar HIST
+
+30
+00:01:10,980 --> 00:01:12,240
+and then I hit the tab key,
+
+31
+00:01:12,240 --> 00:01:13,230
+then what do we see?
+
+32
+00:01:13,230 --> 00:01:17,190
+I see all the variables that
+cause that start with HIST
+
+33
+00:01:17,190 --> 00:01:18,540
+like HIST size
+
+34
+00:01:18,540 --> 00:01:22,200
+1000 for the history
+size or echo dollar path
+
+35
+00:01:22,200 --> 00:01:23,430
+which is the current path
+
+36
+00:01:23,430 --> 00:01:26,310
+that the operating system is using.
+
+37
+00:01:26,310 --> 00:01:29,130
+I can also define my own variables
+
+38
+00:01:29,130 --> 00:01:30,480
+by using
+
+39
+00:01:30,480 --> 00:01:32,523
+key equals value.
+
+40
+00:01:33,420 --> 00:01:36,630
+And next I can use echo dollar
+
+41
+00:01:36,630 --> 00:01:38,130
+followed by the name of the key
+
+42
+00:01:38,130 --> 00:01:40,143
+to request the current value.
+
+43
+00:01:42,030 --> 00:01:45,090
+But the thing is that this
+variable is a local variable.
+
+44
+00:01:45,090 --> 00:01:48,330
+If I would start another
+shell like a sub shell
+
+45
+00:01:48,330 --> 00:01:49,530
+as well I've done right now
+
+46
+00:01:49,530 --> 00:01:52,350
+and I use echo dollar color again,
+
+47
+00:01:52,350 --> 00:01:54,090
+I don't see it anymore.
+
+48
+00:01:54,090 --> 00:01:56,820
+And that's why if you
+want to set variables,
+
+49
+00:01:56,820 --> 00:01:57,990
+well first you need to do it
+
+50
+00:01:57,990 --> 00:02:00,210
+through some of the Bash startup files
+
+51
+00:02:00,210 --> 00:02:03,390
+because that makes sure they
+are available everywhere.
+
+52
+00:02:03,390 --> 00:02:05,160
+But even if you want to set them
+
+53
+00:02:05,160 --> 00:02:06,390
+on the command line,
+
+54
+00:02:06,390 --> 00:02:08,310
+at least use export.
+
+55
+00:02:08,310 --> 00:02:10,350
+So if I use exports,
+
+56
+00:02:10,350 --> 00:02:13,590
+color equals green for instance
+
+57
+00:02:13,590 --> 00:02:15,720
+and then I go to a sub shell
+
+58
+00:02:15,720 --> 00:02:17,910
+and I use echo dollar color again,
+
+59
+00:02:17,910 --> 00:02:20,760
+at least I can see this variable still,
+
+60
+00:02:20,760 --> 00:02:23,250
+but that works for sub shells,
+
+61
+00:02:23,250 --> 00:02:26,970
+not in new shells that you are opening
+
+62
+00:02:26,970 --> 00:02:30,750
+because if right now I'm
+using echo dollar color
+
+63
+00:02:30,750 --> 00:02:32,430
+then I'm getting nothing.
+
+64
+00:02:32,430 --> 00:02:33,300
+As I said,
+
+65
+00:02:33,300 --> 00:02:36,150
+if you really want these
+variables to be persistent
+
+66
+00:02:36,150 --> 00:02:38,793
+you should set them in
+the Bash startup files.

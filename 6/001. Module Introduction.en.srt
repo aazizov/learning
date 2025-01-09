@@ -1,0 +1,48 @@
+1
+00:00:07,200 --> 00:00:09,000
+- Welcome to module three.
+
+2
+00:00:09,000 --> 00:00:09,833
+In this module,
+
+3
+00:00:09,833 --> 00:00:12,780
+you'll learn about basic
+system management tasks.
+
+4
+00:00:12,780 --> 00:00:14,400
+The first two lessons in this module
+
+5
+00:00:14,400 --> 00:00:16,740
+are about file management tasks.
+
+6
+00:00:16,740 --> 00:00:19,740
+You'll first explore some
+essential file management tasks
+
+7
+00:00:19,740 --> 00:00:23,010
+and next, you'll learn
+about managing text files.
+
+8
+00:00:23,010 --> 00:00:26,040
+The next lesson is about
+using root privileges.
+
+9
+00:00:26,040 --> 00:00:27,990
+And after that, you'll find lessons about
+
+10
+00:00:27,990 --> 00:00:30,720
+managing users and groups,
+managing permissions,
+
+11
+00:00:30,720 --> 00:00:32,373
+and network configuration.

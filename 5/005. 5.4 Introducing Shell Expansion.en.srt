@@ -1,0 +1,443 @@
+1
+00:00:06,480 --> 00:00:09,720
+- In this video, I wanna tell
+you about shell expansion.
+
+2
+00:00:09,720 --> 00:00:11,730
+So, what is shell expansion?
+
+3
+00:00:11,730 --> 00:00:12,840
+Well, that's something that allows
+
+4
+00:00:12,840 --> 00:00:15,450
+for more efficient command line use,
+
+5
+00:00:15,450 --> 00:00:17,190
+and there are different option.
+
+6
+00:00:17,190 --> 00:00:20,400
+To start with, there's
+what we call globbing.
+
+7
+00:00:20,400 --> 00:00:23,430
+Globbing, also refer to as wildcards,
+
+8
+00:00:23,430 --> 00:00:26,340
+expense file names based on wildcards
+
+9
+00:00:26,340 --> 00:00:28,680
+are better based on patterns,
+
+10
+00:00:28,680 --> 00:00:33,600
+like ls*, which is using
+the star for any pattern
+
+11
+00:00:33,600 --> 00:00:34,880
+or ls a?*.
+
+12
+00:00:36,450 --> 00:00:40,320
+Question mark stands for
+one single character,
+
+13
+00:00:40,320 --> 00:00:41,970
+any character.
+
+14
+00:00:41,970 --> 00:00:45,330
+Or whether you think of ls [a-e],
+
+15
+00:00:45,330 --> 00:00:47,250
+which is specifying your range.
+
+16
+00:00:47,250 --> 00:00:51,180
+So this would show all the
+files that have a name starting
+
+17
+00:00:51,180 --> 00:00:52,863
+with A, B, C, D, or E.
+
+18
+00:00:54,060 --> 00:00:56,970
+There are also other types of expansion
+
+19
+00:00:56,970 --> 00:00:58,200
+like brace expansion.
+
+20
+00:00:58,200 --> 00:01:01,710
+In brace expansion, you are going to
+
+21
+00:01:01,710 --> 00:01:04,410
+expand everything between the braces.
+
+22
+00:01:04,410 --> 00:01:08,370
+The touch command for
+instance, is creating files.
+
+23
+00:01:08,370 --> 00:01:11,250
+And if you touch file file one,
+
+24
+00:01:11,250 --> 00:01:14,580
+you create file one, but file 1..9.
+
+25
+00:01:14,580 --> 00:01:17,940
+If the one nine are between
+the curly braces, well,
+
+26
+00:01:17,940 --> 00:01:20,940
+you will see nine files is what you get.
+
+27
+00:01:20,940 --> 00:01:24,630
+You can also do that for
+a comma separated list.
+
+28
+00:01:24,630 --> 00:01:26,400
+You can use still the expansion
+
+29
+00:01:26,400 --> 00:01:29,730
+which is for the home directory
+or command substitution
+
+30
+00:01:29,730 --> 00:01:32,430
+which is where you are
+going to use the result
+
+31
+00:01:32,430 --> 00:01:35,013
+of one command in another command.
+
+32
+00:01:35,850 --> 00:01:38,880
+Unless there is variable substitution,
+
+33
+00:01:38,880 --> 00:01:42,870
+which you can use to check the
+current value of a variable.
+
+34
+00:01:42,870 --> 00:01:45,630
+And all of these are
+examples of shell expansion
+
+35
+00:01:45,630 --> 00:01:47,400
+where the shell is going to interpret
+
+36
+00:01:47,400 --> 00:01:49,410
+what you have just typed.
+
+37
+00:01:49,410 --> 00:01:50,613
+Let's go check this out.
+
+38
+00:01:53,880 --> 00:01:55,410
+All right.
+
+39
+00:01:55,410 --> 00:01:57,993
+To start with, let me use LS.
+
+40
+00:01:58,920 --> 00:02:01,290
+Now, if anything is LS and LS star,
+
+41
+00:02:01,290 --> 00:02:02,880
+do you see the difference?
+
+42
+00:02:02,880 --> 00:02:06,090
+Well, there is a difference
+and that is that the star
+
+43
+00:02:06,090 --> 00:02:09,393
+is showing the directory,
+the directory names,
+
+44
+00:02:10,500 --> 00:02:11,853
+item by item.
+
+45
+00:02:13,200 --> 00:02:16,020
+Now I don't want LS to
+do any smart things.
+
+46
+00:02:16,020 --> 00:02:18,180
+So I'm adding the option minus D,
+
+47
+00:02:18,180 --> 00:02:20,700
+I'll tell you about this minus D later,
+
+48
+00:02:20,700 --> 00:02:24,000
+and that'll show you the same as LS star.
+
+49
+00:02:24,000 --> 00:02:27,000
+Now, what if I use LS?
+
+50
+00:02:27,000 --> 00:02:30,510
+And we should do that on
+the directory that contains
+
+51
+00:02:30,510 --> 00:02:34,800
+a couple more files, LS
+slash etc star for instance.
+
+52
+00:02:34,800 --> 00:02:37,590
+These are all fells in the etc directory.
+
+53
+00:02:37,590 --> 00:02:42,060
+Now what if I would use
+LS minus D, etc, a star,
+
+54
+00:02:42,060 --> 00:02:45,330
+all files that have a
+name starting with an a.
+
+55
+00:02:45,330 --> 00:02:48,300
+And if I make that a
+question, mark question mark,
+
+56
+00:02:48,300 --> 00:02:49,710
+question mark, question mark.
+
+57
+00:02:49,710 --> 00:02:53,550
+Four question mark, star,
+have a look etc alsa
+
+58
+00:02:53,550 --> 00:02:56,790
+in the second column to the
+bottom, it's no longer there.
+
+59
+00:02:56,790 --> 00:02:58,680
+It doesn't match the
+pattern, which is an a
+
+60
+00:02:58,680 --> 00:03:01,470
+followed by four characters, followed by
+
+61
+00:03:01,470 --> 00:03:03,513
+no matter how many other characters.
+
+62
+00:03:04,650 --> 00:03:09,180
+Also an interesting,
+well, is LS slash etc,
+
+63
+00:03:09,180 --> 00:03:12,840
+oops, let's keep the minus D, slash etc,
+
+64
+00:03:12,840 --> 00:03:17,840
+between braces a E star, which
+is showing files of the namea
+
+65
+00:03:18,240 --> 00:03:21,300
+starting with an A, B, C, D, or E.
+
+66
+00:03:21,300 --> 00:03:22,710
+I like the brace extension.
+
+67
+00:03:22,710 --> 00:03:25,350
+What do you think, for instance, of touch?
+
+68
+00:03:25,350 --> 00:03:26,970
+Have we already talked about touch?
+
+69
+00:03:26,970 --> 00:03:27,960
+I don't think so.
+
+70
+00:03:27,960 --> 00:03:30,180
+Okay, quick demo of touch.
+
+71
+00:03:30,180 --> 00:03:32,880
+Touch hello is doing what?
+
+72
+00:03:32,880 --> 00:03:36,990
+It's creating a file with the
+name, hello, an empty file.
+
+73
+00:03:36,990 --> 00:03:39,180
+And that's convenient, you can use touch
+
+74
+00:03:39,180 --> 00:03:41,640
+to verify, right, ability.
+
+75
+00:03:41,640 --> 00:03:46,640
+What do you think of touch
+hello, curly brace 1..100000?
+
+76
+00:03:49,860 --> 00:03:51,420
+Is it going to work?
+
+77
+00:03:51,420 --> 00:03:54,840
+In fact, I should say I don't hope so.
+
+78
+00:03:54,840 --> 00:03:59,700
+I'm using control C
+because as you can see,
+
+79
+00:03:59,700 --> 00:04:03,450
+it has it has done a lot, oh boy.
+
+80
+00:04:03,450 --> 00:04:06,633
+Now I need to show you rm on hello.
+
+81
+00:04:07,530 --> 00:04:09,480
+Hello what?
+
+82
+00:04:09,480 --> 00:04:14,190
+Well, hello star should do
+it to remove everything,
+
+83
+00:04:14,190 --> 00:04:16,950
+and removing almost a
+hundred thousand files
+
+84
+00:04:16,950 --> 00:04:19,833
+as you can see is quite some
+work, but they are gone.
+
+85
+00:04:21,630 --> 00:04:24,810
+Now, I also like command substitution.
+
+86
+00:04:24,810 --> 00:04:27,750
+We have, for instance, which passwd,
+
+87
+00:04:27,750 --> 00:04:32,640
+which is showing the full path
+name of the passwd command.
+
+88
+00:04:32,640 --> 00:04:36,510
+And if I wanna see properties
+of that, I can use LS minus L,
+
+89
+00:04:36,510 --> 00:04:39,690
+of course, I can type user being passwd,
+
+90
+00:04:39,690 --> 00:04:42,540
+but I can also put my
+command between braces.
+
+91
+00:04:42,540 --> 00:04:47,540
+So LS minus L, which passwd
+is showing the long listing
+
+92
+00:04:47,850 --> 00:04:50,820
+of this command.
+
+93
+00:04:50,820 --> 00:04:54,060
+And last but not least,
+let's explore a variable.
+
+94
+00:04:54,060 --> 00:04:57,630
+Echo dollar path, which is
+showing the current contents
+
+95
+00:04:57,630 --> 00:04:59,340
+of the path variable.
+
+96
+00:04:59,340 --> 00:05:02,940
+Variables are convenient
+parts of the operating system
+
+97
+00:05:02,940 --> 00:05:05,580
+that store stuff that
+changes all the time.
+
+98
+00:05:05,580 --> 00:05:09,270
+And here you can see how to
+address one of these variables.
+
+99
+00:05:09,270 --> 00:05:11,040
+More about variables later.
+
+100
+00:05:11,040 --> 00:05:12,450
+About shell expansion?
+
+101
+00:05:12,450 --> 00:05:14,150
+Well, we have seen enough for now.

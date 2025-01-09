@@ -1,0 +1,310 @@
+1
+00:00:06,510 --> 00:00:07,920
+- While working with files,
+
+2
+00:00:07,920 --> 00:00:10,590
+there's a couple of commands
+that you should know about.
+
+3
+00:00:10,590 --> 00:00:13,320
+To start with ls, which will list files.
+
+4
+00:00:13,320 --> 00:00:16,050
+Mkdir, which allows you
+to create a directory.
+
+5
+00:00:16,050 --> 00:00:18,330
+Or cp for copying files,
+
+6
+00:00:18,330 --> 00:00:20,677
+and mv for moving files.
+
+7
+00:00:20,677 --> 00:00:23,490
+And there's rmdir for
+removing an empty directory
+
+8
+00:00:23,490 --> 00:00:26,400
+and finally rm for removing files.
+
+9
+00:00:26,400 --> 00:00:27,513
+Let me demonstrate.
+
+10
+00:00:29,670 --> 00:00:32,250
+So right here, I'm in my home directory
+
+11
+00:00:32,250 --> 00:00:36,450
+and I am going to use mkdir filedemo
+
+12
+00:00:36,450 --> 00:00:38,580
+to create a new directory.
+
+13
+00:00:38,580 --> 00:00:41,970
+Ls, I like using ls-l for a long listing
+
+14
+00:00:41,970 --> 00:00:44,790
+so that you can see properties
+of the files as well.
+
+15
+00:00:44,790 --> 00:00:47,460
+But if you make that ls-lrt,
+
+16
+00:00:47,460 --> 00:00:51,903
+you get a long listing that
+is sorted by creation time.
+
+17
+00:00:52,890 --> 00:00:54,750
+Very often, if you look at it directly,
+
+18
+00:00:54,750 --> 00:00:57,840
+you are most interested in the
+files that were added last.
+
+19
+00:00:57,840 --> 00:01:01,020
+And that is exactly what ls-lrt is doing.
+
+20
+00:01:01,020 --> 00:01:03,030
+The last added item is through the bottom
+
+21
+00:01:03,030 --> 00:01:04,860
+of everything you see.
+
+22
+00:01:04,860 --> 00:01:06,090
+Now, what can we do?
+
+23
+00:01:06,090 --> 00:01:10,443
+Well, we can copy files
+like cp output to filedemo.
+
+24
+00:01:11,730 --> 00:01:14,580
+And do you see, tab completion
+is really convenient
+
+25
+00:01:14,580 --> 00:01:17,580
+to complete the command
+line, just press the tab key,
+
+26
+00:01:17,580 --> 00:01:18,990
+and the base shell will try
+
+27
+00:01:18,990 --> 00:01:21,360
+to automatically complete everything.
+
+28
+00:01:21,360 --> 00:01:23,850
+So I'm using cp output to filedemo.
+
+29
+00:01:23,850 --> 00:01:26,700
+And now if I use ls on filedemo,
+
+30
+00:01:26,700 --> 00:01:29,553
+I see the contents of this filedemo.
+
+31
+00:01:30,450 --> 00:01:34,080
+This is, by the way, something
+that you don't always expect.
+
+32
+00:01:34,080 --> 00:01:37,830
+And if you want to see properties
+of direct use, use ls-d
+
+33
+00:01:37,830 --> 00:01:41,790
+or ls-dl to see the long listing.
+
+34
+00:01:41,790 --> 00:01:46,110
+Right, I'm going to cd to
+change directory into filedemo.
+
+35
+00:01:46,110 --> 00:01:47,910
+And I want to
+
+36
+00:01:47,910 --> 00:01:52,910
+copy slash atc slash ab*.
+
+37
+00:01:53,310 --> 00:01:56,727
+Anything starting with an a or a b to dot.
+
+38
+00:01:56,727 --> 00:01:59,100
+Dot is the current directory.
+
+39
+00:01:59,100 --> 00:02:02,580
+Notice that I'm getting a
+couple of error messages.
+
+40
+00:02:02,580 --> 00:02:04,530
+Some error messages related to the fact
+
+41
+00:02:04,530 --> 00:02:06,750
+that I'm trying to copy directory
+
+42
+00:02:06,750 --> 00:02:10,920
+but I did not use cp with the
+minus r option for recursive.
+
+43
+00:02:10,920 --> 00:02:12,300
+Let's expect it.
+
+44
+00:02:12,300 --> 00:02:15,000
+Another error relates to permission denied
+
+45
+00:02:15,000 --> 00:02:17,820
+on BRL API dot key.
+
+46
+00:02:17,820 --> 00:02:19,497
+Ah, that's an API key.
+
+47
+00:02:19,497 --> 00:02:21,180
+API key should be well protected.
+
+48
+00:02:21,180 --> 00:02:24,780
+So that makes sense that
+we get a permission denied.
+
+49
+00:02:24,780 --> 00:02:25,980
+You can see the result here.
+
+50
+00:02:25,980 --> 00:02:27,963
+The result is a couple of files.
+
+51
+00:02:29,256 --> 00:02:31,332
+And I can mv, mv for move.
+
+52
+00:02:31,332 --> 00:02:36,332
+At/deny for instance, to
+hello.deny or whatever.
+
+53
+00:02:37,350 --> 00:02:41,010
+mv is move, but mv is also rename.
+
+54
+00:02:41,010 --> 00:02:42,600
+And as you can see, the result is that
+
+55
+00:02:42,600 --> 00:02:44,910
+the original file no longer exists
+
+56
+00:02:44,910 --> 00:02:46,923
+and the new file has been created.
+
+57
+00:02:47,760 --> 00:02:50,100
+Now, did you like this demo?
+
+58
+00:02:50,100 --> 00:02:51,390
+I'm not sure about it.
+
+59
+00:02:51,390 --> 00:02:53,520
+It's just about managing files
+
+60
+00:02:53,520 --> 00:02:57,120
+and it's kind of boring,
+so let's clean it up.
+
+61
+00:02:57,120 --> 00:02:58,830
+Rmdir, filedemo.
+
+62
+00:02:58,830 --> 00:03:00,750
+I want to remove my directory.
+
+63
+00:03:00,750 --> 00:03:04,230
+Too bad, rmdir is a command
+that you can only use
+
+64
+00:03:04,230 --> 00:03:06,333
+to remove empty directories.
+
+65
+00:03:07,260 --> 00:03:09,450
+That makes it kind of not so very useful.
+
+66
+00:03:09,450 --> 00:03:11,110
+So better use rm-rf
+
+67
+00:03:13,110 --> 00:03:15,960
+- r is for recursive, -f is for force.
+
+68
+00:03:15,960 --> 00:03:18,270
+But Hey, I hope at this moment
+
+69
+00:03:18,270 --> 00:03:21,420
+you have found it out yourself already
+
+70
+00:03:21,420 --> 00:03:23,580
+by using rm--help
+
+71
+00:03:23,580 --> 00:03:27,000
+or man-rm, which is
+perfectly documenting it.
+
+72
+00:03:27,000 --> 00:03:28,260
+Now, everything is gone.
+
+73
+00:03:28,260 --> 00:03:30,363
+Let's move further to the next topic.

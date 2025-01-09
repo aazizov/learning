@@ -1,0 +1,363 @@
+1
+00:00:06,780 --> 00:00:10,230
+- The Linux Filesystem
+Hierarchy is very organized.
+
+2
+00:00:10,230 --> 00:00:12,993
+So let's talk about this standardization
+
+3
+00:00:12,993 --> 00:00:16,080
+before diving into the details.
+
+4
+00:00:16,080 --> 00:00:18,653
+The Linux Filesystem
+is highly standardized
+
+5
+00:00:18,653 --> 00:00:20,550
+standard directly so defined
+
+6
+00:00:20,550 --> 00:00:23,760
+in the Filesystem
+Hierarchy standard or FHS.
+
+7
+00:00:23,760 --> 00:00:27,480
+And its FHS was defined
+by Linux Foundation.
+
+8
+00:00:27,480 --> 00:00:29,550
+Linux Foundation is the organization
+
+9
+00:00:29,550 --> 00:00:31,890
+behind all the Linux distributions.
+
+10
+00:00:31,890 --> 00:00:34,950
+And their main mission is
+to keep standardization
+
+11
+00:00:34,950 --> 00:00:37,170
+between the different distributions
+
+12
+00:00:37,170 --> 00:00:39,480
+to make sure that even
+if all the distributions
+
+13
+00:00:39,480 --> 00:00:43,680
+are slightly different, Linux
+looks and fuels the same.
+
+14
+00:00:43,680 --> 00:00:46,050
+The link to the Filesystem
+Hierarchy standard
+
+15
+00:00:46,050 --> 00:00:48,900
+is on the slight that
+you can see right now.
+
+16
+00:00:48,900 --> 00:00:50,100
+I would say, check it out
+
+17
+00:00:50,100 --> 00:00:52,620
+if you are looking for any details.
+
+18
+00:00:52,620 --> 00:00:55,950
+The starting point of the
+Filesystem is the route directory.
+
+19
+00:00:55,950 --> 00:00:58,230
+And in this route
+directory different devices
+
+20
+00:00:58,230 --> 00:01:00,870
+might be integrated by using mounts.
+
+21
+00:01:00,870 --> 00:01:02,700
+I'll tell you about these mounts later,
+
+22
+00:01:02,700 --> 00:01:05,610
+but before continuing, I'd
+like to show you a little bit
+
+23
+00:01:05,610 --> 00:01:08,523
+of what is going on in
+Filesystem hierarchy standard.
+
+24
+00:01:10,980 --> 00:01:14,550
+So I'm using CD slash to
+go to the root directory
+
+25
+00:01:14,550 --> 00:01:17,790
+because this root directory
+is represented as a slash.
+
+26
+00:01:17,790 --> 00:01:19,740
+Then when we type LS
+
+27
+00:01:19,740 --> 00:01:21,780
+we can see all the directories existing
+
+28
+00:01:21,780 --> 00:01:23,550
+in this root directory.
+
+29
+00:01:23,550 --> 00:01:26,400
+Let's not try to cover all
+of them at this moment.
+
+30
+00:01:26,400 --> 00:01:28,560
+We'll talk about them when it is needed.
+
+31
+00:01:28,560 --> 00:01:29,610
+Just a couple of them
+
+32
+00:01:29,610 --> 00:01:33,660
+the etc directory changing
+directory, and I'm typing LS.
+
+33
+00:01:33,660 --> 00:01:35,850
+This is for configuration files
+
+34
+00:01:35,850 --> 00:01:38,100
+or the USR directory.
+
+35
+00:01:38,100 --> 00:01:40,620
+That's like your program
+fails on windows here.
+
+36
+00:01:40,620 --> 00:01:43,890
+You can find all your
+binaries, nicely organized
+
+37
+00:01:43,890 --> 00:01:46,980
+and user bin and user sbin where sbin
+
+38
+00:01:46,980 --> 00:01:50,190
+is super user binary
+requiring a root privileges
+
+39
+00:01:50,190 --> 00:01:53,760
+and bin are the binaries
+that would be documented
+
+40
+00:01:53,760 --> 00:01:56,403
+in section one of the
+main page, if you want.
+
+41
+00:01:57,390 --> 00:01:58,890
+What else do we have?
+
+42
+00:01:58,890 --> 00:02:01,260
+Well another one that is pretty important
+
+43
+00:02:01,260 --> 00:02:03,180
+is the VAR directory.
+
+44
+00:02:03,180 --> 00:02:06,960
+The VAR directory is
+used for temporary stuff
+
+45
+00:02:06,960 --> 00:02:11,100
+for a long time VAR log has
+been a very important directory
+
+46
+00:02:11,100 --> 00:02:13,050
+containing log files,
+
+47
+00:02:13,050 --> 00:02:15,450
+but nowadays, as you will learn later
+
+48
+00:02:15,450 --> 00:02:17,190
+journal D is taking over
+
+49
+00:02:17,190 --> 00:02:20,283
+in journal D keeps its log somewhere else.
+
+50
+00:02:20,283 --> 00:02:25,140
+Also there's the TMP directory
+TMPs for temporary files,
+
+51
+00:02:25,140 --> 00:02:27,870
+and this is the only
+directory apart from the user
+
+52
+00:02:27,870 --> 00:02:30,690
+home directory, where any user can write.
+
+53
+00:02:30,690 --> 00:02:34,320
+If you want to check it, you
+touch to create an empty file
+
+54
+00:02:34,320 --> 00:02:36,150
+with the name hello in this case
+
+55
+00:02:36,150 --> 00:02:38,970
+and look at that, start hello
+is leading to me writing
+
+56
+00:02:38,970 --> 00:02:41,340
+a file with the name, hello.
+
+57
+00:02:41,340 --> 00:02:44,220
+Last but not least there's
+the user home directory,
+
+58
+00:02:44,220 --> 00:02:46,860
+this type CD without anything behind it.
+
+59
+00:02:46,860 --> 00:02:50,520
+And you'll get automatically
+into your user home directory
+
+60
+00:02:50,520 --> 00:02:53,940
+which can be verified if you type pwd,
+
+61
+00:02:53,940 --> 00:02:54,930
+if you wanna know more
+
+62
+00:02:54,930 --> 00:02:58,650
+about directories and which
+is used for what type,
+
+63
+00:02:58,650 --> 00:03:01,410
+man hier, hier for hierarchy
+
+64
+00:03:01,410 --> 00:03:03,090
+this is the man page that is based
+
+65
+00:03:03,090 --> 00:03:05,400
+on the filesystem hierarchy standard,
+
+66
+00:03:05,400 --> 00:03:06,900
+and you will find it on Reddit
+
+67
+00:03:06,900 --> 00:03:09,180
+and it contains good documentation
+
+68
+00:03:09,180 --> 00:03:12,960
+of all of these directories,
+including sub directory levels
+
+69
+00:03:12,960 --> 00:03:15,093
+and what exactly they are used for.
+
+70
+00:03:16,080 --> 00:03:18,120
+Now, this is one example
+
+71
+00:03:18,120 --> 00:03:20,790
+of why C also in man pages can be useful.
+
+72
+00:03:20,790 --> 00:03:21,623
+Do you see that?
+
+73
+00:03:21,623 --> 00:03:25,080
+That's man page file
+hierarchy in section seven,
+
+74
+00:03:25,080 --> 00:03:29,820
+section seven is for diverse
+kinds of documentation.
+
+75
+00:03:29,820 --> 00:03:33,750
+So if I use man on file hierarchy
+
+76
+00:03:33,750 --> 00:03:36,000
+then what are we going to get?
+
+77
+00:03:36,000 --> 00:03:37,170
+Now look at that.
+
+78
+00:03:37,170 --> 00:03:38,940
+We get a nice overview
+
+79
+00:03:38,940 --> 00:03:43,623
+of the way our Filesystem
+hierarchy standard is organized.
+
+80
+00:03:44,580 --> 00:03:46,650
+It's a little bit of automatic approach
+
+81
+00:03:46,650 --> 00:03:48,420
+and you might like this approach
+
+82
+00:03:48,420 --> 00:03:51,453
+with more a documentation
+about what is going on.

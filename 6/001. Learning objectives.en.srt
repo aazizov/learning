@@ -1,0 +1,60 @@
+1
+00:00:07,170 --> 00:00:09,390
+- Hello, and welcome to lesson six.
+
+2
+00:00:09,390 --> 00:00:12,750
+This lesson is about essential
+file management tasks.
+
+3
+00:00:12,750 --> 00:00:15,510
+You'll first learn about
+the file system hierarchy.
+
+4
+00:00:15,510 --> 00:00:17,400
+Next, we'll explore the essential commands
+
+5
+00:00:17,400 --> 00:00:18,915
+for managing files.
+
+6
+00:00:18,915 --> 00:00:21,600
+Once you've learned how
+to copy and move files,
+
+7
+00:00:21,600 --> 00:00:23,100
+I'll show you how to find files
+
+8
+00:00:23,100 --> 00:00:25,530
+and mount file systems in the hierarchy.
+
+9
+00:00:25,530 --> 00:00:27,810
+After that, you'll learn
+how to work with links,
+
+10
+00:00:27,810 --> 00:00:29,160
+archive files with tar,
+
+11
+00:00:29,160 --> 00:00:31,170
+and how to work with compressed files.
+
+12
+00:00:31,170 --> 00:00:32,370
+And at the end of this lesson,
+
+13
+00:00:32,370 --> 00:00:34,230
+you find a lab, which will guide you
+
+14
+00:00:34,230 --> 00:00:36,843
+through some of the essential
+file management tasks.

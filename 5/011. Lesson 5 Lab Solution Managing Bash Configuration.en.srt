@@ -1,0 +1,213 @@
+1
+00:00:07,470 --> 00:00:08,640
+- Okay, so in this lab,
+
+2
+00:00:08,640 --> 00:00:11,190
+we really need to tweak
+the Bash environment.
+
+3
+00:00:11,190 --> 00:00:12,120
+The big question is,
+
+4
+00:00:12,120 --> 00:00:14,190
+do I really want to do that for everybody?
+
+5
+00:00:14,190 --> 00:00:15,540
+I don't think so.
+
+6
+00:00:15,540 --> 00:00:19,743
+So let me have a look at .bash_profile,
+
+7
+00:00:21,150 --> 00:00:23,070
+we didn't have a look at that one yet.
+
+8
+00:00:23,070 --> 00:00:26,190
+I just wanted to show you,
+get the alias and functions,
+
+9
+00:00:26,190 --> 00:00:29,640
+and user specific environment,
+and startup programs.
+
+10
+00:00:29,640 --> 00:00:30,780
+That looks good.
+
+11
+00:00:30,780 --> 00:00:34,470
+So I am going to use export.
+
+12
+00:00:34,470 --> 00:00:38,430
+Export color is red to start with.
+
+13
+00:00:38,430 --> 00:00:42,247
+Then we need to create an alias, so alias,
+
+14
+00:00:42,247 --> 00:00:44,160
+(computer keyboard clacking)
+
+15
+00:00:44,160 --> 00:00:46,133
+alias dir=,
+
+16
+00:00:47,400 --> 00:00:51,083
+between single quotes,
+very important, 'ls - ltr'.
+
+17
+00:00:52,545 --> 00:00:55,500
+"ls - ltr" is a nice way
+
+18
+00:00:55,500 --> 00:00:58,860
+of sorting files by modification time.
+
+19
+00:00:58,860 --> 00:01:01,470
+And next ensure that the Bash history file
+
+20
+00:01:01,470 --> 00:01:05,070
+can grow to a maximum
+size of 2,500 entries.
+
+21
+00:01:05,070 --> 00:01:05,903
+What do you think?
+
+22
+00:01:05,903 --> 00:01:09,060
+Is that something that we
+can do for individual users?
+
+23
+00:01:09,060 --> 00:01:11,039
+Let's just try it.
+
+24
+00:01:11,039 --> 00:01:12,447
+Export HIST,
+
+25
+00:01:12,447 --> 00:01:16,263
+(computer keyboard clacking)
+
+26
+00:01:16,263 --> 00:01:19,246
+HIST FILE SIZE is 2,500.
+
+27
+00:01:19,246 --> 00:01:21,992
+(computer keyboard clacking)
+
+28
+00:01:21,992 --> 00:01:22,825
+There we go.
+
+29
+00:01:22,825 --> 00:01:26,340
+Now we need to make sure
+that this new .bash_profile
+
+30
+00:01:26,340 --> 00:01:28,050
+is going to be effective.
+
+31
+00:01:28,050 --> 00:01:30,960
+How do we do that? Maybe by sourcing it.
+
+32
+00:01:30,960 --> 00:01:33,990
+I'm using source .bash_profile.
+
+33
+00:01:33,990 --> 00:01:36,450
+That's something that I
+haven't explained yet,
+
+34
+00:01:36,450 --> 00:01:37,800
+so let me explain.
+
+35
+00:01:37,800 --> 00:01:39,210
+If you use source,
+
+36
+00:01:39,210 --> 00:01:42,810
+you really include the
+contents of a shell script,
+
+37
+00:01:42,810 --> 00:01:44,580
+a shell environment file.
+
+38
+00:01:44,580 --> 00:01:46,740
+So if that was successful
+
+39
+00:01:46,740 --> 00:01:50,700
+then I should be able to use
+dir, and well, that is working.
+
+40
+00:01:50,700 --> 00:01:54,210
+And how about echo HIST FILE SIZE?
+
+41
+00:01:54,210 --> 00:01:57,480
+Yeah, we have HIST file size set to 2,500.
+
+42
+00:01:57,480 --> 00:02:00,480
+Now last, the variable $color,
+
+43
+00:02:00,480 --> 00:02:03,690
+and as you can see, color is set to red.
+
+44
+00:02:03,690 --> 00:02:06,870
+Now with this, we haven't
+only completed the lab,
+
+45
+00:02:06,870 --> 00:02:09,870
+we have also seen something
+else that's very interesting.
+
+46
+00:02:09,870 --> 00:02:11,820
+We have HIST FILE SIZE.
+
+47
+00:02:11,820 --> 00:02:14,490
+HIST FILE SIZE is a
+generic system variable.
+
+48
+00:02:14,490 --> 00:02:16,650
+Even the generic system variables
+
+49
+00:02:16,650 --> 00:02:19,200
+can be overwritten at
+a user specific level,
+
+50
+00:02:19,200 --> 00:02:20,800
+which is what we have just done.

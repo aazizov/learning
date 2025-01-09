@@ -1,0 +1,466 @@
+1
+00:00:06,947 --> 00:00:08,130
+- In this video, I will tell you
+
+2
+00:00:08,130 --> 00:00:10,350
+about some of the most essential features
+
+3
+00:00:10,350 --> 00:00:13,983
+of the Bash Shell, I/O
+redirection, as well as piping.
+
+4
+00:00:15,000 --> 00:00:16,380
+So, what is this about?
+
+5
+00:00:16,380 --> 00:00:19,525
+Well, redirection uses
+what we call the STDIN,
+
+6
+00:00:19,525 --> 00:00:21,160
+STDERR and the STDOUT,
+
+7
+00:00:21,160 --> 00:00:23,310
+which are standard input, standard error
+
+8
+00:00:23,310 --> 00:00:26,100
+and standard output to work
+with command input and output
+
+9
+00:00:26,100 --> 00:00:27,303
+in a flexible way.
+
+10
+00:00:28,200 --> 00:00:31,410
+You can use the greater-than
+sign to write the result
+
+11
+00:00:31,410 --> 00:00:33,360
+of a command to a file.
+
+12
+00:00:33,360 --> 00:00:36,330
+Or a double greater-than
+sign to append the result
+
+13
+00:00:36,330 --> 00:00:37,710
+into a file.
+
+14
+00:00:37,710 --> 00:00:42,710
+Or 2 greater-than to write
+the standard error messages
+
+15
+00:00:43,110 --> 00:00:46,170
+to somewhere like a
+special device, dev null,
+
+16
+00:00:46,170 --> 00:00:49,200
+which is the discard device
+you will never see it back.
+
+17
+00:00:49,200 --> 00:00:53,910
+Or you can use smaller-than to
+fetch the input from a file.
+
+18
+00:00:53,910 --> 00:00:55,740
+The other option is piping.
+
+19
+00:00:55,740 --> 00:00:57,240
+In piping, the standard output
+
+20
+00:00:57,240 --> 00:00:59,490
+of the first command is
+used as standard input
+
+21
+00:00:59,490 --> 00:01:01,140
+of the second command.
+
+22
+00:01:01,140 --> 00:01:02,013
+Let me show you.
+
+23
+00:01:05,220 --> 00:01:08,280
+So, if I'm typing a command like ls,
+
+24
+00:01:08,280 --> 00:01:11,460
+then the ls command is writing its output
+
+25
+00:01:11,460 --> 00:01:13,080
+to the standard output.
+
+26
+00:01:13,080 --> 00:01:16,380
+Standard input, standard
+output, standard error
+
+27
+00:01:16,380 --> 00:01:18,720
+is normally the combination
+
+28
+00:01:18,720 --> 00:01:21,150
+of your keyboard and your screen.
+
+29
+00:01:21,150 --> 00:01:23,163
+So, we can see the output on screen.
+
+30
+00:01:24,600 --> 00:01:28,590
+Now, if I use ls greater-than output,
+
+31
+00:01:28,590 --> 00:01:32,100
+then it redirects the
+standard output to a file.
+
+32
+00:01:32,100 --> 00:01:33,570
+The file will be created
+
+33
+00:01:33,570 --> 00:01:35,910
+and the name of the file is output.
+
+34
+00:01:35,910 --> 00:01:38,130
+So, I can use cat to check the contents
+
+35
+00:01:38,130 --> 00:01:42,030
+of the file and there
+we can see that the list
+
+36
+00:01:42,030 --> 00:01:44,550
+of files that ls is
+normally showing is now
+
+37
+00:01:44,550 --> 00:01:45,843
+in the file output.
+
+38
+00:01:46,770 --> 00:01:49,920
+Now, if I do this again,
+who greater-than output,
+
+39
+00:01:49,920 --> 00:01:51,480
+then what is going to happen?
+
+40
+00:01:51,480 --> 00:01:54,180
+Well, let me use cat to show you.
+
+41
+00:01:54,180 --> 00:01:55,650
+We can see that the contents
+
+42
+00:01:55,650 --> 00:01:58,260
+of the file has been overwritten.
+
+43
+00:01:58,260 --> 00:02:02,910
+If you use a greater-than sign
+and the file already exists,
+
+44
+00:02:02,910 --> 00:02:05,820
+the file will be overwritten
+with a new output.
+
+45
+00:02:05,820 --> 00:02:07,560
+And that's why we have the append mode.
+
+46
+00:02:07,560 --> 00:02:10,680
+So, ls greater-than, greater-than output.
+
+47
+00:02:10,680 --> 00:02:13,410
+The double greater-than is appending.
+
+48
+00:02:13,410 --> 00:02:16,740
+And now if I use cat on
+my output file again,
+
+49
+00:02:16,740 --> 00:02:19,080
+there we can see the
+result of the who command
+
+50
+00:02:19,080 --> 00:02:20,190
+is still there.
+
+51
+00:02:20,190 --> 00:02:24,390
+And you can also see the
+result of the new command.
+
+52
+00:02:24,390 --> 00:02:28,320
+Now, 2 greater-than is what
+you can use to redirect errors.
+
+53
+00:02:28,320 --> 00:02:31,980
+Let me do ls on something
+that does not exist.
+
+54
+00:02:31,980 --> 00:02:32,813
+There we go.
+
+55
+00:02:32,813 --> 00:02:34,620
+I'm getting an error message.
+
+56
+00:02:34,620 --> 00:02:37,140
+Now, this error message
+is quite convenient,
+
+57
+00:02:37,140 --> 00:02:40,260
+but later we will find
+examples of commands generating
+
+58
+00:02:40,260 --> 00:02:43,020
+so many error messages
+that don't make sense,
+
+59
+00:02:43,020 --> 00:02:45,480
+that you might want to redirect them
+
+60
+00:02:45,480 --> 00:02:48,390
+to the discard device, dev null.
+
+61
+00:02:48,390 --> 00:02:51,030
+And in order to redirect
+your standard output,
+
+62
+00:02:51,030 --> 00:02:54,210
+2 greater-than is what
+you are going to use.
+
+63
+00:02:54,210 --> 00:02:56,883
+That means that you will
+only see the regular output.
+
+64
+00:02:57,720 --> 00:02:59,550
+That is maybe easier to see
+
+65
+00:02:59,550 --> 00:03:02,190
+if we use 2 arguments to ls,
+
+66
+00:03:02,190 --> 00:03:05,250
+a non-existing file and an existing file.
+
+67
+00:03:05,250 --> 00:03:07,620
+And as you can see, we
+don't see the error,
+
+68
+00:03:07,620 --> 00:03:10,530
+we do see the name of the existing file.
+
+69
+00:03:10,530 --> 00:03:12,930
+The smaller-than sign is
+not so very important.
+
+70
+00:03:12,930 --> 00:03:14,760
+You are not going to use that very often.
+
+71
+00:03:14,760 --> 00:03:16,293
+It's for input redirection.
+
+72
+00:03:17,130 --> 00:03:20,160
+The thing is, you could
+very well use something
+
+73
+00:03:20,160 --> 00:03:25,160
+like cat smaller-than output
+to do input redirection.
+
+74
+00:03:25,530 --> 00:03:27,450
+But the thing is that
+the input redirection
+
+75
+00:03:27,450 --> 00:03:31,080
+for most commands also works
+without the smaller-than sign.
+
+76
+00:03:31,080 --> 00:03:33,873
+And that's why this one
+is not very important.
+
+77
+00:03:34,770 --> 00:03:38,550
+Now, let's have a look at piping.
+
+78
+00:03:38,550 --> 00:03:42,540
+Well, in fact, we already
+have seen piping in man -k,
+
+79
+00:03:42,540 --> 00:03:45,660
+man -k user pipe grep 8
+
+80
+00:03:45,660 --> 00:03:46,710
+was doing what?
+
+81
+00:03:46,710 --> 00:03:49,470
+Well, it's producing output.
+
+82
+00:03:49,470 --> 00:03:51,990
+So, man -k user is producing output
+
+83
+00:03:51,990 --> 00:03:54,900
+and it's sending this
+output to the grep command.
+
+84
+00:03:54,900 --> 00:03:58,590
+And grep is filtering all
+lines containing an 8.
+
+85
+00:03:58,590 --> 00:03:59,760
+You can do that once.
+
+86
+00:03:59,760 --> 00:04:02,280
+You can do that even more times.
+
+87
+00:04:02,280 --> 00:04:06,480
+So, first you grep,
+then you do another pipe
+
+88
+00:04:06,480 --> 00:04:09,813
+and you send it to less to
+see the results page by page.
+
+89
+00:04:10,830 --> 00:04:15,450
+This piping is extremely
+powerful in Linux environments
+
+90
+00:04:15,450 --> 00:04:18,060
+because it's exactly
+what the Linux philosophy
+
+91
+00:04:18,060 --> 00:04:19,260
+is all about.
+
+92
+00:04:19,260 --> 00:04:24,260
+In the Linux philosophy it's
+all about using commands
+
+93
+00:04:24,450 --> 00:04:27,570
+that are very powerful or very
+strong in what they are doing
+
+94
+00:04:27,570 --> 00:04:29,460
+but not very feature-rich.
+
+95
+00:04:29,460 --> 00:04:31,980
+Why are these commands
+not very feature-rich?
+
+96
+00:04:31,980 --> 00:04:36,420
+Well simple, because you can
+use a pipe to apply the feature
+
+97
+00:04:36,420 --> 00:04:38,490
+using some other command.
+
+98
+00:04:38,490 --> 00:04:39,990
+Let's see it this way.
+
+99
+00:04:39,990 --> 00:04:41,670
+Why don't we use
+
+100
+00:04:41,670 --> 00:04:43,620
+man -k
+
+101
+00:04:43,620 --> 00:04:46,560
+user -8, for instance.
+
+102
+00:04:46,560 --> 00:04:50,550
+Well, there's no need to program
+a filtering option in man
+
+103
+00:04:50,550 --> 00:04:52,230
+because in Linux we have grep
+
+104
+00:04:52,230 --> 00:04:54,420
+and there's no more powerful filtering
+
+105
+00:04:54,420 --> 00:04:55,653
+than the grep command.

@@ -1,0 +1,225 @@
+1
+00:00:07,110 --> 00:00:09,030
+- The BASH shell is providing a number
+
+2
+00:00:09,030 --> 00:00:11,070
+of very useful keyboard shortcuts,
+
+3
+00:00:11,070 --> 00:00:13,350
+they really make your work easier.
+
+4
+00:00:13,350 --> 00:00:14,253
+Let's have a look.
+
+5
+00:00:15,210 --> 00:00:17,190
+To start with there's Control + C
+
+6
+00:00:17,190 --> 00:00:19,890
+which quits the current
+interactive process.
+
+7
+00:00:19,890 --> 00:00:21,570
+If you're getting stuck in some command
+
+8
+00:00:21,570 --> 00:00:24,900
+and it doesn't want to
+move, try Control + C.
+
+9
+00:00:24,900 --> 00:00:26,730
+There's also Control + D,
+
+10
+00:00:26,730 --> 00:00:28,770
+Control + D sends an end-of-file character
+
+11
+00:00:28,770 --> 00:00:31,050
+to the current interactive process.
+
+12
+00:00:31,050 --> 00:00:32,670
+It might not always be clear
+
+13
+00:00:32,670 --> 00:00:34,770
+when to use Control + C, Control + D.
+
+14
+00:00:34,770 --> 00:00:38,400
+My suggestion is just try,
+one of them will work.
+
+15
+00:00:38,400 --> 00:00:40,710
+Control + A, you've seen
+me doing it a couple
+
+16
+00:00:40,710 --> 00:00:41,550
+of times already.
+
+17
+00:00:41,550 --> 00:00:43,080
+It moves your cursor to the start
+
+18
+00:00:43,080 --> 00:00:45,240
+of the current line and that allows you
+
+19
+00:00:45,240 --> 00:00:48,000
+to add commands to the current line.
+
+20
+00:00:48,000 --> 00:00:49,980
+Or Control + E which moves the cursor
+
+21
+00:00:49,980 --> 00:00:51,530
+to the end of the current line.
+
+22
+00:00:52,560 --> 00:00:54,360
+We have talked about Control + R
+
+23
+00:00:54,360 --> 00:00:56,493
+which is the reverse search in history.
+
+24
+00:00:57,360 --> 00:00:59,580
+We have not yet talked about Control + L
+
+25
+00:00:59,580 --> 00:01:01,170
+which clears your screen
+
+26
+00:01:01,170 --> 00:01:03,963
+so that you don't see any
+previous commands anymore.
+
+27
+00:01:04,800 --> 00:01:08,610
+Control + U is also convenient,
+it removes the current line.
+
+28
+00:01:08,610 --> 00:01:11,520
+And then there are a couple
+of keyboard shortcuts
+
+29
+00:01:11,520 --> 00:01:13,710
+that allows you to move between words.
+
+30
+00:01:13,710 --> 00:01:17,340
+Like Alt B, which moves the
+cursor one word backward.
+
+31
+00:01:17,340 --> 00:01:20,580
+The last keyboard shortcut
+I wanna talk about is Alt F,
+
+32
+00:01:20,580 --> 00:01:23,340
+which moves the cursor
+one, one word forward
+
+33
+00:01:23,340 --> 00:01:25,530
+can be quite convenient as well.
+
+34
+00:01:25,530 --> 00:01:27,080
+Let me show you how this works.
+
+35
+00:01:29,640 --> 00:01:32,610
+So here we have my screen
+with lots of commands.
+
+36
+00:01:32,610 --> 00:01:35,190
+I'm using Control + L to wipe it.
+
+37
+00:01:35,190 --> 00:01:38,130
+And now I am using Echo.
+
+38
+00:01:38,130 --> 00:01:40,440
+Hello world.
+
+39
+00:01:40,440 --> 00:01:42,030
+Hello world.
+
+40
+00:01:42,030 --> 00:01:45,150
+How are you today?
+
+41
+00:01:45,150 --> 00:01:46,950
+I am fine.
+
+42
+00:01:46,950 --> 00:01:48,780
+And how are you?
+
+43
+00:01:48,780 --> 00:01:51,480
+I'm just typing some, some stuff here
+
+44
+00:01:51,480 --> 00:01:52,890
+and I'm repeating my command
+
+45
+00:01:52,890 --> 00:01:55,260
+to show you Alt + B for backwards.
+
+46
+00:01:55,260 --> 00:01:58,260
+That will be the option key
+if you're on Mac keyboard,
+
+47
+00:01:58,260 --> 00:02:00,600
+or Alt + F for forwards,
+
+48
+00:02:00,600 --> 00:02:02,010
+but I don't wanna go forwards.
+
+49
+00:02:02,010 --> 00:02:03,660
+I want to go all the way back.
+
+50
+00:02:03,660 --> 00:02:07,170
+So Control + A for all
+the way to the beginning.
+
+51
+00:02:07,170 --> 00:02:08,460
+So this is all you need to know
+
+52
+00:02:08,460 --> 00:02:11,250
+about all these convenient
+keyboard shortcuts.
+
+53
+00:02:11,250 --> 00:02:12,273
+Let's continue.

@@ -1,0 +1,71 @@
+1
+00:00:07,020 --> 00:00:09,300
+- Hello, and welcome to Lesson 5.
+
+2
+00:00:09,300 --> 00:00:11,340
+In this lesson, you'll
+learn about the Bash shell,
+
+3
+00:00:11,340 --> 00:00:13,830
+the command interpreter on Linux.
+
+4
+00:00:13,830 --> 00:00:16,470
+This lesson is about different
+features that it offers
+
+5
+00:00:16,470 --> 00:00:19,200
+to make working on the
+command line easier.
+
+6
+00:00:19,200 --> 00:00:21,990
+You'll learn how to work
+with redirection and piping
+
+7
+00:00:21,990 --> 00:00:23,490
+as well as history.
+
+8
+00:00:23,490 --> 00:00:26,370
+Next, I'll show you some
+convenient keyboard shortcuts
+
+9
+00:00:26,370 --> 00:00:28,920
+that will make working
+with the shell easier.
+
+10
+00:00:28,920 --> 00:00:30,780
+Then you'll learn about shell expansion,
+
+11
+00:00:30,780 --> 00:00:34,350
+special characters, variables,
+and the alias command.
+
+12
+00:00:34,350 --> 00:00:35,940
+And in the end, I will show you
+
+13
+00:00:35,940 --> 00:00:37,470
+how to tune the best environment
+
+14
+00:00:37,470 --> 00:00:39,723
+using the different configuration files.
+
+15
+00:00:40,560 --> 00:00:41,610
+At the end of this lesson,
+
+16
+00:00:41,610 --> 00:00:44,013
+you'll find a lab as
+well as the lab solution.

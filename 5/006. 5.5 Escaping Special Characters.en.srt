@@ -1,0 +1,153 @@
+1
+00:00:06,780 --> 00:00:09,810
+- In this video, we'll talk
+about special characters
+
+2
+00:00:09,810 --> 00:00:11,520
+that need to be escaped.
+
+3
+00:00:11,520 --> 00:00:13,323
+Now, what is escaping all about?
+
+4
+00:00:14,460 --> 00:00:16,380
+Well, we have seen it in expansion,
+
+5
+00:00:16,380 --> 00:00:19,110
+special characters are
+interpreted by the shell
+
+6
+00:00:19,110 --> 00:00:22,080
+to attribute a special
+meaning to the variables.
+
+7
+00:00:22,080 --> 00:00:25,293
+And in escaping, this special
+meaning is taken away.
+
+8
+00:00:26,190 --> 00:00:28,860
+There are three different
+ways to use escaping.
+
+9
+00:00:28,860 --> 00:00:30,450
+Double quotes to start with,
+
+10
+00:00:30,450 --> 00:00:32,490
+they suppress globbing and shell expansion
+
+11
+00:00:32,490 --> 00:00:35,400
+but do allow command and
+variable substitution,
+
+12
+00:00:35,400 --> 00:00:37,140
+so they're quite weak.
+
+13
+00:00:37,140 --> 00:00:39,090
+Single quotes take away
+the special meaning
+
+14
+00:00:39,090 --> 00:00:40,650
+of any characters.
+
+15
+00:00:40,650 --> 00:00:43,290
+And backslash protects the
+following character only
+
+16
+00:00:43,290 --> 00:00:44,670
+from expansion.
+
+17
+00:00:44,670 --> 00:00:45,513
+Let me show you.
+
+18
+00:00:49,380 --> 00:00:54,380
+Okay, let me show you
+first, ls -l myfile output,
+
+19
+00:00:58,260 --> 00:01:01,920
+which is using the ls command
+with two different arguments.
+
+20
+00:01:01,920 --> 00:01:05,343
+Now, what if I put these
+arguments between double quotes?
+
+21
+00:01:06,450 --> 00:01:08,700
+Then we can get an error message,
+
+22
+00:01:08,700 --> 00:01:10,260
+no such file or directory,
+
+23
+00:01:10,260 --> 00:01:12,270
+because the double quotes
+take away the meaning
+
+24
+00:01:12,270 --> 00:01:15,933
+of the spaces, and that is what they do.
+
+25
+00:01:16,770 --> 00:01:20,130
+Now, how about echo $PATH?
+
+26
+00:01:20,130 --> 00:01:23,490
+Well, here we can see $PATH is interpreted
+
+27
+00:01:23,490 --> 00:01:26,460
+and if I don't want
+$PATH to be interpreted
+
+28
+00:01:26,460 --> 00:01:28,500
+I can put it between single quotes.
+
+29
+00:01:28,500 --> 00:01:30,840
+Single quotes work here,
+double quotes don't,
+
+30
+00:01:30,840 --> 00:01:34,320
+because double quotes don't
+take away the meaning of a $.
+
+31
+00:01:34,320 --> 00:01:38,190
+But as in this case,
+it's only one character
+
+32
+00:01:38,190 --> 00:01:40,440
+that I want to take away the meaning for.
+
+33
+00:01:40,440 --> 00:01:44,040
+I might also use a
+backslash for the escaping.
+
+34
+00:01:44,040 --> 00:01:46,863
+There we go, that's all you
+need to know about escaping.

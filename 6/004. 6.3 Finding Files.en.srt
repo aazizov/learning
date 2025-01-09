@@ -1,0 +1,719 @@
+1
+00:00:06,540 --> 00:00:09,540
+- The Linux operating
+system is all about files.
+
+2
+00:00:09,540 --> 00:00:11,430
+Files are so very important.
+
+3
+00:00:11,430 --> 00:00:13,500
+And for that reason, it's important
+
+4
+00:00:13,500 --> 00:00:15,750
+that you know how to find your files.
+
+5
+00:00:15,750 --> 00:00:17,820
+A couple of tools are involved.
+
+6
+00:00:17,820 --> 00:00:19,260
+Ls to start it.
+
+7
+00:00:19,260 --> 00:00:23,100
+Ls is used to list
+files, not to find files.
+
+8
+00:00:23,100 --> 00:00:27,180
+Which, looks for binaries
+in the path valuable.
+
+9
+00:00:27,180 --> 00:00:28,920
+Which, is a convenient command
+
+10
+00:00:28,920 --> 00:00:31,143
+if you are looking for an executable file.
+
+11
+00:00:32,070 --> 00:00:36,660
+Locate is not the most useful
+file, but some people like it.
+
+12
+00:00:36,660 --> 00:00:37,890
+I don't like it very much
+
+13
+00:00:37,890 --> 00:00:42,120
+because locate uses a database
+which is built by updatedb,
+
+14
+00:00:42,120 --> 00:00:43,890
+and if you don't updatedb,
+
+15
+00:00:43,890 --> 00:00:46,530
+the database locate won't find it.
+
+16
+00:00:46,530 --> 00:00:48,930
+If you wanna make sure
+that you find your files
+
+17
+00:00:48,930 --> 00:00:51,510
+then there's just one
+command that you should use,
+
+18
+00:00:51,510 --> 00:00:52,980
+and that is find.
+
+19
+00:00:52,980 --> 00:00:55,950
+Really. it's the most
+flexible tool that allows you
+
+20
+00:00:55,950 --> 00:00:58,770
+to find files based on many criteria.
+
+21
+00:00:58,770 --> 00:01:00,180
+Let me demonstrate.
+
+22
+00:01:00,180 --> 00:01:03,030
+As this demo is becoming
+a little bit more complex
+
+23
+00:01:03,030 --> 00:01:04,830
+and the commands are becoming longer,
+
+24
+00:01:04,830 --> 00:01:07,050
+I've also listed the
+commands on the slides,
+
+25
+00:01:07,050 --> 00:01:10,083
+just to make it easy for you
+to try this for yourself.
+
+26
+00:01:12,480 --> 00:01:15,570
+Okay, to start it, find /,
+
+27
+00:01:15,570 --> 00:01:18,180
+the first argument to find is telling find
+
+28
+00:01:18,180 --> 00:01:19,410
+where it should start.
+
+29
+00:01:19,410 --> 00:01:21,660
+Slash is always a good place to start
+
+30
+00:01:21,660 --> 00:01:23,400
+that's your root directory,
+
+31
+00:01:23,400 --> 00:01:26,160
+but do realize if you
+start at a root directory
+
+32
+00:01:26,160 --> 00:01:29,310
+it can take a long time
+before you see a result.
+
+33
+00:01:29,310 --> 00:01:32,040
+So I'm using find / -name hosts,
+
+34
+00:01:32,040 --> 00:01:34,710
+where I'm putting the
+hosts between double quotes
+
+35
+00:01:34,710 --> 00:01:38,913
+and, oh no, I am getting
+so many permission denied.
+
+36
+00:01:39,750 --> 00:01:41,790
+That is because this is really a demo
+
+37
+00:01:41,790 --> 00:01:45,420
+where we will be better
+off in a root shell.
+
+38
+00:01:45,420 --> 00:01:48,330
+I'm opening a shell using sudo -i
+
+39
+00:01:48,330 --> 00:01:50,850
+and I'm going to repeat this demo.
+
+40
+00:01:50,850 --> 00:01:55,850
+Find / -name, between
+double quotes, hosts.
+
+41
+00:01:56,250 --> 00:01:58,890
+It's always a good idea
+to put your find argument
+
+42
+00:01:58,890 --> 00:02:00,300
+between double quotes.
+
+43
+00:02:00,300 --> 00:02:01,560
+Now, what do we see here?
+
+44
+00:02:01,560 --> 00:02:03,750
+Still a couple of error messages,
+
+45
+00:02:03,750 --> 00:02:06,000
+but we can blow away these error messages
+
+46
+00:02:06,000 --> 00:02:08,190
+by using standard error redirection
+
+47
+00:02:08,190 --> 00:02:09,750
+as we have learned before.
+
+48
+00:02:09,750 --> 00:02:12,670
+And now we can see that there
+are two resulting files,
+
+49
+00:02:12,670 --> 00:02:16,440
+/etc/hosts, and etc/avahi/hosts.
+
+50
+00:02:16,440 --> 00:02:20,160
+The find command only
+looks for exact match.
+
+51
+00:02:20,160 --> 00:02:23,190
+If you want to see files containing a text
+
+52
+00:02:23,190 --> 00:02:27,270
+then you need wildcards,
+like in the Ls command.
+
+53
+00:02:27,270 --> 00:02:29,820
+As you can see here with the star before
+
+54
+00:02:29,820 --> 00:02:31,620
+and after the word hosts,
+
+55
+00:02:31,620 --> 00:02:33,990
+now it is giving matches also
+
+56
+00:02:33,990 --> 00:02:38,220
+on files like
+ssh_knownhostproxy, for instance.
+
+57
+00:02:38,220 --> 00:02:41,220
+It really depends on
+what you want it to do.
+
+58
+00:02:41,220 --> 00:02:45,328
+Next, let me use find / -type f,
+
+59
+00:02:45,328 --> 00:02:49,560
+- type f is useful if you
+want to tell the find command
+
+60
+00:02:49,560 --> 00:02:51,780
+that the only thing that
+you are interested in
+
+61
+00:02:51,780 --> 00:02:55,740
+is files, ordinary
+files, not special files,
+
+62
+00:02:55,740 --> 00:02:58,860
+not directories, just ordinary files.
+
+63
+00:02:58,860 --> 00:03:00,270
+So am I doing here?
+
+64
+00:03:00,270 --> 00:03:02,010
+I'm looking for files with the size bigger
+
+65
+00:03:02,010 --> 00:03:03,453
+than a hundred megabytes.
+
+66
+00:03:04,920 --> 00:03:07,500
+And now we can see
+between the error messages
+
+67
+00:03:07,500 --> 00:03:09,840
+that have been generated,
+that there is a couple
+
+68
+00:03:09,840 --> 00:03:12,480
+of these files available.
+
+69
+00:03:12,480 --> 00:03:15,630
+For our next command,
+we are going to search
+
+70
+00:03:15,630 --> 00:03:18,033
+in the etc directory.
+
+71
+00:03:18,960 --> 00:03:23,550
+So find /etc, is this time the
+place where we want to start.
+
+72
+00:03:23,550 --> 00:03:28,550
+Then I'm using, exec grep -l student {} \;
+
+73
+00:03:32,280 --> 00:03:33,630
+Wow, what is that?
+
+74
+00:03:33,630 --> 00:03:35,280
+Well, we have the find command first.
+
+75
+00:03:35,280 --> 00:03:38,010
+The find command is
+instructed to look for files
+
+76
+00:03:38,010 --> 00:03:40,140
+in the etc directory.
+
+77
+00:03:40,140 --> 00:03:42,840
+The advantage of using
+the find command here is
+
+78
+00:03:42,840 --> 00:03:45,630
+that you can use additional criteria
+
+79
+00:03:45,630 --> 00:03:50,430
+like -size +1K or something like that.
+
+80
+00:03:50,430 --> 00:03:54,900
+And now we have -exec, -exec
+allows you to run a command
+
+81
+00:03:54,900 --> 00:03:57,180
+on the result of the find command.
+
+82
+00:03:57,180 --> 00:04:00,870
+So the command that I want
+to run is grep -l student,
+
+83
+00:04:00,870 --> 00:04:03,180
+and the grep -l student, well,
+
+84
+00:04:03,180 --> 00:04:06,210
+is followed by two curly braces.
+
+85
+00:04:06,210 --> 00:04:08,910
+The curly braces really
+refer to the result
+
+86
+00:04:08,910 --> 00:04:11,280
+of the previous part of the find command
+
+87
+00:04:11,280 --> 00:04:13,290
+and make sure that you
+are only going to look
+
+88
+00:04:13,290 --> 00:04:15,510
+for the text, student,
+in files that are bigger
+
+89
+00:04:15,510 --> 00:04:17,520
+than one kilobyte.
+
+90
+00:04:17,520 --> 00:04:19,710
+Also notice the backslash semicolon,
+
+91
+00:04:19,710 --> 00:04:23,550
+backslash semicolon closes
+a minus XX statement.
+
+92
+00:04:23,550 --> 00:04:26,910
+You can use multiple minus
+XX statements, if you do,
+
+93
+00:04:26,910 --> 00:04:28,890
+then every minus XX statement
+
+94
+00:04:28,890 --> 00:04:32,070
+needs its own backslash semicolon.
+
+95
+00:04:32,070 --> 00:04:34,950
+And oh boy, I'm doing a wrong thing here,
+
+96
+00:04:34,950 --> 00:04:36,600
+minus uppercase K.
+
+97
+00:04:36,600 --> 00:04:38,190
+Well, I'm making a wild guess here
+
+98
+00:04:38,190 --> 00:04:40,980
+and I'm doing it on minus lowercase K.
+
+99
+00:04:40,980 --> 00:04:42,090
+And what do we see?
+
+100
+00:04:42,090 --> 00:04:46,080
+We see too many things that
+are really not readable.
+
+101
+00:04:46,080 --> 00:04:49,170
+So this again is one of these examples
+
+102
+00:04:49,170 --> 00:04:52,170
+where we want to do error early direction.
+
+103
+00:04:52,170 --> 00:04:53,910
+2> /dev/null,
+
+104
+00:04:53,910 --> 00:04:55,980
+and here we can see a couple of files
+
+105
+00:04:55,980 --> 00:04:57,813
+that match what we were looking for.
+
+106
+00:04:59,400 --> 00:05:02,610
+We can even make this
+command bigger if you want.
+
+107
+00:05:02,610 --> 00:05:04,800
+And if we do, I'm going to edit it.
+
+108
+00:05:04,800 --> 00:05:08,190
+But while editing, I'm
+keeping the 2> /dev/null
+
+109
+00:05:08,190 --> 00:05:09,690
+to the end, because I don't want
+
+110
+00:05:09,690 --> 00:05:13,200
+to see any error messages at any point.
+
+111
+00:05:13,200 --> 00:05:16,350
+The 2> /dev/null results to the output
+
+112
+00:05:16,350 --> 00:05:17,880
+of the fine command.
+
+113
+00:05:17,880 --> 00:05:20,730
+So that is why it needs to
+be at the end of the command.
+
+114
+00:05:20,730 --> 00:05:25,380
+And I'm going to add
+a new -exec, -exec cp.
+
+115
+00:05:25,380 --> 00:05:28,410
+So after finding these files
+
+116
+00:05:28,410 --> 00:05:33,300
+and grabbing on the files,
+I'm going to copy the files
+
+117
+00:05:33,300 --> 00:05:38,300
+that were found to find/contents/.
+
+118
+00:05:39,750 --> 00:05:43,140
+That's a typo, let me correct this typo.
+
+119
+00:05:43,140 --> 00:05:47,490
+So find/contents/, and then, oh, wait,
+
+120
+00:05:47,490 --> 00:05:49,290
+we need to close the find statement
+
+121
+00:05:49,290 --> 00:05:51,810
+with a backslash semicolon.
+
+122
+00:05:51,810 --> 00:05:53,280
+Hey, have you already wondered
+
+123
+00:05:53,280 --> 00:05:55,680
+what is backslash semicolon is about?
+
+124
+00:05:55,680 --> 00:05:57,780
+Well, semicolon as such can be used
+
+125
+00:05:57,780 --> 00:06:00,690
+on the bash command line
+as command separator.
+
+126
+00:06:00,690 --> 00:06:04,170
+Just try, type Ls; who, and press enter,
+
+127
+00:06:04,170 --> 00:06:05,520
+and you'll see the result.
+
+128
+00:06:05,520 --> 00:06:07,740
+It'll first give you the output of Ls,
+
+129
+00:06:07,740 --> 00:06:10,230
+then it'll give you the output of who.
+
+130
+00:06:10,230 --> 00:06:11,550
+Why does that matter?
+
+131
+00:06:11,550 --> 00:06:14,850
+Well, in this case, the
+backslash is making sure
+
+132
+00:06:14,850 --> 00:06:16,860
+that the semicolon is not interpreted
+
+133
+00:06:16,860 --> 00:06:19,830
+by the bash shell so that
+find can interpret it,
+
+134
+00:06:19,830 --> 00:06:23,070
+because a semicolon has a
+special meaning for bash,
+
+135
+00:06:23,070 --> 00:06:25,530
+and that is why you need the
+backslash in front of it.
+
+136
+00:06:25,530 --> 00:06:29,160
+Now, let me use CTRL+A because
+we need one more thing,
+
+137
+00:06:29,160 --> 00:06:33,063
+and that is mkdir -p, -p is for pass,
+
+138
+00:06:33,990 --> 00:06:36,063
+find/contents;
+
+139
+00:06:37,650 --> 00:06:39,060
+Here we see semicolon
+
+140
+00:06:39,060 --> 00:06:42,480
+and backslash semicolon two
+times in the same command.
+
+141
+00:06:42,480 --> 00:06:43,560
+And what is the result?
+
+142
+00:06:43,560 --> 00:06:46,140
+Well, the result is that
+find is doing its thing,
+
+143
+00:06:46,140 --> 00:06:50,910
+and if all went right, then
+in find, directory, contents,
+
+144
+00:06:50,910 --> 00:06:53,763
+it has copied the files that it has found.
+
+145
+00:06:54,630 --> 00:06:58,950
+And that's enough for this
+relatively complex example
+
+146
+00:06:58,950 --> 00:07:00,840
+of the find command.
+
+147
+00:07:00,840 --> 00:07:03,502
+Let's have a look at one
+more example where I'm using
+
+148
+00:07:03,502 --> 00:07:06,947
+find /etc
+
+149
+00:07:06,947 --> 00:07:08,197
+- name '*'.
+
+150
+00:07:09,330 --> 00:07:10,680
+We are looking in all files.
+
+151
+00:07:10,680 --> 00:07:12,930
+Just to indicate, that
+you can also specify
+
+152
+00:07:12,930 --> 00:07:14,820
+a pattern here if you want to.
+
+153
+00:07:14,820 --> 00:07:18,720
+And if you don't, well you
+can do without a -name '*'
+
+154
+00:07:18,720 --> 00:07:21,990
+because -name'*' is a default behavior
+
+155
+00:07:21,990 --> 00:07:24,270
+if you don't specify anything else.
+
+156
+00:07:24,270 --> 00:07:26,997
+The command that matters here is xargs.
+
+157
+00:07:26,997 --> 00:07:29,910
+Xargs is taking the
+output of the find command
+
+158
+00:07:29,910 --> 00:07:34,530
+and passes it to be used
+by the grep command.
+
+159
+00:07:34,530 --> 00:07:37,380
+So the grep command is
+going to grep its thing
+
+160
+00:07:37,380 --> 00:07:40,830
+on 127.0.0.1.
+
+161
+00:07:40,830 --> 00:07:42,600
+And the result will be that this command
+
+162
+00:07:42,600 --> 00:07:47,600
+will show you all files
+containing the string 127.0.0.1,
+
+163
+00:07:48,270 --> 00:07:51,090
+which happens to be the
+local looopback IP address.
+
+164
+00:07:51,090 --> 00:07:53,403
+You'll learn about that
+later in this course.
