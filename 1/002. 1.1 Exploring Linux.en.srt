@@ -1,0 +1,263 @@
+1
+00:00:06,870 --> 00:00:08,070
+- Before we get started
+
+2
+00:00:08,070 --> 00:00:10,020
+let's talk a bit about Linux.
+
+3
+00:00:10,020 --> 00:00:12,390
+Linux is an open source operating system
+
+4
+00:00:12,390 --> 00:00:14,160
+that is based on UNIX
+
+5
+00:00:14,160 --> 00:00:16,080
+and UNIX was the leading operating system
+
+6
+00:00:16,080 --> 00:00:19,830
+in the 1970s, 80s and 90s.
+
+7
+00:00:19,830 --> 00:00:22,710
+As UNIX was mainly used
+for servers in companies,
+
+8
+00:00:22,710 --> 00:00:26,610
+expensive licenses needed to
+be purchased for using it.
+
+9
+00:00:26,610 --> 00:00:30,240
+And by being open source, Linux
+provides a free alternative
+
+10
+00:00:30,240 --> 00:00:32,193
+to UNIX, with the same look and feel.
+
+11
+00:00:33,420 --> 00:00:36,120
+Open source is a software
+development model,
+
+12
+00:00:36,120 --> 00:00:38,670
+where the source code used
+to compile software programs
+
+13
+00:00:38,670 --> 00:00:42,063
+is not proprietary and secret,
+but accessible to anyone.
+
+14
+00:00:43,080 --> 00:00:45,840
+An open source has proved
+to be very successful
+
+15
+00:00:45,840 --> 00:00:48,660
+as a development model,
+as anyone can analyze
+
+16
+00:00:48,660 --> 00:00:50,673
+the source code and contribute to it.
+
+17
+00:00:52,170 --> 00:00:54,870
+Open source software
+leads to free software
+
+18
+00:00:54,870 --> 00:00:57,210
+and that is free as in freedom of mind,
+
+19
+00:00:57,210 --> 00:00:58,563
+not as in free beer.
+
+20
+00:01:00,450 --> 00:01:02,490
+Companies can bundle open source software
+
+21
+00:01:02,490 --> 00:01:05,910
+which support licenses and
+still charge for their product.
+
+22
+00:01:05,910 --> 00:01:08,430
+One major requirement
+in open source software
+
+23
+00:01:08,430 --> 00:01:10,590
+is that most licenses
+require the source code
+
+24
+00:01:10,590 --> 00:01:13,590
+to remain accessible to
+everyone at all times.
+
+25
+00:01:13,590 --> 00:01:15,300
+But how about support?
+
+26
+00:01:15,300 --> 00:01:19,200
+Well, for use in companies,
+support on software is essential
+
+27
+00:01:19,200 --> 00:01:22,200
+and support is available
+at different levels.
+
+28
+00:01:22,200 --> 00:01:24,840
+You can think of help
+if anything goes wrong
+
+29
+00:01:24,840 --> 00:01:26,730
+or support by hardware vendors
+
+30
+00:01:26,730 --> 00:01:28,140
+who will be able to help you
+
+31
+00:01:28,140 --> 00:01:30,810
+according to their support contracts
+
+32
+00:01:30,810 --> 00:01:33,900
+or support by application
+vendors who will support
+
+33
+00:01:33,900 --> 00:01:35,310
+their main applications on top
+
+34
+00:01:35,310 --> 00:01:38,100
+of the supporting operating systems.
+
+35
+00:01:38,100 --> 00:01:41,580
+As you can guess, support is
+essential for being successful
+
+36
+00:01:41,580 --> 00:01:44,218
+in an enterprise environment.
+
+37
+00:01:44,218 --> 00:01:46,470
+But Linux is free, and for that reason
+
+38
+00:01:46,470 --> 00:01:48,750
+it does not come with
+support automatically,
+
+39
+00:01:48,750 --> 00:01:49,983
+because who owns it?
+
+40
+00:01:50,850 --> 00:01:53,970
+Well, that is where Enterprise
+Linux distributions come in
+
+41
+00:01:53,970 --> 00:01:55,830
+like Red Hat Enterprise Linux.
+
+42
+00:01:55,830 --> 00:01:57,360
+And they differentiate themselves
+
+43
+00:01:57,360 --> 00:01:59,670
+by providing a support offering.
+
+44
+00:01:59,670 --> 00:02:03,273
+While working with Linux, there
+are different distributions.
+
+45
+00:02:04,290 --> 00:02:06,690
+Linux itself is an operating
+system that is made
+
+46
+00:02:06,690 --> 00:02:08,850
+from a software collection that includes
+
+47
+00:02:08,850 --> 00:02:11,823
+the Linux kernel, and
+additional software components.
+
+48
+00:02:12,780 --> 00:02:15,120
+And the additional software
+components are developed
+
+49
+00:02:15,120 --> 00:02:17,790
+as individual open source projects.
+
+50
+00:02:17,790 --> 00:02:20,010
+And you could gather all
+the components yourself
+
+51
+00:02:20,010 --> 00:02:22,950
+and combine them into a
+working operating system
+
+52
+00:02:22,950 --> 00:02:24,450
+but that's a lot of work.
+
+53
+00:02:24,450 --> 00:02:27,660
+And that is why Linux distributions
+are doing that for you.
+
+54
+00:02:27,660 --> 00:02:30,420
+And they provide an
+installer, a package manager
+
+55
+00:02:30,420 --> 00:02:32,280
+and other components to make it easy
+
+56
+00:02:32,280 --> 00:02:33,903
+to get started with Linux.
+
+57
+00:02:34,860 --> 00:02:35,970
+Now that you know a little bit
+
+58
+00:02:35,970 --> 00:02:37,530
+about the background of Linux,
+
+59
+00:02:37,530 --> 00:02:39,873
+let's talk about Red Hat Enterprise Linux.

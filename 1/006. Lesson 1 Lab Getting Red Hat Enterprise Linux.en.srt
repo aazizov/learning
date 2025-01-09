@@ -1,0 +1,21 @@
+1
+00:00:06,510 --> 00:00:07,343
+- All right.
+
+2
+00:00:07,343 --> 00:00:08,176
+Now that we are at the end,
+
+3
+00:00:08,176 --> 00:00:09,210
+let's do a lab.
+
+4
+00:00:09,210 --> 00:00:13,050
+In this lab, you create an
+account on developers.redhat.com
+
+5
+00:00:13,050 --> 00:00:15,663
+and download a copy of
+Red Hat Enterprise Linux.

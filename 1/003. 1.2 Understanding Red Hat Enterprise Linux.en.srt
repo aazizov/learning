@@ -1,0 +1,110 @@
+1
+00:00:06,810 --> 00:00:09,030
+- Now that we know about
+the backgrounds of Linux,
+
+2
+00:00:09,030 --> 00:00:12,720
+let's talk about Red Hat
+Enterprise Linux specifically.
+
+3
+00:00:12,720 --> 00:00:15,060
+Red Hat Enterprise Linux or RHEL
+
+4
+00:00:15,060 --> 00:00:17,343
+is the leading Linux distribution.
+
+5
+00:00:18,240 --> 00:00:21,570
+It started in 1993 as a Linux distribution
+
+6
+00:00:21,570 --> 00:00:22,980
+and it was amongst the first
+
+7
+00:00:22,980 --> 00:00:24,933
+to offer support for their software.
+
+8
+00:00:25,920 --> 00:00:27,690
+And because of the software offering,
+
+9
+00:00:27,690 --> 00:00:29,430
+Red Hat Enterprise Linux currently
+
+10
+00:00:29,430 --> 00:00:31,470
+is the most successful Linux distribution
+
+11
+00:00:31,470 --> 00:00:32,793
+for use in companies.
+
+12
+00:00:34,050 --> 00:00:35,550
+A new major version of RHEL
+
+13
+00:00:35,550 --> 00:00:38,610
+is released approximately every four years
+
+14
+00:00:38,610 --> 00:00:41,133
+and the current major
+version of RHEL is nine.
+
+15
+00:00:42,060 --> 00:00:44,130
+During the live time of a major version,
+
+16
+00:00:44,130 --> 00:00:45,930
+minor updates are provided,
+
+17
+00:00:45,930 --> 00:00:48,420
+typically, in six to nine-month intervals,
+
+18
+00:00:48,420 --> 00:00:51,690
+but that depends if software requires it.
+
+19
+00:00:51,690 --> 00:00:54,780
+Big changes are introduced
+only in major versions
+
+20
+00:00:54,780 --> 00:00:58,020
+and minor versions don't
+see any big changes.
+
+21
+00:00:58,020 --> 00:01:00,870
+And while a new version
+of RHEL is introduced,
+
+22
+00:01:00,870 --> 00:01:03,000
+the previous versions, normally,
+
+23
+00:01:03,000 --> 00:01:05,073
+are still supported for quite some time.
+
+24
+00:01:06,090 --> 00:01:08,100
+You can check this website
+
+25
+00:01:08,100 --> 00:01:10,020
+for the current RHEL support policy
+
+26
+00:01:10,020 --> 00:01:12,813
+because that tends to
+change every now and then.

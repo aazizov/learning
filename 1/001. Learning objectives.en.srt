@@ -1,0 +1,52 @@
+1
+00:00:07,530 --> 00:00:09,330
+- Hi, welcome to lesson one.
+
+2
+00:00:09,330 --> 00:00:10,163
+In this lesson,
+
+3
+00:00:10,163 --> 00:00:13,080
+you'll learn about the Linux
+operating system and Red Hat.
+
+4
+00:00:13,080 --> 00:00:16,680
+This lesson starts with a
+video that will explore Linux.
+
+5
+00:00:16,680 --> 00:00:18,450
+You'll learn all about it.
+
+6
+00:00:18,450 --> 00:00:21,750
+Next, I will explain what the
+Red Hat Enterprise Linux is
+
+7
+00:00:21,750 --> 00:00:23,910
+and how it relates to other distributions
+
+8
+00:00:23,910 --> 00:00:25,440
+in the Red Hat family.
+
+9
+00:00:25,440 --> 00:00:26,790
+After which, I'll show you
+
+10
+00:00:26,790 --> 00:00:29,430
+where you can get Red
+Hat Enterprise Linux.
+
+11
+00:00:29,430 --> 00:00:30,420
+At the end of this lesson,
+
+12
+00:00:30,420 --> 00:00:32,820
+you'll find the lab as
+well as the lab solution.

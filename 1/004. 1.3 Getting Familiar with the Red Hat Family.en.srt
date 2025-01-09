@@ -1,0 +1,340 @@
+1
+00:00:06,750 --> 00:00:10,620
+- Being open source, Red Hat
+doesn't stand all by itself.
+
+2
+00:00:10,620 --> 00:00:14,130
+Red Hat participates in
+many open source projects.
+
+3
+00:00:14,130 --> 00:00:15,990
+And one of these is Fedora
+
+4
+00:00:15,990 --> 00:00:19,203
+a free community distribution
+that is sponsored by Red Hat.
+
+5
+00:00:20,130 --> 00:00:24,330
+Mature packages from Fedora
+are included in CentOS stream
+
+6
+00:00:24,330 --> 00:00:27,720
+and CentOS stream is the
+upstream project for RHEL ,
+
+7
+00:00:27,720 --> 00:00:29,910
+where community developers can participate
+
+8
+00:00:29,910 --> 00:00:32,370
+and contribute new software.
+
+9
+00:00:32,370 --> 00:00:34,620
+RHEL is derived from CentOS stream
+
+10
+00:00:34,620 --> 00:00:36,840
+and it offers an Enterprise
+Linux distribution
+
+11
+00:00:36,840 --> 00:00:38,133
+which support options.
+
+12
+00:00:39,210 --> 00:00:42,090
+Rocky Linux And Alma Linux
+are derived from Red Hat
+
+13
+00:00:42,090 --> 00:00:45,303
+Enterprise Linux as free
+community alternatives.
+
+14
+00:00:46,440 --> 00:00:48,510
+Let's talk a bit about Fedora.
+
+15
+00:00:48,510 --> 00:00:50,460
+Fedora is a community project
+
+16
+00:00:50,460 --> 00:00:51,960
+which is sponsored by redhead.
+
+17
+00:00:52,920 --> 00:00:54,930
+The focus in Fedora is on the latest
+
+18
+00:00:54,930 --> 00:00:58,173
+and greatest developments
+and not so much on stability.
+
+19
+00:00:59,100 --> 00:01:02,160
+Fedora has a 12 to 18 months life cycle
+
+20
+00:01:02,160 --> 00:01:04,890
+and no support options are available.
+
+21
+00:01:04,890 --> 00:01:08,430
+A new version is typically
+released every six months
+
+22
+00:01:08,430 --> 00:01:10,320
+and Fedora is an awesome solution
+
+23
+00:01:10,320 --> 00:01:11,400
+if you want to be ahead
+
+24
+00:01:11,400 --> 00:01:14,403
+of the changes and run
+Linux or modern hardware.
+
+25
+00:01:16,200 --> 00:01:20,340
+Then there is CentOS stream,
+CentOS stream is extremely
+
+26
+00:01:20,340 --> 00:01:22,350
+important in the development life cycle
+
+27
+00:01:22,350 --> 00:01:26,580
+of RHEL, because it is the
+upstream development platform.
+
+28
+00:01:26,580 --> 00:01:28,710
+And that means that new changes will occur
+
+29
+00:01:28,710 --> 00:01:32,447
+in CentOS stream before
+being implemented in RHEL.
+
+30
+00:01:32,447 --> 00:01:34,800
+CentOS stream is based
+on software that comes
+
+31
+00:01:34,800 --> 00:01:36,020
+from the Fedora project,
+
+32
+00:01:36,020 --> 00:01:38,760
+in which has reached a stable state.
+
+33
+00:01:38,760 --> 00:01:41,703
+And it has an expected
+life cycle of five years.
+
+34
+00:01:42,540 --> 00:01:45,900
+Due to its ever evolving
+nature, CentOS to stream is not
+
+35
+00:01:45,900 --> 00:01:47,640
+a recommended distribution to use
+
+36
+00:01:47,640 --> 00:01:50,040
+in production environments.
+
+37
+00:01:50,040 --> 00:01:54,150
+And then there is RHEL, RHEL
+is Red Hat Enterprise Linux
+
+38
+00:01:54,150 --> 00:01:56,850
+which is a supported Linux
+distribution that is offered
+
+39
+00:01:56,850 --> 00:01:58,683
+for used by organizations.
+
+40
+00:01:59,610 --> 00:02:02,100
+It has a life cycle of 10 years.
+
+41
+00:02:02,100 --> 00:02:04,770
+And it offers support on the software.
+
+42
+00:02:04,770 --> 00:02:07,470
+It integrates in the
+Red Hat product family,
+
+43
+00:02:07,470 --> 00:02:10,320
+where additional expertise,
+security, certification,
+
+44
+00:02:10,320 --> 00:02:13,413
+and monitoring can be offered
+through different products.
+
+45
+00:02:14,730 --> 00:02:17,640
+You can also use it unsupported for free,
+
+46
+00:02:17,640 --> 00:02:21,690
+up to 16 instances of Red Hat
+Enterprise Linux are available
+
+47
+00:02:21,690 --> 00:02:23,830
+through developer.RedHat.com
+
+48
+00:02:24,840 --> 00:02:27,600
+Then there are also Rocky
+Linux and Alma Linux,
+
+49
+00:02:27,600 --> 00:02:30,200
+which will be considered
+part of the Red Hat family.
+
+50
+00:02:31,080 --> 00:02:34,860
+Before 2019, CentOS was a
+free alternative to Red Hat
+
+51
+00:02:34,860 --> 00:02:38,430
+Enterprise Linux, where all
+Red Hat proprietary elements
+
+52
+00:02:38,430 --> 00:02:40,050
+were removed.
+
+53
+00:02:40,050 --> 00:02:42,000
+And nowadays, CentOS stream has
+
+54
+00:02:42,000 --> 00:02:44,760
+become the only version
+of CentOS and it serves
+
+55
+00:02:44,760 --> 00:02:46,650
+as an upstream for RHEL.
+
+56
+00:02:46,650 --> 00:02:50,133
+So the old way that CentOS was
+used does not exist anymore.
+
+57
+00:02:51,150 --> 00:02:54,390
+Rocky Linux was created as
+an answer by the original
+
+58
+00:02:54,390 --> 00:02:56,430
+founders of the CentOS project
+
+59
+00:02:56,430 --> 00:02:58,740
+who thought that the
+free Red Hat alternative
+
+60
+00:02:58,740 --> 00:02:59,883
+should be available.
+
+61
+00:03:00,990 --> 00:03:03,210
+Alma Linux had the same idea in mind,
+
+62
+00:03:03,210 --> 00:03:05,673
+and Alma was created by cloud Linux.
+
+63
+00:03:06,720 --> 00:03:10,650
+But, as Red Hat offer up to
+16 instances of RHEL for free,
+
+64
+00:03:10,650 --> 00:03:12,300
+the need for free distributions
+
+65
+00:03:12,300 --> 00:03:15,423
+like Alma and Rocky is not
+as big as it used to be.
+
+66
+00:03:16,830 --> 00:03:19,590
+Now let's talk a bit about RHEL versions.
+
+67
+00:03:19,590 --> 00:03:21,690
+Red Hat Enterprise Linux is a foundation
+
+68
+00:03:21,690 --> 00:03:24,150
+for some other products as well.
+
+69
+00:03:24,150 --> 00:03:25,710
+Like a Red Hat CoreOS
+
+70
+00:03:25,710 --> 00:03:28,620
+which is an image based
+container host that is used
+
+71
+00:03:28,620 --> 00:03:30,900
+in OpenShift environments.
+
+72
+00:03:30,900 --> 00:03:33,210
+Or Red Hat universal based image,
+
+73
+00:03:33,210 --> 00:03:37,020
+or UBI, which is a subset of
+RHEL packages that can be used
+
+74
+00:03:37,020 --> 00:03:39,993
+as a foundation for building
+custom container images.
+
+75
+00:03:41,580 --> 00:03:43,740
+Now that you know about
+the backgrounds of RHEL
+
+76
+00:03:43,740 --> 00:03:45,290
+let's talk about how to get it.
