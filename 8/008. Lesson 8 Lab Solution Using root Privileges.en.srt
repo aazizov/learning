@@ -1,0 +1,258 @@
+1
+00:00:06,870 --> 00:00:09,420
+- All right, so here we
+have the lab solution.
+
+2
+00:00:09,420 --> 00:00:10,770
+I'm going to continue a bit
+
+3
+00:00:10,770 --> 00:00:12,840
+on what we have already
+done for user linda.
+
+4
+00:00:12,840 --> 00:00:17,840
+So sudo vim on /etc/sudoers.d/linda
+
+5
+00:00:19,590 --> 00:00:24,590
+where we have ALL=/usr/bin/passwd
+not usr/bin/passwd root,
+
+6
+00:00:25,440 --> 00:00:29,733
+and let's just include these
+other commands as well.
+
+7
+00:00:30,932 --> 00:00:35,932
+/usr/sbin/useradd, and /usr/sbin/usermod,
+
+8
+00:00:37,443 --> 00:00:42,343
+and /usr/sbin/userdel.
+
+9
+00:00:42,343 --> 00:00:46,170
+(computer keyboard clacking)
+
+10
+00:00:46,170 --> 00:00:49,620
+So that should do it for
+the part of user linda.
+
+11
+00:00:49,620 --> 00:00:52,907
+Now, I also wanna do a sudo visudo.
+
+12
+00:00:54,702 --> 00:00:56,430
+This visudo is very convenient
+
+13
+00:00:56,430 --> 00:00:58,980
+because it's a default
+sudo configuration file
+
+14
+00:00:58,980 --> 00:01:01,110
+and it contains nice examples.
+
+15
+00:01:01,110 --> 00:01:02,700
+Go all the way down,
+
+16
+00:01:02,700 --> 00:01:04,170
+and if you go all the way down,
+
+17
+00:01:04,170 --> 00:01:06,580
+you see some example lines
+
+18
+00:01:07,620 --> 00:01:09,903
+like this one right here,
+
+19
+00:01:10,890 --> 00:01:13,380
+which is, oh boy, very bad line.
+
+20
+00:01:13,380 --> 00:01:14,880
+Same thing without the password.
+
+21
+00:01:14,880 --> 00:01:16,080
+Honestly, I don't get it,
+
+22
+00:01:16,080 --> 00:01:18,360
+why they keep it as an example by default.
+
+23
+00:01:18,360 --> 00:01:19,650
+It's like inviting people,
+
+24
+00:01:19,650 --> 00:01:22,477
+like, "Hey, you wanna do
+something very stupid? Go ahead.
+
+25
+00:01:22,477 --> 00:01:25,950
+"You only have to remove
+the comment line from it."
+
+26
+00:01:25,950 --> 00:01:28,893
+So let's just clean that up.
+
+27
+00:01:30,120 --> 00:01:31,470
+I like this one as well
+
+28
+00:01:31,470 --> 00:01:33,660
+because this one is giving you an example
+
+29
+00:01:33,660 --> 00:01:35,370
+of what we need to do for user linda,
+
+30
+00:01:35,370 --> 00:01:37,440
+in case you don't remember it.
+
+31
+00:01:37,440 --> 00:01:39,690
+And you know on your RHCSA exam,
+
+32
+00:01:39,690 --> 00:01:43,440
+it's so useful if you can
+find examples like this.
+
+33
+00:01:43,440 --> 00:01:47,433
+And I am going to put in generic defaults.
+
+34
+00:01:48,600 --> 00:01:51,297
+time stamp_type is global,
+
+35
+00:01:51,297 --> 00:01:54,990
+(computer keyboard clacking)
+
+36
+00:01:54,990 --> 00:01:59,403
+and timeout is, well,
+what do you want it to be?
+
+37
+00:02:00,270 --> 00:02:04,623
+Let's do 60, 60 sounds
+reasonable, and let's save this.
+
+38
+00:02:05,910 --> 00:02:08,160
+And uh-oh! What do we see?
+
+39
+00:02:08,160 --> 00:02:11,940
+We see we did something invalid,
+
+40
+00:02:11,940 --> 00:02:14,730
+and that's what good about visudo.
+
+41
+00:02:14,730 --> 00:02:16,080
+So it's asking what now?
+
+42
+00:02:16,080 --> 00:02:18,690
+I'm pressing enter because
+I wanna know my choices.
+
+43
+00:02:18,690 --> 00:02:22,800
+I am going to edit my sudoers file again,
+
+44
+00:02:22,800 --> 00:02:25,020
+and that is bringing me to the line
+
+45
+00:02:25,020 --> 00:02:26,610
+that contains the problem,
+
+46
+00:02:26,610 --> 00:02:31,203
+and the problem is that
+we need timestamp_timeout.
+
+47
+00:02:32,460 --> 00:02:35,040
+You could have guessed
+that because just timeout,
+
+48
+00:02:35,040 --> 00:02:36,480
+what is just timeout?
+
+49
+00:02:36,480 --> 00:02:38,370
+It's a timestamp_timeout.
+
+50
+00:02:38,370 --> 00:02:40,140
+Now I'm saving the changes again,
+
+51
+00:02:40,140 --> 00:02:43,290
+and now you can see that sudo is happy.
+
+52
+00:02:43,290 --> 00:02:48,290
+So once more, su - linda to
+open a shell as user Linda.
+
+53
+00:02:49,140 --> 00:02:52,863
+and as user linda I'm
+using sudo useradd bob.
+
+54
+00:02:53,850 --> 00:02:55,290
+And of course it's prompting
+
+55
+00:02:55,290 --> 00:02:57,300
+for the password for user Linda,
+
+56
+00:02:57,300 --> 00:02:59,730
+and well, it's not
+complaining about anything,
+
+57
+00:02:59,730 --> 00:03:03,040
+so that seems to be happening all right.
+
+58
+00:03:03,040 --> 00:03:05,640
+Sudo passwd bob, that's still allowed.
+
+59
+00:03:05,640 --> 00:03:10,350
+Still allowed, and Bob is
+getting a password right now.
+
+60
+00:03:10,350 --> 00:03:12,633
+And that's all you needed
+to do for this lab.

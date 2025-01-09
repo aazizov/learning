@@ -1,0 +1,518 @@
+1
+00:00:06,660 --> 00:00:08,673
+- Behind sudo, there's
+a lot of configuration
+
+2
+00:00:08,673 --> 00:00:10,290
+that can be done.
+
+3
+00:00:10,290 --> 00:00:13,920
+And this configuration is
+in the file etc/sudoers.
+
+4
+00:00:13,920 --> 00:00:17,580
+First thing to know, do not
+edit this file directly.
+
+5
+00:00:17,580 --> 00:00:20,580
+You can only edit it using visudo.
+
+6
+00:00:20,580 --> 00:00:23,040
+That's because visudo is
+doing a couple of check
+
+7
+00:00:23,040 --> 00:00:26,460
+so making sure that
+everything is going all right.
+
+8
+00:00:26,460 --> 00:00:27,510
+And there's another way.
+
+9
+00:00:27,510 --> 00:00:30,390
+Instead of editing the
+configuration file directly,
+
+10
+00:00:30,390 --> 00:00:32,730
+you can also consider
+creating drop-in-files
+
+11
+00:00:32,730 --> 00:00:34,533
+in /ect.sudoers.d.
+
+12
+00:00:35,390 --> 00:00:38,110
+/ect.sudoers is installed from packages
+
+13
+00:00:39,039 --> 00:00:39,872
+and it may be overwritten
+
+14
+00:00:39,872 --> 00:00:42,420
+and drop in files will
+never be overwritten.
+
+15
+00:00:42,420 --> 00:00:45,174
+We've seen that before,
+and this is something
+
+16
+00:00:45,174 --> 00:00:47,340
+that is commonly done
+in Linux environment.
+
+17
+00:00:47,340 --> 00:00:48,300
+Before we have seen it
+
+18
+00:00:48,300 --> 00:00:51,450
+in etc profile and etc profile.d.
+
+19
+00:00:51,450 --> 00:00:54,510
+You wanna keep your changes,
+store them somewhere else.
+
+20
+00:00:54,510 --> 00:00:55,683
+That's the message.
+
+21
+00:00:57,210 --> 00:00:58,800
+Now let's talk about using sudo
+
+22
+00:00:58,800 --> 00:01:00,873
+to provide administrator access.
+
+23
+00:01:01,800 --> 00:01:03,900
+Users who are a member of the group wheel,
+
+24
+00:01:03,900 --> 00:01:05,880
+get full sudo access.
+
+25
+00:01:05,880 --> 00:01:06,840
+And that is accomplished
+
+26
+00:01:06,840 --> 00:01:10,369
+by including the line %wheel is All=(ALL)
+
+27
+00:01:10,369 --> 00:01:12,150
+ALL in /etc/sudoers.
+
+28
+00:01:12,150 --> 00:01:15,330
+If you need a user to have this full level
+
+29
+00:01:15,330 --> 00:01:17,250
+of sudo privileges,
+
+30
+00:01:17,250 --> 00:01:21,547
+you should consider using
+usermod -aG wheel myuser,
+
+31
+00:01:21,547 --> 00:01:24,990
+where myuser is the user and -aG wheel
+
+32
+00:01:24,990 --> 00:01:27,540
+is making the user member of that group.
+
+33
+00:01:27,540 --> 00:01:30,360
+Make sure you use
+lowercase a, uppercase G,
+
+34
+00:01:30,360 --> 00:01:32,130
+because otherwise it doesn't work.
+
+35
+00:01:32,130 --> 00:01:34,023
+More about this in the next lesson,
+
+36
+00:01:35,190 --> 00:01:39,693
+do not enable the line, %wheel
+is All=(ALL) NOPASSWD: ALL,
+
+37
+00:01:40,650 --> 00:01:44,310
+I mean it's convenient and
+it's nice that that line exists
+
+38
+00:01:44,310 --> 00:01:47,490
+as a default example, but
+it's also very dangerous
+
+39
+00:01:47,490 --> 00:01:50,430
+because it'll provide full sudo access
+
+40
+00:01:50,430 --> 00:01:52,560
+without entering a password,
+
+41
+00:01:52,560 --> 00:01:55,260
+that is like having a root
+user without password.
+
+42
+00:01:55,260 --> 00:01:56,373
+Just don't do it.
+
+43
+00:01:57,330 --> 00:02:00,630
+If you don't like entering
+your user password
+
+44
+00:02:00,630 --> 00:02:03,330
+every five minutes,
+increase authentication
+
+45
+00:02:03,330 --> 00:02:06,630
+token expiration by adding the following.
+
+46
+00:02:06,630 --> 00:02:11,630
+Defaults
+timestamp_type=global,timestamp_timeout=60.
+
+47
+00:02:12,270 --> 00:02:13,650
+What is that doing?
+
+48
+00:02:13,650 --> 00:02:17,520
+Well when you use sudo, you
+are prompted for a password,
+
+49
+00:02:17,520 --> 00:02:20,040
+at that moment, a token will be generated
+
+50
+00:02:20,040 --> 00:02:22,620
+and that token will be cashed in the cash
+
+51
+00:02:22,620 --> 00:02:26,040
+of your local, and it is
+valid for five minutes.
+
+52
+00:02:26,040 --> 00:02:27,570
+If you use this parameter,
+
+53
+00:02:27,570 --> 00:02:31,140
+your token will be valid
+for a much longer period.
+
+54
+00:02:31,140 --> 00:02:33,750
+So if you want it to be valid for an hour
+
+55
+00:02:33,750 --> 00:02:37,260
+until you type your
+password again, use this.
+
+56
+00:02:37,260 --> 00:02:39,150
+Notice by the way that
+this is not something
+
+57
+00:02:39,150 --> 00:02:41,220
+you'll have to do on RHCSA,
+
+58
+00:02:41,220 --> 00:02:43,140
+it's just something I need you to know
+
+59
+00:02:43,140 --> 00:02:44,973
+to make your systems more secure.
+
+60
+00:02:46,410 --> 00:02:48,510
+You can also use sudo to provide access
+
+61
+00:02:48,510 --> 00:02:51,570
+to specific tasks, in order to do so,
+
+62
+00:02:51,570 --> 00:02:52,996
+you can use drop-in flies,
+
+63
+00:02:52,996 --> 00:02:57,996
+like Lisa ALL=/sbin/useradd,
+/usr/bin/passwd,
+
+64
+00:02:59,550 --> 00:03:03,663
+which allows user Lisa to add
+users and to set passwords.
+
+65
+00:03:04,830 --> 00:03:07,110
+You can consider using command arguments
+
+66
+00:03:07,110 --> 00:03:09,390
+to make the commands more specific.
+
+67
+00:03:09,390 --> 00:03:10,710
+What do you think for instance
+
+68
+00:03:10,710 --> 00:03:15,710
+of
+%users
+ALL=/bin/mount/dev/sdb,/bin/umount/dev/sdb,
+
+69
+00:03:17,010 --> 00:03:19,470
+which allows all members
+of the group users
+
+70
+00:03:19,470 --> 00:03:22,860
+to mount, but only the device SDB
+
+71
+00:03:22,860 --> 00:03:24,030
+or what do you think
+
+72
+00:03:24,030 --> 00:03:29,030
+of Linda
+ALL=/usr/bin/passwd,!/usr/bin/passwd root.
+
+73
+00:03:30,330 --> 00:03:32,130
+And that last one is one example
+
+74
+00:03:32,130 --> 00:03:33,630
+that I would like to show you.
+
+75
+00:03:36,960 --> 00:03:41,960
+All right, I'm using
+sudo vim /etc/sudoers.d,
+
+76
+00:03:44,760 --> 00:03:49,760
+Linda and in there, I
+am going to add Linda,
+
+77
+00:03:53,160 --> 00:03:58,160
+ALL=/usr/bin/pasawd.
+
+78
+00:03:58,260 --> 00:04:00,270
+Let's imagine that Linda
+is a help desk user
+
+79
+00:04:00,270 --> 00:04:02,510
+and you wanna make sure that user Linda
+
+80
+00:04:02,510 --> 00:04:05,193
+is allowed to reset passwords.
+
+81
+00:04:06,870 --> 00:04:09,510
+One requirement, we do
+need user Linda to exist.
+
+82
+00:04:09,510 --> 00:04:14,510
+So sudu useradd Linda
+and sudo passwd Linda,
+
+83
+00:04:16,860 --> 00:04:18,963
+to give the user a password as well.
+
+84
+00:04:22,140 --> 00:04:24,630
+So now we need to open a as user Linda,
+
+85
+00:04:24,630 --> 00:04:26,598
+that's where SU comes in.
+
+86
+00:04:26,598 --> 00:04:29,160
+SU - Linda opens the shell.
+
+87
+00:04:29,160 --> 00:04:32,610
+I need to provide the
+password for the target user.
+
+88
+00:04:32,610 --> 00:04:37,610
+And there we go. sudo passwd
+Anna, she's going to work.
+
+89
+00:04:40,200 --> 00:04:43,680
+We don't know it yet, but
+here we can see it's working,
+
+90
+00:04:43,680 --> 00:04:45,663
+changing password for user Anna.
+
+91
+00:04:46,560 --> 00:04:50,520
+Typing the password once,
+typing the password twice.
+
+92
+00:04:50,520 --> 00:04:51,720
+So isn't that nice?
+
+93
+00:04:51,720 --> 00:04:55,290
+Now Linda looks to be an
+innocent help desk user,
+
+94
+00:04:55,290 --> 00:04:57,453
+but what do you think of this,
+
+95
+00:04:57,453 --> 00:05:02,103
+sudo passwd root, changing
+password for user root.
+
+96
+00:05:03,090 --> 00:05:07,595
+Something is not right here
+and what is not right is,
+
+97
+00:05:07,595 --> 00:05:11,460
+well basically, the way
+how this has been applied.
+
+98
+00:05:11,460 --> 00:05:13,650
+Let's get back to the sudo file,
+
+99
+00:05:13,650 --> 00:05:16,170
+in this sudo file, we
+can see that user Linda
+
+100
+00:05:16,170 --> 00:05:20,673
+has the the permissions
+to use usr/bin/passwd.
+
+101
+00:05:21,720 --> 00:05:25,410
+So Linda can use this
+command for any user.
+
+102
+00:05:25,410 --> 00:05:27,360
+Now, in order to make it more secure,
+
+103
+00:05:27,360 --> 00:05:32,360
+I'm going to add !/usr/bin/passwd root.
+
+104
+00:05:35,340 --> 00:05:37,110
+Can you guess what this is doing?
+
+105
+00:05:37,110 --> 00:05:39,633
+Let's check it out, back to the Linda,
+
+106
+00:05:42,930 --> 00:05:44,703
+and as user Linda,
+
+107
+00:05:45,570 --> 00:05:49,980
+user Linda is not allowed
+to execute bin/passwd root,
+
+108
+00:05:49,980 --> 00:05:52,773
+as root on localhost.localdomain.
+
+109
+00:05:53,670 --> 00:05:56,010
+So what did we just do?
+
+110
+00:05:56,010 --> 00:05:58,320
+Well, we just created an exception.
+
+111
+00:05:58,320 --> 00:06:01,020
+User Linda is allowed to run passwd,
+
+112
+00:06:01,020 --> 00:06:02,120
+but not for user root.
+
+113
+00:06:03,240 --> 00:06:06,360
+The funny thing here
+is that you might think
+
+114
+00:06:06,360 --> 00:06:09,660
+that the exception comes
+before the generic rule.
+
+115
+00:06:09,660 --> 00:06:10,800
+That's not the case.
+
+116
+00:06:10,800 --> 00:06:12,450
+You first put the generic rule,
+
+117
+00:06:12,450 --> 00:06:14,853
+then you put the exception
+and then you're done.

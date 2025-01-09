@@ -1,0 +1,47 @@
+1
+00:00:07,500 --> 00:00:09,510
+- Hi and welcome to lesson 10.
+
+2
+00:00:09,510 --> 00:00:10,680
+In this important lesson,
+
+3
+00:00:10,680 --> 00:00:13,200
+you'll learn how to work with permissions.
+
+4
+00:00:13,200 --> 00:00:15,360
+To work successfully with permissions,
+
+5
+00:00:15,360 --> 00:00:17,820
+you'll first need to
+understand file ownership
+
+6
+00:00:17,820 --> 00:00:20,040
+so that is what we are starting with.
+
+7
+00:00:20,040 --> 00:00:22,560
+Next, you'll learn how to
+work with basic permissions
+
+8
+00:00:22,560 --> 00:00:25,050
+as well as how to set default permissions.
+
+9
+00:00:25,050 --> 00:00:27,390
+You'll also learn about
+special permissions.
+
+10
+00:00:27,390 --> 00:00:28,830
+And at the end of this lesson,
+
+11
+00:00:28,830 --> 00:00:31,230
+you'll find the lab as
+well as the lab solution.

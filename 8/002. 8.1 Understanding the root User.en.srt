@@ -1,0 +1,162 @@
+1
+00:00:06,840 --> 00:00:09,060
+- Before we can talk
+about root privileges.
+
+2
+00:00:09,060 --> 00:00:11,760
+We need to understand the root user.
+
+3
+00:00:11,760 --> 00:00:13,800
+Since the earliest days of UNIX,
+
+4
+00:00:13,800 --> 00:00:16,500
+a user account with UID 0 existed
+
+5
+00:00:16,500 --> 00:00:18,543
+to perform administration tasks.
+
+6
+00:00:19,560 --> 00:00:23,520
+And on Linux, this user by
+default has the name root.
+
+7
+00:00:23,520 --> 00:00:25,470
+The special thing about
+a root user is that
+
+8
+00:00:25,470 --> 00:00:27,750
+the root user operates in kernel space.
+
+9
+00:00:27,750 --> 00:00:29,850
+And for that reason has unlimited access
+
+10
+00:00:29,850 --> 00:00:32,340
+to all parts of the system.
+
+11
+00:00:32,340 --> 00:00:35,400
+We call root also the unrestricted user
+
+12
+00:00:35,400 --> 00:00:37,080
+or the privileged user.
+
+13
+00:00:37,080 --> 00:00:39,570
+There are no limitations
+in the original design
+
+14
+00:00:39,570 --> 00:00:42,333
+of the UNIX operating
+system for the root user.
+
+15
+00:00:44,237 --> 00:00:46,050
+Now, RHEL 9, it's up to you
+
+16
+00:00:46,050 --> 00:00:48,540
+to define what you want to do with root.
+
+17
+00:00:48,540 --> 00:00:52,080
+You can decide whether or
+not to activate this user.
+
+18
+00:00:52,080 --> 00:00:54,420
+And if the user root is not activated
+
+19
+00:00:54,420 --> 00:00:57,633
+the administrative user is
+used for administration access.
+
+20
+00:00:58,530 --> 00:01:00,660
+And this administrative user is the user
+
+21
+00:01:00,660 --> 00:01:02,370
+that you need to create.
+
+22
+00:01:02,370 --> 00:01:03,780
+While installing RHEL 9,
+
+23
+00:01:03,780 --> 00:01:05,520
+if you don't have a root user,
+
+24
+00:01:05,520 --> 00:01:08,220
+'cause otherwise your
+system would be unmanageable
+
+25
+00:01:08,220 --> 00:01:09,220
+and that's not good.
+
+26
+00:01:10,140 --> 00:01:12,330
+If you want to activate the root user,
+
+27
+00:01:12,330 --> 00:01:14,220
+you just have to set a password.
+
+28
+00:01:14,220 --> 00:01:16,320
+We have seen that while installing RHEL 9.
+
+29
+00:01:17,250 --> 00:01:19,140
+But from a security perspective,
+
+30
+00:01:19,140 --> 00:01:20,550
+it may be a good idea not
+
+31
+00:01:20,550 --> 00:01:22,533
+to have an active root user at all.
+
+32
+00:01:23,370 --> 00:01:24,930
+Additional measures are possible
+
+33
+00:01:24,930 --> 00:01:28,080
+to restrict the root user
+access to the system.
+
+34
+00:01:28,080 --> 00:01:32,130
+For instance, also during the
+installation, you can decide
+
+35
+00:01:32,130 --> 00:01:35,610
+whether or not the root user
+is allowed to use secure shell
+
+36
+00:01:35,610 --> 00:01:38,250
+or SSH to connect to a server.
+
+37
+00:01:38,250 --> 00:01:40,110
+And I can tell you by default
+
+38
+00:01:40,110 --> 00:01:42,393
+the root user cannot RHEL 9.

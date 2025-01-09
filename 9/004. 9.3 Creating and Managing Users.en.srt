@@ -1,0 +1,223 @@
+1
+00:00:06,780 --> 00:00:09,600
+- This video is about
+creating and managing users,
+
+2
+00:00:09,600 --> 00:00:11,610
+which in fact is super easy.
+
+3
+00:00:11,610 --> 00:00:13,950
+There is just four
+commands that are involved.
+
+4
+00:00:13,950 --> 00:00:16,080
+Useradd, which allows you to create.
+
+5
+00:00:16,080 --> 00:00:18,450
+Usermod, which allows you to modify.
+
+6
+00:00:18,450 --> 00:00:21,630
+Userdel, which allows you
+to delete user accounts.
+
+7
+00:00:21,630 --> 00:00:24,720
+And once you have created
+or modified or deleted,
+
+8
+00:00:24,720 --> 00:00:26,220
+you can set passwords.
+
+9
+00:00:26,220 --> 00:00:28,620
+Well, probably not on deleted users,
+
+10
+00:00:28,620 --> 00:00:30,660
+but for the other users you can.
+
+11
+00:00:30,660 --> 00:00:33,480
+PassWD is how to do it.
+
+12
+00:00:33,480 --> 00:00:35,193
+Let's check out these commands.
+
+13
+00:00:37,610 --> 00:00:39,270
+So, in order to work with these users,
+
+14
+00:00:39,270 --> 00:00:40,920
+and probably from this moment on,
+
+15
+00:00:40,920 --> 00:00:44,239
+I will be in our root shell sudo minus I.
+
+16
+00:00:44,239 --> 00:00:46,710
+That's also something
+that I would advise to do
+
+17
+00:00:46,710 --> 00:00:50,160
+on your RHCSA exam,
+just open a root shell,
+
+18
+00:00:50,160 --> 00:00:52,530
+because it's about system administration,
+
+19
+00:00:52,530 --> 00:00:53,670
+and you need to be root
+
+20
+00:00:53,670 --> 00:00:55,803
+in order to do system administration.
+
+21
+00:00:57,150 --> 00:01:00,390
+So, if you use commands like this,
+
+22
+00:01:00,390 --> 00:01:03,390
+might be smart to use a little command
+
+23
+00:01:03,390 --> 00:01:06,720
+Minus minus help and
+pipe the output to less.
+
+24
+00:01:06,720 --> 00:01:09,750
+And here we can see all the
+different options that exist
+
+25
+00:01:09,750 --> 00:01:12,630
+for creating this user account.
+
+26
+00:01:12,630 --> 00:01:17,548
+So let me use useradd to
+create user Lori, for instance.
+
+27
+00:01:17,548 --> 00:01:20,520
+Minus U is an option
+that you can use to set
+
+28
+00:01:20,520 --> 00:01:22,830
+the user id yourself, if you want.
+
+29
+00:01:22,830 --> 00:01:24,720
+So minus U, 2000.
+
+30
+00:01:24,720 --> 00:01:29,070
+Normally people users have
+a user ID higher than 1000,
+
+31
+00:01:29,070 --> 00:01:30,510
+so anything goes.
+
+32
+00:01:30,510 --> 00:01:33,570
+And minus S if you want to set the shell.
+
+33
+00:01:33,570 --> 00:01:37,830
+So, if this user is supposed
+to be never logging in
+
+34
+00:01:37,830 --> 00:01:42,830
+you set it to slash sbin
+slash nologin, for instance.
+
+35
+00:01:43,650 --> 00:01:48,210
+I mean, all of these are
+parameters that you can set
+
+36
+00:01:48,210 --> 00:01:50,490
+and to figure out if that works,
+
+37
+00:01:50,490 --> 00:01:54,240
+we'll grab Lori on ETC PassWD.
+
+38
+00:01:54,240 --> 00:01:55,620
+And there, we can see that the user
+
+39
+00:01:55,620 --> 00:01:58,140
+has been created successfully.
+
+40
+00:01:58,140 --> 00:02:00,150
+Is it useful? I'm not sure.
+
+41
+00:02:00,150 --> 00:02:05,100
+So, let's delete user
+Lori again: userdel lori
+
+42
+00:02:05,100 --> 00:02:08,043
+Oh, wait, userdel, minus minus help.
+
+43
+00:02:09,000 --> 00:02:09,930
+Why is that?
+
+44
+00:02:09,930 --> 00:02:13,680
+Well, because I want to
+check out some options,
+
+45
+00:02:13,680 --> 00:02:18,660
+in particular, these
+options: minus RF Lori.
+
+46
+00:02:18,660 --> 00:02:21,810
+If you don't do this,
+then some information
+
+47
+00:02:21,810 --> 00:02:24,510
+about the user might stick around,
+
+48
+00:02:24,510 --> 00:02:28,605
+and if you use userdel minus
+RF, you remove the user,
+
+49
+00:02:28,605 --> 00:02:33,390
+you force the user off, and
+everything is clean afterwards.
+
+50
+00:02:33,390 --> 00:02:34,890
+And that's all for now you need to know
+
+51
+00:02:34,890 --> 00:02:36,363
+about creating users.

@@ -1,0 +1,57 @@
+1
+00:00:07,170 --> 00:00:09,060
+- Hello, and welcome to lesson eight.
+
+2
+00:00:09,060 --> 00:00:09,893
+In this lesson,
+
+3
+00:00:09,893 --> 00:00:12,360
+you'll learn how to use
+your root Privileges.
+
+4
+00:00:12,360 --> 00:00:15,450
+First, I'll explain what
+exactly the root User is.
+
+5
+00:00:15,450 --> 00:00:17,670
+And after that, you'll
+learn how to use su,
+
+6
+00:00:17,670 --> 00:00:19,260
+to switch user accounts.
+
+7
+00:00:19,260 --> 00:00:22,620
+Which is a convenient skill
+when working with Linux.
+
+8
+00:00:22,620 --> 00:00:24,600
+Then I will tell you how to use sudo
+
+9
+00:00:24,600 --> 00:00:26,850
+and how to manage sudo Configuration.
+
+10
+00:00:26,850 --> 00:00:29,100
+And next you learn how
+to use secure shell.
+
+11
+00:00:29,100 --> 00:00:31,760
+Or ssh, to log into systems remotely.
+
+12
+00:00:31,760 --> 00:00:33,180
+At the end of this lesson,
+
+13
+00:00:33,180 --> 00:00:35,630
+you'll find the lab, as
+well as the lab solution.

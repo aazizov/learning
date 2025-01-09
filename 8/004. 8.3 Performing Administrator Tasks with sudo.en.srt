@@ -1,0 +1,201 @@
+1
+00:00:06,780 --> 00:00:09,390
+- In this video, I will
+tell you about sudo.
+
+2
+00:00:09,390 --> 00:00:11,700
+So sudo is a much more secure mechanism
+
+3
+00:00:11,700 --> 00:00:13,743
+to perform administrative tasks.
+
+4
+00:00:15,090 --> 00:00:19,770
+Behind sudo is the /etc/sudoers
+configuration file.
+
+5
+00:00:19,770 --> 00:00:23,040
+And while editing
+/etc/sudoers through visudo,
+
+6
+00:00:23,040 --> 00:00:26,940
+very detailed administrator
+privileges can be assigned.
+
+7
+00:00:26,940 --> 00:00:29,820
+In SU it's all or nothing,
+you're in a root shell
+
+8
+00:00:29,820 --> 00:00:30,960
+or you're not.
+
+9
+00:00:30,960 --> 00:00:33,870
+In sudo it is possible to assign
+
+10
+00:00:33,870 --> 00:00:37,020
+this one or two commands to
+a user that can be performed
+
+11
+00:00:37,020 --> 00:00:39,783
+at administrative
+privileges and nothing else.
+
+12
+00:00:40,980 --> 00:00:43,170
+Now, if a user has sudo privileges,
+
+13
+00:00:43,170 --> 00:00:45,780
+to learn an administration task using sudo
+
+14
+00:00:45,780 --> 00:00:49,200
+the user needs to type sudo
+followed by the command.
+
+15
+00:00:49,200 --> 00:00:51,690
+And that will prompt for
+the current user password.
+
+16
+00:00:51,690 --> 00:00:52,860
+And it'll run the command
+
+17
+00:00:52,860 --> 00:00:55,140
+if this is allowed through etc/sudoers
+
+18
+00:00:55,140 --> 00:00:58,830
+and if not it'll print
+a fine error message.
+
+19
+00:00:58,830 --> 00:01:03,030
+To open a root shell, sudo-i can be used.
+
+20
+00:01:03,030 --> 00:01:04,030
+Now let me show you.
+
+21
+00:01:07,620 --> 00:01:08,730
+Now let's look at this.
+
+22
+00:01:08,730 --> 00:01:10,500
+I'm in a shell as user Anna
+
+23
+00:01:10,500 --> 00:01:13,590
+and I'm using sudo LS/root.
+
+24
+00:01:13,590 --> 00:01:15,630
+That's a test that I like a lot.
+
+25
+00:01:15,630 --> 00:01:17,790
+It's non intrusive, not dangerous at all,
+
+26
+00:01:17,790 --> 00:01:19,710
+but it proves if it is working.
+
+27
+00:01:19,710 --> 00:01:21,810
+Here, we can see what's happening
+
+28
+00:01:21,810 --> 00:01:23,370
+when a user is typing sudo.
+
+29
+00:01:23,370 --> 00:01:25,620
+User needs to prompt
+password, so here we go.
+
+30
+00:01:25,620 --> 00:01:26,880
+Password for user Anna
+
+31
+00:01:26,880 --> 00:01:30,420
+and Anna is not in the sudo as well.
+
+32
+00:01:30,420 --> 00:01:32,850
+The incident will be reported.
+
+33
+00:01:32,850 --> 00:01:35,400
+That is what is so secure about sudo.
+
+34
+00:01:35,400 --> 00:01:38,100
+Now, if I exit and exit again,
+
+35
+00:01:38,100 --> 00:01:39,930
+to get back in my student shell,
+
+36
+00:01:39,930 --> 00:01:43,380
+and I do the same sudo LS/root
+
+37
+00:01:43,380 --> 00:01:46,140
+then we can see that it is working.
+
+38
+00:01:46,140 --> 00:01:47,496
+And that is
+
+39
+00:01:47,496 --> 00:01:50,160
+because the student user
+is the administrative user.
+
+40
+00:01:50,160 --> 00:01:52,200
+The first user that you have created
+
+41
+00:01:52,200 --> 00:01:53,970
+after installing of your system
+
+42
+00:01:53,970 --> 00:01:56,765
+will always have sudo privileges.
+
+43
+00:01:56,765 --> 00:02:00,810
+And this already demonstrates why sudo
+
+44
+00:02:00,810 --> 00:02:02,940
+is much better than SU
+
+45
+00:02:02,940 --> 00:02:05,100
+for performing administration task.
+
+46
+00:02:05,100 --> 00:02:07,350
+But there's so much more
+that you can do with sudo.
+
+47
+00:02:07,350 --> 00:02:09,700
+In the next video, I'll
+tell you more about it.

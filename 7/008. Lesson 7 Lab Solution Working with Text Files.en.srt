@@ -1,0 +1,257 @@
+1
+00:00:07,230 --> 00:00:12,230
+- So to start with, we
+need head, minus five,
+
+2
+00:00:13,653 --> 00:00:16,780
+ETC, pass WD, pipe, tail, minus one.
+
+3
+00:00:16,780 --> 00:00:19,813
+There we go. Fifth line
+out of ETC pass WD.
+
+4
+00:00:21,180 --> 00:00:23,943
+Next, we need sed,
+
+5
+00:00:24,780 --> 00:00:26,400
+minus N,
+
+6
+00:00:26,400 --> 00:00:29,610
+five B on ETC pass WD.
+
+7
+00:00:29,610 --> 00:00:30,663
+Same result.
+
+8
+00:00:31,710 --> 00:00:34,890
+Then we use AWK and a pipe
+to filter the last column
+
+9
+00:00:34,890 --> 00:00:37,890
+out of the results of the command PS AUX.
+
+10
+00:00:37,890 --> 00:00:39,677
+So PS,
+
+11
+00:00:39,677 --> 00:00:40,682
+AUX,
+
+12
+00:00:40,682 --> 00:00:42,420
+pipe,
+
+13
+00:00:42,420 --> 00:00:43,253
+AWK,
+
+14
+00:00:44,550 --> 00:00:45,930
+print,
+
+15
+00:00:45,930 --> 00:00:46,763
+dollar,
+
+16
+00:00:46,763 --> 00:00:49,020
+and F should be doing it.
+
+17
+00:00:49,020 --> 00:00:51,097
+And there we go. Last column.
+
+18
+00:00:52,167 --> 00:00:55,860
+Now, last column may give
+you some unexpected results.
+
+19
+00:00:55,860 --> 00:00:58,590
+That's right, but that
+requires further filtering.
+
+20
+00:00:58,590 --> 00:00:59,990
+That's not our mission here.
+
+21
+00:01:00,930 --> 00:01:04,127
+Now we need to use grep to
+show the names of all fells
+
+22
+00:01:04,127 --> 00:01:08,703
+in ETC that have lines that
+contain text root as a word.
+
+23
+00:01:09,810 --> 00:01:11,740
+So, let's do that in ETC
+
+24
+00:01:12,824 --> 00:01:17,230
+and let's use grep, root, slash B or star.
+
+25
+00:01:20,220 --> 00:01:24,630
+We do definitely need to remove
+all these error messages.
+
+26
+00:01:24,630 --> 00:01:25,920
+So there we go.
+
+27
+00:01:25,920 --> 00:01:28,533
+And here we can see dex root.
+
+28
+00:01:29,610 --> 00:01:31,350
+Now, we have an interesting one.
+
+29
+00:01:31,350 --> 00:01:34,110
+Use grep to show all lines
+from all files in ETC
+
+30
+00:01:34,110 --> 00:01:36,510
+that contain exactly three characters.
+
+31
+00:01:36,510 --> 00:01:37,920
+Is that an interesting one?
+
+32
+00:01:37,920 --> 00:01:40,263
+Well, in fact, it's a simple one.
+
+33
+00:01:40,263 --> 00:01:42,750
+We use carrot as a start,
+
+34
+00:01:42,750 --> 00:01:45,900
+dot dot dot for three characters,
+
+35
+00:01:45,900 --> 00:01:47,490
+dollar at the end.
+
+36
+00:01:47,490 --> 00:01:48,930
+And there we go.
+
+37
+00:01:48,930 --> 00:01:50,940
+All the lines in all the fells.
+
+38
+00:01:50,940 --> 00:01:53,010
+There's not that many of them.
+
+39
+00:01:53,010 --> 00:01:55,290
+Now we need to use grep to find all fells
+
+40
+00:01:55,290 --> 00:01:56,700
+that contain the string Alex,
+
+41
+00:01:56,700 --> 00:02:01,440
+but make sure that Alexander
+is not included in the result.
+
+42
+00:02:01,440 --> 00:02:05,044
+All right, last one is to grep
+
+43
+00:02:05,044 --> 00:02:08,370
+on all fells that contain the string Alex,
+
+44
+00:02:08,370 --> 00:02:10,290
+but not Alexander.
+
+45
+00:02:10,290 --> 00:02:12,240
+Well, that will be a word grep.
+
+46
+00:02:12,240 --> 00:02:15,630
+And I'm going to show
+you how it works for Anna
+
+47
+00:02:15,630 --> 00:02:17,609
+in our users fell.
+
+48
+00:02:17,609 --> 00:02:18,810
+There we go.
+
+49
+00:02:18,810 --> 00:02:20,103
+Here we find the works.
+
+50
+00:02:21,330 --> 00:02:22,770
+Now, confusing?
+
+51
+00:02:22,770 --> 00:02:26,670
+Yes, of course. But
+slash B, slash B, slash B
+
+52
+00:02:26,670 --> 00:02:29,220
+for the beginning, slash B at the end,
+
+53
+00:02:29,220 --> 00:02:32,310
+that is showing it should
+start a word, to end as a word,
+
+54
+00:02:32,310 --> 00:02:35,160
+and this is the result
+that it's giving us.
+
+55
+00:02:35,160 --> 00:02:38,880
+So, that's all, I hope you
+succeeded a little bit.
+
+56
+00:02:38,880 --> 00:02:41,460
+Nice, isn't it? Regular expressions.
+
+57
+00:02:41,460 --> 00:02:45,240
+They are very powerful,
+but don't overestimate
+
+58
+00:02:45,240 --> 00:02:46,680
+the use of them.
+
+59
+00:02:46,680 --> 00:02:48,660
+On the scale of everything
+you need to know
+
+60
+00:02:48,660 --> 00:02:53,343
+for the RHCSA exam, regular
+expressions are not that big.

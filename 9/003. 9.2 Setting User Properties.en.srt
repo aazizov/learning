@@ -1,0 +1,307 @@
+1
+00:00:07,170 --> 00:00:08,340
+- When defining users,
+
+2
+00:00:08,340 --> 00:00:11,130
+there are different properties
+that need to be set.
+
+3
+00:00:11,130 --> 00:00:12,840
+And I wanna talk about them.
+
+4
+00:00:12,840 --> 00:00:16,890
+You set these properties in
+/etc/passwd, here they are.
+
+5
+00:00:16,890 --> 00:00:18,180
+Start with the name.
+
+6
+00:00:18,180 --> 00:00:21,000
+The name is the name of the user account.
+
+7
+00:00:21,000 --> 00:00:24,480
+It's a human understandable
+name, so it's for people.
+
+8
+00:00:24,480 --> 00:00:25,980
+Then there is the password.
+
+9
+00:00:25,980 --> 00:00:29,400
+The password is the secret that
+is used for authentication.
+
+10
+00:00:29,400 --> 00:00:33,690
+It may be disabled, but for
+people uses normally, it is not.
+
+11
+00:00:33,690 --> 00:00:34,800
+For system users.
+
+12
+00:00:34,800 --> 00:00:37,470
+However, they should
+never have a password.
+
+13
+00:00:37,470 --> 00:00:39,030
+They should be disabled.
+
+14
+00:00:39,030 --> 00:00:42,630
+Shouldn't be possible to
+log in as a system user.
+
+15
+00:00:42,630 --> 00:00:47,190
+Next is a UID, which is a
+unique identifier for user.
+
+16
+00:00:47,190 --> 00:00:51,840
+The GID is another ID
+for the primary group.
+
+17
+00:00:51,840 --> 00:00:53,310
+When you create a user,
+
+18
+00:00:53,310 --> 00:00:55,920
+every user is a member
+of exactly one group,
+
+19
+00:00:55,920 --> 00:00:58,440
+which is called the primary group.
+
+20
+00:00:58,440 --> 00:01:00,600
+Then there is a so-called GECOS field,
+
+21
+00:01:00,600 --> 00:01:03,960
+which contains additional
+non-mandatory information
+
+22
+00:01:03,960 --> 00:01:05,550
+about the user.
+
+23
+00:01:05,550 --> 00:01:07,770
+We have home directories
+for the environment
+
+24
+00:01:07,770 --> 00:01:09,900
+where users can create personal files.
+
+25
+00:01:09,900 --> 00:01:12,900
+And finally, there is a
+Shell, which is a program
+
+26
+00:01:12,900 --> 00:01:16,590
+that will be started after
+successful authentication.
+
+27
+00:01:16,590 --> 00:01:17,760
+For ordinary users,
+
+28
+00:01:17,760 --> 00:01:20,250
+the Shell is normally set to bin bash.
+
+29
+00:01:20,250 --> 00:01:21,870
+For system users,
+
+30
+00:01:21,870 --> 00:01:23,340
+it should be set to bin false,
+
+31
+00:01:23,340 --> 00:01:26,250
+or anything that disallows
+the user to log in.
+
+32
+00:01:26,250 --> 00:01:31,250
+Let me show you the contents
+of this /etc/passwd file.
+
+33
+00:01:32,910 --> 00:01:34,607
+Okay. So, if I use cat on /etc/passwd,
+
+34
+00:01:36,750 --> 00:01:39,453
+we can see the contents
+of this passwd file.
+
+35
+00:01:40,320 --> 00:01:42,210
+Just picking out two random lines.
+
+36
+00:01:42,210 --> 00:01:44,310
+We have a line FTP.
+
+37
+00:01:44,310 --> 00:01:48,000
+This is a user that can be
+created by the FTP server.
+
+38
+00:01:48,000 --> 00:01:52,230
+And we can see that this
+FTP user has a directory,
+
+39
+00:01:52,230 --> 00:01:54,240
+a home directory via FTP.
+
+40
+00:01:54,240 --> 00:01:56,250
+Which happens to be the environment,
+
+41
+00:01:56,250 --> 00:01:59,010
+where this user can work with,
+
+42
+00:01:59,010 --> 00:02:01,050
+can create files and stuff like that.
+
+43
+00:02:01,050 --> 00:02:03,330
+Very important, as this is a system user
+
+44
+00:02:03,330 --> 00:02:07,350
+the Shell is set to slash
+sbin slash no login.
+
+45
+00:02:07,350 --> 00:02:09,720
+So, no matter what this user is not going
+
+46
+00:02:09,720 --> 00:02:12,658
+to be able to log in ever.
+
+47
+00:02:12,658 --> 00:02:15,930
+Here, we have the first person user,
+
+48
+00:02:15,930 --> 00:02:19,350
+use a student that's
+our administrative user.
+
+49
+00:02:19,350 --> 00:02:22,950
+We can see that people users
+normally start their user IDs
+
+50
+00:02:22,950 --> 00:02:25,110
+at number 1000.
+
+51
+00:02:25,110 --> 00:02:28,440
+And the home directory
+is set to sub directory
+
+52
+00:02:28,440 --> 00:02:29,273
+in slash home.
+
+53
+00:02:29,273 --> 00:02:31,230
+And the Shell is set to bin bash.
+
+54
+00:02:31,230 --> 00:02:32,700
+So, that is what we need
+
+55
+00:02:32,700 --> 00:02:35,460
+for ordinary people to be logging in.
+
+56
+00:02:35,460 --> 00:02:39,000
+On some of cases, you can
+also see users that have,
+
+57
+00:02:39,000 --> 00:02:42,870
+that do have a Shell, but which
+is a very specific program.
+
+58
+00:02:42,870 --> 00:02:44,820
+Like here, the halt user,
+
+59
+00:02:44,820 --> 00:02:46,710
+which is used for halting your system,
+
+60
+00:02:46,710 --> 00:02:48,540
+a slash sbin slash halt.
+
+61
+00:02:48,540 --> 00:02:50,520
+Which allows you to stop your system,
+
+62
+00:02:50,520 --> 00:02:51,750
+or the sync user,
+
+63
+00:02:51,750 --> 00:02:53,430
+as the sync binary,
+
+64
+00:02:53,430 --> 00:02:55,800
+which allows this user
+to synchronize Shells
+
+65
+00:02:55,800 --> 00:02:58,263
+to whatever you want
+them to synchronize with.
+
+66
+00:02:59,670 --> 00:03:02,460
+So, that's all about the user properties.
+
+67
+00:03:02,460 --> 00:03:04,950
+As we can find them in /etc/passwd,
+
+68
+00:03:04,950 --> 00:03:07,080
+there are more properties
+in /etc/skeleton.
+
+69
+00:03:07,080 --> 00:03:08,200
+We'll talk about them later.
+
+70
+00:03:08,200 --> 00:03:10,683
+Let's first go and create some users.

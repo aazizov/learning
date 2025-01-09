@@ -1,0 +1,313 @@
+1
+00:00:06,810 --> 00:00:09,210
+- We have already seen
+grep a couple of times.
+
+2
+00:00:09,210 --> 00:00:10,830
+And that is because grep is one
+
+3
+00:00:10,830 --> 00:00:14,010
+of the most awesome tools
+that exists on Linux.
+
+4
+00:00:14,010 --> 00:00:18,000
+It's an amazing tool to find
+text in files or in input
+
+5
+00:00:18,000 --> 00:00:20,550
+and you can use it in many different ways.
+
+6
+00:00:20,550 --> 00:00:23,370
+You know what, let me just
+show you the examples.
+
+7
+00:00:23,370 --> 00:00:25,350
+And instead of talking about the slides,
+
+8
+00:00:25,350 --> 00:00:27,093
+let me run these examples for you.
+
+9
+00:00:30,090 --> 00:00:34,170
+So, let me start with
+ps aux, ps aux by itself
+
+10
+00:00:34,170 --> 00:00:37,200
+is listing all the
+processes currently running
+
+11
+00:00:37,200 --> 00:00:40,020
+and some interesting
+options for these processes.
+
+12
+00:00:40,020 --> 00:00:43,260
+Now, what if you just want
+to know about one process?
+
+13
+00:00:43,260 --> 00:00:45,300
+Well, then you can grep on it.
+
+14
+00:00:45,300 --> 00:00:47,760
+I use ps aux pipe grep ssh.
+
+15
+00:00:47,760 --> 00:00:49,140
+And in the result,
+
+16
+00:00:49,140 --> 00:00:53,340
+we can see the line that
+contains the text "ssh."
+
+17
+00:00:53,340 --> 00:00:55,950
+Oh boy, there's one
+thing that I need to do,
+
+18
+00:00:55,950 --> 00:00:59,018
+pipe grep
+
+19
+00:00:59,018 --> 00:01:00,573
+- v grep.
+
+20
+00:01:02,460 --> 00:01:03,780
+Which is doing what?
+
+21
+00:01:03,780 --> 00:01:07,710
+Grep -v is excluding from the result.
+
+22
+00:01:07,710 --> 00:01:10,560
+You know, if I would like
+to use this in a script
+
+23
+00:01:10,560 --> 00:01:13,470
+or something, then I'm
+interested in the first result,
+
+24
+00:01:13,470 --> 00:01:14,610
+not in the second result
+
+25
+00:01:14,610 --> 00:01:16,860
+because this is the grep command itself.
+
+26
+00:01:16,860 --> 00:01:20,790
+And by using grep -v grep,
+I'm telling grep to filter out
+
+27
+00:01:20,790 --> 00:01:23,160
+all lines that contain the text "grep"
+
+28
+00:01:23,160 --> 00:01:25,020
+and then the result is pure
+
+29
+00:01:25,020 --> 00:01:26,883
+and you can use it in something else.
+
+30
+00:01:27,720 --> 00:01:30,840
+Another example of grep is on file.
+
+31
+00:01:30,840 --> 00:01:33,120
+So, if I use grep
+
+32
+00:01:33,120 --> 00:01:34,822
+student on star,
+
+33
+00:01:34,822 --> 00:01:36,510
+then what do we get?
+
+34
+00:01:36,510 --> 00:01:39,957
+We get a list of all files that
+contain the text "student."
+
+35
+00:01:41,010 --> 00:01:42,630
+Now,
+
+36
+00:01:42,630 --> 00:01:44,160
+as we have seen before,
+
+37
+00:01:44,160 --> 00:01:46,770
+we have a little bit too
+much of error messages.
+
+38
+00:01:46,770 --> 00:01:49,260
+So, let's filter the
+error message a little bit
+
+39
+00:01:49,260 --> 00:01:54,240
+and send the error outputs
+to the null device.
+
+40
+00:01:54,240 --> 00:01:56,100
+Now, in case you are not really sure
+
+41
+00:01:56,100 --> 00:01:59,490
+about the case of the string
+that you are looking for,
+
+42
+00:01:59,490 --> 00:02:04,490
+grep -i is convenient,
+-i for case insensitive.
+
+43
+00:02:05,370 --> 00:02:09,390
+What I also like a lot is
+the after and before options.
+
+44
+00:02:09,390 --> 00:02:13,800
+The after and before
+options are very convenient
+
+45
+00:02:13,800 --> 00:02:16,470
+if you analyze configuration files,
+
+46
+00:02:16,470 --> 00:02:17,586
+like grep
+
+47
+00:02:17,586 --> 00:02:19,823
+- A 5
+
+48
+00:02:19,823 --> 00:02:23,250
+- B 5,
+
+49
+00:02:23,250 --> 00:02:24,180
+we need spaces
+
+50
+00:02:24,180 --> 00:02:27,090
+to separate the option
+from the option argument.
+
+51
+00:02:27,090 --> 00:02:28,890
+And what are we looking for?
+
+52
+00:02:28,890 --> 00:02:30,450
+Well, I'm looking for,
+
+53
+00:02:30,450 --> 00:02:33,180
+Allow in etc ssh
+
+54
+00:02:33,180 --> 00:02:35,643
+sshd underscore config,
+
+55
+00:02:36,630 --> 00:02:39,420
+which is showing a couple of parameters
+
+56
+00:02:39,420 --> 00:02:42,450
+like allow agent forwarding,
+but also the five lines
+
+57
+00:02:42,450 --> 00:02:44,970
+before and the five lines after that,
+
+58
+00:02:44,970 --> 00:02:48,240
+because you might be interested
+in seeing what exactly
+
+59
+00:02:48,240 --> 00:02:50,880
+is in front of it and behind it.
+
+60
+00:02:50,880 --> 00:02:52,703
+Last example for now,
+
+61
+00:02:52,703 --> 00:02:54,240
+grep -R
+
+62
+00:02:54,240 --> 00:02:56,193
+root or star,
+
+63
+00:02:57,690 --> 00:02:59,640
+which is doing a recursive grep,
+
+64
+00:02:59,640 --> 00:03:01,590
+not only in the current directory
+
+65
+00:03:01,590 --> 00:03:03,930
+but also in all of the subdirectories.
+
+66
+00:03:03,930 --> 00:03:06,240
+Hey, but one thing, do you see the result?
+
+67
+00:03:06,240 --> 00:03:09,870
+The result is really like
+file name matching a line.
+
+68
+00:03:09,870 --> 00:03:12,750
+Wow. Can we also see just the file names?
+
+69
+00:03:12,750 --> 00:03:16,800
+Of course you can, grep -RL root star.
+
+70
+00:03:16,800 --> 00:03:17,760
+And there we go,
+
+71
+00:03:17,760 --> 00:03:20,100
+all the names of the
+files in etc that contain
+
+72
+00:03:20,100 --> 00:03:21,297
+the text "root."

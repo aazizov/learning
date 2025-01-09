@@ -1,0 +1,58 @@
+1
+00:00:06,990 --> 00:00:08,910
+- All right, we are now
+at the end of this lesson.
+
+2
+00:00:08,910 --> 00:00:10,020
+Let's do a lab.
+
+3
+00:00:10,020 --> 00:00:13,500
+This lab is about using root privileges.
+
+4
+00:00:13,500 --> 00:00:14,550
+In order to do so,
+
+5
+00:00:14,550 --> 00:00:16,740
+make sure you have a user it name linda,
+
+6
+00:00:16,740 --> 00:00:19,260
+and create a pseudo
+configuration that allows linda
+
+7
+00:00:19,260 --> 00:00:21,843
+to perform common administration task.
+
+8
+00:00:22,740 --> 00:00:26,310
+So you should allow useradd,
+usermod, and use userdel,
+
+9
+00:00:26,310 --> 00:00:28,170
+and you should allow changing passwords,
+
+10
+00:00:28,170 --> 00:00:30,630
+but not password for user root.
+
+11
+00:00:30,630 --> 00:00:34,620
+And also, ensure that any user only needs
+
+12
+00:00:34,620 --> 00:00:35,730
+to enter a password
+
+13
+00:00:35,730 --> 00:00:38,520
+for sudo operations every 60 minutes.
+
+14
+00:00:38,520 --> 00:00:39,353
+Good luck.

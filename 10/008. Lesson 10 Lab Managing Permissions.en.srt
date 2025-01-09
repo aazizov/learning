@@ -1,0 +1,60 @@
+1
+00:00:06,660 --> 00:00:08,280
+- We are now at the end of this lesson.
+
+2
+00:00:08,280 --> 00:00:09,840
+Let's do a lab.
+
+3
+00:00:09,840 --> 00:00:13,410
+To start with, create a shared
+group directory structure,
+
+4
+00:00:13,410 --> 00:00:15,360
+two directories, slash data slash profs
+
+5
+00:00:15,360 --> 00:00:17,340
+and slash data slash students
+
+6
+00:00:17,340 --> 00:00:20,160
+and make sure it meets
+the following conditions.
+
+7
+00:00:20,160 --> 00:00:23,280
+Members of the group have
+full read and write access
+
+8
+00:00:23,280 --> 00:00:26,070
+to their directories and others
+have no permissions at all.
+
+9
+00:00:26,070 --> 00:00:28,560
+Next, modify default permission settings
+
+10
+00:00:28,560 --> 00:00:30,690
+such that normal users have a umask
+
+11
+00:00:30,690 --> 00:00:33,270
+that allows the user and
+group to write, create,
+
+12
+00:00:33,270 --> 00:00:34,920
+and execute files and directories
+
+13
+00:00:34,920 --> 00:00:37,800
+while denying all other access to users.
+
+14
+00:00:37,800 --> 00:00:38,633
+Good luck.

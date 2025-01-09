@@ -1,0 +1,74 @@
+1
+00:00:07,170 --> 00:00:09,120
+- Hi, welcome to Lesson 9.
+
+2
+00:00:09,120 --> 00:00:11,100
+In this lesson, you'll
+learn all you need to know
+
+3
+00:00:11,100 --> 00:00:13,650
+about managing local user accounts.
+
+4
+00:00:13,650 --> 00:00:16,590
+I'll start by explaining
+what exactly the purpose is
+
+5
+00:00:16,590 --> 00:00:18,360
+of these user accounts.
+
+6
+00:00:18,360 --> 00:00:20,760
+And next you'll learn about
+setting user properties
+
+7
+00:00:20,760 --> 00:00:23,640
+and how to create and
+manage user accounts.
+
+8
+00:00:23,640 --> 00:00:25,110
+Once you know how to do that,
+
+9
+00:00:25,110 --> 00:00:28,050
+you'll learn how to
+define default settings.
+
+10
+00:00:28,050 --> 00:00:29,820
+Then I'll show you what is going on
+
+11
+00:00:29,820 --> 00:00:32,940
+in /etc/passwd and in /etc/shadow.
+
+12
+00:00:32,940 --> 00:00:33,900
+And after that,
+
+13
+00:00:33,900 --> 00:00:36,210
+we'll talk about group
+membership and groups
+
+14
+00:00:36,210 --> 00:00:38,340
+as well as password properties.
+
+15
+00:00:38,340 --> 00:00:39,360
+At the end of this lesson,
+
+16
+00:00:39,360 --> 00:00:41,550
+you'll find the lab and the lab solution,
+
+17
+00:00:41,550 --> 00:00:44,403
+which help you to practice
+all of these important skills.

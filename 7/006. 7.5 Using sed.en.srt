@@ -1,0 +1,238 @@
+1
+00:00:06,870 --> 00:00:09,840
+- In this video, I will tell
+you a little bit about sed.
+
+2
+00:00:09,840 --> 00:00:14,220
+Sed is a stream editor, used
+to search and transform text.
+
+3
+00:00:14,220 --> 00:00:18,060
+Also one of these tools that
+was created in the 1970s
+
+4
+00:00:18,060 --> 00:00:19,410
+which was used a lot,
+
+5
+00:00:19,410 --> 00:00:22,440
+but nowadays isn't used that much anymore,
+
+6
+00:00:22,440 --> 00:00:26,520
+but still there are useful
+things that you can do with sed.
+
+7
+00:00:26,520 --> 00:00:28,380
+It focuses on searching for text
+
+8
+00:00:28,380 --> 00:00:31,140
+and performing an
+operation on matching text.
+
+9
+00:00:31,140 --> 00:00:32,310
+And here on the slide,
+
+10
+00:00:32,310 --> 00:00:35,130
+I have three demos that
+I want to show you.
+
+11
+00:00:35,130 --> 00:00:36,603
+So, let me just show you.
+
+12
+00:00:39,960 --> 00:00:41,460
+So, first I'm going to show you
+
+13
+00:00:41,460 --> 00:00:45,613
+sed -n 5p on /etc/passwd,
+
+14
+00:00:45,613 --> 00:00:47,070
+which is doing what?
+
+15
+00:00:47,070 --> 00:00:50,613
+Which is printing a line
+number five from /etc/passwd.
+
+16
+00:00:52,380 --> 00:00:56,010
+Then I am going to use
+
+17
+00:00:56,010 --> 00:01:01,010
+sed -i s/boot/beet/g on users
+
+18
+00:01:11,010 --> 00:01:12,030
+which is doing what?
+
+19
+00:01:12,030 --> 00:01:14,520
+Well, this is manipulating our users file
+
+20
+00:01:14,520 --> 00:01:17,220
+where we had a line that read, "boot"
+
+21
+00:01:17,220 --> 00:01:19,050
+and now it reads "beet."
+
+22
+00:01:19,050 --> 00:01:20,795
+Notice the g to the end,
+
+23
+00:01:20,795 --> 00:01:22,828
+I can show you what it's doing.
+
+24
+00:01:22,828 --> 00:01:25,020
+So, let me continue on these users
+
+25
+00:01:25,020 --> 00:01:27,063
+even if it's not users anymore.
+
+26
+00:01:27,960 --> 00:01:31,737
+And let me do bot bot bot bot.
+
+27
+00:01:31,737 --> 00:01:34,380
+One line bot four times.
+
+28
+00:01:34,380 --> 00:01:38,880
+So, I am going to use sed -i,
+
+29
+00:01:38,880 --> 00:01:42,737
+and we are going to replace bot with bet
+
+30
+00:01:42,737 --> 00:01:44,928
+but first without a /g.
+
+31
+00:01:44,928 --> 00:01:46,049
+What is the result?
+
+32
+00:01:46,049 --> 00:01:48,690
+Well, the result is that you can see
+
+33
+00:01:48,690 --> 00:01:51,660
+that it has to replaced
+the first instance only.
+
+34
+00:01:51,660 --> 00:01:53,970
+And that is why we want to add g.
+
+35
+00:01:53,970 --> 00:01:55,173
+G for global.
+
+36
+00:01:55,173 --> 00:02:00,173
+Global means any occurrence within a line.
+
+37
+00:02:00,486 --> 00:02:05,486
+Now, another one is
+sed -i -e 10d on users.
+
+38
+00:02:08,483 --> 00:02:09,622
+What is that doing?
+
+39
+00:02:09,622 --> 00:02:12,060
+Sed -i is for interactive.
+
+40
+00:02:12,060 --> 00:02:14,550
+Interactive means that the
+change is written immediately
+
+41
+00:02:14,550 --> 00:02:15,383
+to the file.
+
+42
+00:02:15,383 --> 00:02:17,010
+Minus e is for edit
+
+43
+00:02:17,010 --> 00:02:20,723
+and the edit command that
+we are passing is 10d.
+
+44
+00:02:20,723 --> 00:02:22,301
+Can you see the difference?
+
+45
+00:02:22,301 --> 00:02:23,820
+Well, the difference
+
+46
+00:02:23,820 --> 00:02:27,933
+is that it has just
+deleted line number 10.
+
+47
+00:02:28,830 --> 00:02:31,170
+Before we had two bets,
+
+48
+00:02:31,170 --> 00:02:33,450
+now we have one bet only
+
+49
+00:02:33,450 --> 00:02:35,901
+and that's what you can do
+with sed and so much more.
+
+50
+00:02:35,901 --> 00:02:39,960
+But my advice is don't let
+sed and all confuse you.
+
+51
+00:02:39,960 --> 00:02:41,800
+There's so much that you can do with them
+
+52
+00:02:41,800 --> 00:02:43,920
+but there is also so much
+
+53
+00:02:43,920 --> 00:02:46,620
+that is not really needed anymore nowadays
+
+54
+00:02:46,620 --> 00:02:48,180
+you can do perfectly without.
+
+55
+00:02:48,180 --> 00:02:51,540
+Every now and then, the
+examples that we've covered here
+
+56
+00:02:51,540 --> 00:02:52,563
+may come in handy.

@@ -1,0 +1,290 @@
+1
+00:00:06,780 --> 00:00:08,100
+- In this video, I will tell you
+
+2
+00:00:08,100 --> 00:00:10,200
+how to change file ownership.
+
+3
+00:00:10,200 --> 00:00:11,130
+It's pretty simple.
+
+4
+00:00:11,130 --> 00:00:12,552
+There are two commands involved.
+
+5
+00:00:12,552 --> 00:00:13,385
+First command is chown,
+
+6
+00:00:13,385 --> 00:00:15,000
+First command is chown,
+
+7
+00:00:15,000 --> 00:00:16,950
+for change owner.
+
+8
+00:00:16,950 --> 00:00:18,780
+Chown needs a username
+
+9
+00:00:18,780 --> 00:00:21,480
+and optionally can use
+a group name as well.
+
+10
+00:00:21,480 --> 00:00:23,310
+And next it needs a file name.
+
+11
+00:00:23,310 --> 00:00:25,710
+And that allows you to set the ownership.
+
+12
+00:00:25,710 --> 00:00:29,868
+C H G R P is what you do
+to set group ownership
+
+13
+00:00:29,868 --> 00:00:33,570
+but you can also use chown
+to set user ownership as well
+
+14
+00:00:33,570 --> 00:00:34,710
+as group ownership.
+
+15
+00:00:34,710 --> 00:00:35,543
+Let me show you.
+
+16
+00:00:38,757 --> 00:00:39,930
+So to demonstrate this
+
+17
+00:00:39,930 --> 00:00:42,090
+I'm going to create a directory.
+
+18
+00:00:42,090 --> 00:00:44,313
+Let's call it data new files.
+
+19
+00:00:45,900 --> 00:00:48,510
+I'm creating this
+directory as the root user.
+
+20
+00:00:48,510 --> 00:00:51,450
+If I type ID, always a convenient command
+
+21
+00:00:51,450 --> 00:00:53,010
+If you work with permissions,
+
+22
+00:00:53,010 --> 00:00:55,500
+then you can see my
+current user ID is zero.
+
+23
+00:00:55,500 --> 00:00:59,100
+My current group ID is zero as well.
+
+24
+00:00:59,100 --> 00:01:01,380
+Because of these current settings
+
+25
+00:01:01,380 --> 00:01:03,473
+the ownership will be set accordingly.
+
+26
+00:01:03,473 --> 00:01:06,765
+So as you can see new files as user root
+
+27
+00:01:06,765 --> 00:01:10,500
+as the user owner group
+root as the group owner.
+
+28
+00:01:10,500 --> 00:01:14,540
+And right here, starting the
+second position up to the end,
+
+29
+00:01:14,540 --> 00:01:17,730
+we can see the permissions
+that are currently applied.
+
+30
+00:01:17,730 --> 00:01:21,180
+So read, write, execute,
+read, execute, read, execute,
+
+31
+00:01:21,180 --> 00:01:23,730
+which means that the user
+has read write execute,
+
+32
+00:01:23,730 --> 00:01:26,340
+the group has read, execute and others,
+
+33
+00:01:26,340 --> 00:01:30,060
+which is everybody else, as
+read and execute as well.
+
+34
+00:01:30,060 --> 00:01:30,893
+Now, the purpose
+
+35
+00:01:30,893 --> 00:01:35,893
+of this demo is to show you
+how to use chown and C H D R P.
+
+36
+00:01:35,940 --> 00:01:38,400
+So chown can be used as follows.
+
+37
+00:01:38,400 --> 00:01:41,640
+If I use chown Lisa on new files,
+
+38
+00:01:41,640 --> 00:01:44,520
+then the result is that user Lisa is now
+
+39
+00:01:44,520 --> 00:01:46,950
+user owner of the files.
+
+40
+00:01:46,950 --> 00:01:49,050
+If you change ownership
+that doesn't affect the
+
+41
+00:01:49,050 --> 00:01:51,510
+permissions at all,
+it's a separate setting.
+
+42
+00:01:51,510 --> 00:01:54,270
+So you will need to change
+the permissions accordingly,
+
+43
+00:01:54,270 --> 00:01:56,100
+If that is needed.
+
+44
+00:01:56,100 --> 00:01:57,450
+Also convenient to say
+
+45
+00:01:57,450 --> 00:02:01,230
+you can use something like
+chown Linda colon sales
+
+46
+00:02:01,230 --> 00:02:02,970
+on new files.
+
+47
+00:02:02,970 --> 00:02:04,860
+In which the colon is a separator
+
+48
+00:02:04,860 --> 00:02:06,900
+between the user and the group.
+
+49
+00:02:06,900 --> 00:02:09,150
+Now, if we check the current
+permission assignments
+
+50
+00:02:09,150 --> 00:02:11,250
+we can see the user Linda
+
+51
+00:02:11,250 --> 00:02:13,923
+and group sales is set as a group owner.
+
+52
+00:02:14,850 --> 00:02:18,420
+Now, alternatively, you can use C H G R P.
+
+53
+00:02:18,420 --> 00:02:20,490
+So let me use C H G R P.
+
+54
+00:02:20,490 --> 00:02:22,050
+I don't have that many groups,
+
+55
+00:02:22,050 --> 00:02:25,230
+so let me use wheel as a group to make
+
+56
+00:02:25,230 --> 00:02:26,820
+that the group owner.
+
+57
+00:02:26,820 --> 00:02:27,720
+Notice that normally
+
+58
+00:02:27,720 --> 00:02:29,991
+you would never do that,
+but I just need a group to
+
+59
+00:02:29,991 --> 00:02:33,510
+make that the owner and really, I don't
+
+60
+00:02:33,510 --> 00:02:36,630
+like group wheel being the
+owner of new files because wheel
+
+61
+00:02:36,630 --> 00:02:39,540
+should really be used
+for pseudo purposes only.
+
+62
+00:02:39,540 --> 00:02:40,530
+So, you know what
+
+63
+00:02:40,530 --> 00:02:45,150
+let me use yet another
+alternative chown colon sales
+
+64
+00:02:45,150 --> 00:02:49,895
+on new file and the result is
+what you can see right here.
+
+65
+00:02:49,895 --> 00:02:51,210
+on new file and the result is
+what you can see right here.
+
+66
+00:02:51,210 --> 00:02:53,250
+User Linda as well as group sales
+
+67
+00:02:53,250 --> 00:02:55,533
+are owner of the directory new files.

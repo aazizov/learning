@@ -1,0 +1,320 @@
+1
+00:00:06,630 --> 00:00:08,010
+- In this video, I want to tell you
+
+2
+00:00:08,010 --> 00:00:10,233
+how to configure shared group directories.
+
+3
+00:00:11,220 --> 00:00:12,630
+So what is the thing?
+
+4
+00:00:12,630 --> 00:00:15,240
+Well, if members of the same
+group need to share files
+
+5
+00:00:15,240 --> 00:00:19,380
+within a directory, some special
+permissions are required.
+
+6
+00:00:19,380 --> 00:00:23,130
+The shared group ID
+permission, also known as SGID,
+
+7
+00:00:23,130 --> 00:00:26,130
+ensures that all files created
+in the shared group directory
+
+8
+00:00:26,130 --> 00:00:29,670
+are group owned by the group
+owner of the directory.
+
+9
+00:00:29,670 --> 00:00:32,250
+The sticky bit permission
+ensures that only the user
+
+10
+00:00:32,250 --> 00:00:34,560
+who is either owner of the file
+
+11
+00:00:34,560 --> 00:00:37,620
+or of the directory
+that contains the file,
+
+12
+00:00:37,620 --> 00:00:39,183
+is allowed to delete the file.
+
+13
+00:00:41,130 --> 00:00:42,750
+So how does it work?
+
+14
+00:00:42,750 --> 00:00:47,750
+Well, we have chmod g+s,
+which will apply SGID,
+
+15
+00:00:48,270 --> 00:00:52,200
+or chmod +T, which assigns sticky bit.
+
+16
+00:00:52,200 --> 00:00:54,180
+And if you want to use absolute mode
+
+17
+00:00:54,180 --> 00:00:55,920
+of four digit number is used,
+
+18
+00:00:55,920 --> 00:00:59,850
+of which the first digit is
+for the special permissions,
+
+19
+00:00:59,850 --> 00:01:04,170
+as in chmod 3770, which will grants SGID
+
+20
+00:01:04,170 --> 00:01:07,980
+and sticky bit, as well
+as rwx for user and group.
+
+21
+00:01:07,980 --> 00:01:08,813
+Let me show you.
+
+22
+00:01:12,270 --> 00:01:14,850
+All right, so I want to show you
+
+23
+00:01:14,850 --> 00:01:18,450
+what's going on, LS
+minus L, what do we have?
+
+24
+00:01:18,450 --> 00:01:20,970
+We have these profs and these students
+
+25
+00:01:20,970 --> 00:01:25,023
+so we should be working
+with the profs directory.
+
+26
+00:01:26,610 --> 00:01:29,280
+So if I use ID on user Anna,
+
+27
+00:01:29,280 --> 00:01:33,300
+we can see user Anna is a member of profs
+
+28
+00:01:33,300 --> 00:01:38,300
+and likewise for Audrey,
+also a member of profs.
+
+29
+00:01:39,390 --> 00:01:42,390
+So I am going to open a shell as user Anna
+
+30
+00:01:42,390 --> 00:01:46,113
+and to the directory data profs.
+
+31
+00:01:47,130 --> 00:01:51,000
+And I am going to create
+a couple of files.
+
+32
+00:01:51,000 --> 00:01:53,520
+That should be enough, in LS minus L.
+
+33
+00:01:53,520 --> 00:01:54,360
+And what do we see?
+
+34
+00:01:54,360 --> 00:01:56,220
+We see that all of these files
+
+35
+00:01:56,220 --> 00:02:00,060
+are group owned by user Anna.
+
+36
+00:02:00,060 --> 00:02:01,560
+That's not what I wanted.
+
+37
+00:02:01,560 --> 00:02:05,730
+We need these to be group
+owned by the group profs,
+
+38
+00:02:05,730 --> 00:02:07,290
+not the group Anna.
+
+39
+00:02:07,290 --> 00:02:09,900
+So what are we going to do about it?
+
+40
+00:02:09,900 --> 00:02:14,190
+Well, we are going to apply, set group ID.
+
+41
+00:02:14,190 --> 00:02:15,960
+Before doing that, there's another thing
+
+42
+00:02:15,960 --> 00:02:17,520
+that I want you to be aware of.
+
+43
+00:02:17,520 --> 00:02:21,400
+I'm opening a shell as user
+Audrey, and if this user
+
+44
+00:02:23,580 --> 00:02:26,880
+goes to data profs, then what do we find?
+
+45
+00:02:26,880 --> 00:02:28,530
+Couple of files.
+
+46
+00:02:28,530 --> 00:02:32,430
+What do you think, is Audrey
+allowed to remove files?
+
+47
+00:02:32,430 --> 00:02:36,750
+Well, the answer is yes,
+because Audrey is a member
+
+48
+00:02:36,750 --> 00:02:38,551
+of the group profs and group profs
+
+49
+00:02:38,551 --> 00:02:40,500
+has right on the directory.
+
+50
+00:02:40,500 --> 00:02:42,600
+And with right on the directory,
+
+51
+00:02:42,600 --> 00:02:45,270
+you can remove, easy like that.
+
+52
+00:02:45,270 --> 00:02:48,630
+Let's go fix it, so how do we fix?
+
+53
+00:02:48,630 --> 00:02:53,630
+Well simple, chmod 3770 /data/profs.
+
+54
+00:02:56,760 --> 00:03:01,620
+So right now we can see that
+the permissions have changed.
+
+55
+00:03:01,620 --> 00:03:02,760
+How do we see that?
+
+56
+00:03:02,760 --> 00:03:05,310
+We see that the position
+where before we had X
+
+57
+00:03:05,310 --> 00:03:09,330
+or group execute, we now
+have S, lowercase S indicates
+
+58
+00:03:09,330 --> 00:03:12,390
+that we have set group ID
+as well as group execute.
+
+59
+00:03:12,390 --> 00:03:15,090
+And we have uppercase D, uppercase D,
+
+60
+00:03:15,090 --> 00:03:17,550
+which is for the sticky bit.
+
+61
+00:03:17,550 --> 00:03:22,050
+So that means that if I am
+logging in as user Anna again
+
+62
+00:03:22,050 --> 00:03:27,050
+and I go to that directory
+and I create a new file,
+
+63
+00:03:27,690 --> 00:03:29,670
+then on this new file,
+
+64
+00:03:29,670 --> 00:03:33,180
+we have the group profs automatically set
+
+65
+00:03:33,180 --> 00:03:35,010
+as the group owner.
+
+66
+00:03:35,010 --> 00:03:40,010
+Now, how about we log
+in as user Audrey again
+
+67
+00:03:40,110 --> 00:03:41,610
+and try to delete a file.
+
+68
+00:03:41,610 --> 00:03:42,960
+I mean, you do want to check
+
+69
+00:03:42,960 --> 00:03:45,330
+if it's working out all right, don't you?
+
+70
+00:03:45,330 --> 00:03:47,280
+So SU minus Audrey,
+
+71
+00:03:47,280 --> 00:03:51,030
+back to the data profs directory, and RM
+
+72
+00:03:51,030 --> 00:03:53,700
+minus F star and oh,
+
+73
+00:03:53,700 --> 00:03:56,040
+Audrey is getting operation not permitted.
+
+74
+00:03:56,040 --> 00:03:57,813
+And that's what sticky is doing.

@@ -1,0 +1,245 @@
+1
+00:00:06,510 --> 00:00:09,690
+- In this video, we'll talk
+about Secure Shell or SSH,
+
+2
+00:00:09,690 --> 00:00:12,240
+which can be used login you remotely.
+
+3
+00:00:12,240 --> 00:00:15,750
+By default, all RHEL servers
+run a Secure Shell server.
+
+4
+00:00:15,750 --> 00:00:18,403
+You can use systemctl to verify.
+
+5
+00:00:18,403 --> 00:00:20,700
+Systemctl is a part of systemd,
+
+6
+00:00:20,700 --> 00:00:24,072
+the manager of everything about
+which I will tell you later.
+
+7
+00:00:24,072 --> 00:00:28,836
+Systemctl status sshd should
+show you that SSH is running.
+
+8
+00:00:28,836 --> 00:00:31,470
+And SSH access is also allowed
+
+9
+00:00:31,470 --> 00:00:33,180
+through the firewall by default.
+
+10
+00:00:33,180 --> 00:00:34,713
+No need to do anything here.
+
+11
+00:00:35,730 --> 00:00:38,175
+Notice that root access is often denied.
+
+12
+00:00:38,175 --> 00:00:41,653
+It is in fact denied by default on RHEL9.
+
+13
+00:00:41,653 --> 00:00:46,290
+So by default, you cannot
+SSH into remote servers.
+
+14
+00:00:46,290 --> 00:00:49,170
+If you want to SSH to
+connect to a remote server
+
+15
+00:00:49,170 --> 00:00:51,630
+you need to find out a couple of things.
+
+16
+00:00:51,630 --> 00:00:54,780
+First, use "ip a" to find the IP address
+
+17
+00:00:54,780 --> 00:00:55,892
+of the remote server.
+
+18
+00:00:55,892 --> 00:00:59,730
+And then you can use SSH
+followed by the IP address
+
+19
+00:00:59,730 --> 00:01:01,620
+which will connect to this IP address
+
+20
+00:01:01,620 --> 00:01:03,202
+using your current user account.
+
+21
+00:01:03,202 --> 00:01:05,910
+If you don't want to use
+your current user account
+
+22
+00:01:05,910 --> 00:01:06,743
+that's also okay,
+
+23
+00:01:06,743 --> 00:01:10,470
+just use ssh username at IP address.
+
+24
+00:01:10,470 --> 00:01:13,200
+And that will connect
+you as a specific user.
+
+25
+00:01:13,200 --> 00:01:14,493
+Let's go check this out.
+
+26
+00:01:17,220 --> 00:01:21,629
+So to start with, I'm
+showing you sudo systemsctl,
+
+27
+00:01:21,629 --> 00:01:26,629
+status sshd, and now we can
+see that the sshd is running
+
+28
+00:01:28,290 --> 00:01:30,060
+and it's running as it should be.
+
+29
+00:01:30,060 --> 00:01:31,142
+For now, that's enough.
+
+30
+00:01:31,142 --> 00:01:34,710
+Now, ssh is for connecting
+to remote server.
+
+31
+00:01:34,710 --> 00:01:37,980
+In fact, I don't have a
+remote server here yet.
+
+32
+00:01:37,980 --> 00:01:39,570
+So, I'm using "ip a",
+
+33
+00:01:39,570 --> 00:01:42,423
+and I'm going to pretend
+that this is a remote server.
+
+34
+00:01:43,998 --> 00:01:45,720
+What I'm looking for here
+
+35
+00:01:45,720 --> 00:01:49,470
+is the IP address that is shown by "ip a."
+
+36
+00:01:49,470 --> 00:01:54,470
+And I am going to use SSH 192.168.29.211,
+
+37
+00:01:57,270 --> 00:01:58,350
+which is doing what?
+
+38
+00:01:58,350 --> 00:02:01,230
+It's opening the SSH session.
+
+39
+00:02:01,230 --> 00:02:04,980
+So, while doing so it receives
+an SSH key fingerprint
+
+40
+00:02:04,980 --> 00:02:06,720
+from the remote server.
+
+41
+00:02:06,720 --> 00:02:10,878
+And you need to store that
+in your local environment
+
+42
+00:02:10,878 --> 00:02:14,310
+so that the next time you
+can verify the authenticity
+
+43
+00:02:14,310 --> 00:02:16,080
+of the remote server,
+
+44
+00:02:16,080 --> 00:02:18,300
+then you enter the password
+for the remote user
+
+45
+00:02:18,300 --> 00:02:20,550
+and up, you're in.
+
+46
+00:02:20,550 --> 00:02:23,250
+Once you are done in your
+SSH session, you type "exit"
+
+47
+00:02:23,250 --> 00:02:26,073
+and you are back on the ordinary server.
+
+48
+00:02:27,000 --> 00:02:28,800
+Now, let's do this one more time
+
+49
+00:02:28,800 --> 00:02:31,677
+but this time specifying
+a username, root@.
+
+50
+00:02:33,000 --> 00:02:35,670
+So, it's prompting for the
+password of this user root.
+
+51
+00:02:35,670 --> 00:02:37,290
+And what do we get?
+
+52
+00:02:37,290 --> 00:02:38,717
+We get nothing.
+
+53
+00:02:38,717 --> 00:02:40,704
+Is that expected behavior?
+
+54
+00:02:40,704 --> 00:02:43,290
+Yes, that is expected behavior,
+
+55
+00:02:43,290 --> 00:02:47,250
+because if you don't specifically
+enable root SSH access
+
+56
+00:02:47,250 --> 00:02:50,763
+or RHEL9, route SSH access will be denied.

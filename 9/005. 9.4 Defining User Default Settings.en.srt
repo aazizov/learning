@@ -1,0 +1,246 @@
+1
+00:00:06,600 --> 00:00:10,230
+- In this video, we'll talk
+about user default settings.
+
+2
+00:00:10,230 --> 00:00:12,840
+The idea is you take care
+of the default settings
+
+3
+00:00:12,840 --> 00:00:14,790
+before creating your user.
+
+4
+00:00:14,790 --> 00:00:17,643
+And that's especially what
+you need to do on the exam.
+
+5
+00:00:18,480 --> 00:00:22,260
+You can use useradd -D to
+specify default settings.
+
+6
+00:00:22,260 --> 00:00:24,033
+I advise not to do that.
+
+7
+00:00:25,080 --> 00:00:27,430
+Also, don't have a look
+at /etc/default/useradd
+
+8
+00:00:28,890 --> 00:00:31,590
+because these are settings
+that apply to useradd only.
+
+9
+00:00:31,590 --> 00:00:32,550
+That's pretty useless.
+
+10
+00:00:32,550 --> 00:00:34,681
+If you want to set user default settings,
+
+11
+00:00:34,681 --> 00:00:36,110
+you modify the config file,
+
+12
+00:00:36,110 --> 00:00:38,370
+/etc/login.defs.
+
+13
+00:00:39,333 --> 00:00:41,370
+Files in /etc/skel are created
+
+14
+00:00:41,370 --> 00:00:43,383
+to the user home directly upon creation.
+
+15
+00:00:43,383 --> 00:00:46,730
+So, if you want files to
+be created automatically,
+
+16
+00:00:46,730 --> 00:00:49,080
+have a look at /etc/skel.
+
+17
+00:00:49,080 --> 00:00:51,600
+All right, now that you know
+about these default settings,
+
+18
+00:00:51,600 --> 00:00:54,030
+let's have a look at /etc/login.defs
+
+19
+00:00:54,030 --> 00:00:57,303
+which is the most important
+file for user default settings.
+
+20
+00:00:59,210 --> 00:01:03,630
+/etc/login/defs, here we go.
+
+21
+00:01:03,630 --> 00:01:04,825
+What do we have in this file?
+
+22
+00:01:04,825 --> 00:01:08,108
+We have a couple of important options.
+
+23
+00:01:08,108 --> 00:01:11,080
+It is a good read because many options
+
+24
+00:01:12,461 --> 00:01:15,270
+are well annotated and well explained.
+
+25
+00:01:15,270 --> 00:01:17,496
+But what you definitely need to look at
+
+26
+00:01:17,496 --> 00:01:20,700
+is what we find right here.
+
+27
+00:01:20,700 --> 00:01:24,815
+The Pass Max days, 99999.
+
+28
+00:01:24,815 --> 00:01:26,580
+You know how long that is?
+
+29
+00:01:26,580 --> 00:01:28,284
+That is 270 years,
+
+30
+00:01:28,284 --> 00:01:30,927
+count 270 years back.
+
+31
+00:01:30,927 --> 00:01:33,450
+That was before Napoleon in Europe.
+
+32
+00:01:33,450 --> 00:01:35,699
+That was before the Civil War in the US.
+
+33
+00:01:35,699 --> 00:01:38,710
+That was before Buzz
+Lightyear landed on the moon.
+
+34
+00:01:38,710 --> 00:01:41,100
+Okay, so let's change this
+
+35
+00:01:41,100 --> 00:01:44,115
+and let's make it like, 99 for instance.
+
+36
+00:01:44,115 --> 00:01:46,740
+There's a couple of other options as well,
+
+37
+00:01:46,740 --> 00:01:50,610
+I do like "Home mode" by the way, 0700.
+
+38
+00:01:50,610 --> 00:01:54,030
+0700 means that only the user has access
+
+39
+00:01:54,030 --> 00:01:54,942
+to the home directory.
+
+40
+00:01:54,942 --> 00:01:59,335
+And we can set some other
+properties in here as well.
+
+41
+00:01:59,335 --> 00:02:02,880
+Apart from that, there's
+/etc/skel, you know what?
+
+42
+00:02:02,880 --> 00:02:07,170
+Let me use "touch/etc/skel/hello."
+
+43
+00:02:07,170 --> 00:02:10,557
+And now, let's do "useradd bill."
+
+44
+00:02:11,400 --> 00:02:13,680
+And also "passwd bill,"
+
+45
+00:02:13,680 --> 00:02:15,840
+so that Bill has a password as well.
+
+46
+00:02:15,840 --> 00:02:19,890
+Going once for the password,
+going twice for the password.
+
+47
+00:02:19,890 --> 00:02:23,100
+And now, we can check
+out what has happened.
+
+48
+00:02:23,100 --> 00:02:26,250
+Well, for users on a Red Hat system
+
+49
+00:02:26,250 --> 00:02:28,470
+they get a home directory by default.
+
+50
+00:02:28,470 --> 00:02:30,840
+And if I do an LS on that home directory,
+
+51
+00:02:30,840 --> 00:02:35,044
+look at that, it has copied
+over the file from /etc/skel.
+
+52
+00:02:35,044 --> 00:02:39,060
+And if I would look up
+"user bill" in /etc/passwd
+
+53
+00:02:39,060 --> 00:02:41,910
+we can see the ordinary
+options, not a password one
+
+54
+00:02:41,910 --> 00:02:44,830
+because the password one
+is stored in /etc/shadow
+
+55
+00:02:44,830 --> 00:02:48,372
+but /etc/shadow does contain
+a couple of additional options
+
+56
+00:02:48,372 --> 00:02:51,060
+that I first separately need to explain.
+
+57
+00:02:51,060 --> 00:02:52,683
+So, let's talk about that later.

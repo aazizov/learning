@@ -1,0 +1,175 @@
+1
+00:00:06,630 --> 00:00:09,390
+- In this video, I wanna talk about awk.
+
+2
+00:00:09,390 --> 00:00:11,190
+So what is awk?
+
+3
+00:00:11,190 --> 00:00:14,910
+Well, awk is a very powerful
+text processing utility
+
+4
+00:00:14,910 --> 00:00:18,120
+that is specialized in data
+extraction and reporting.
+
+5
+00:00:18,120 --> 00:00:21,180
+It was developed in the late 1970s
+
+6
+00:00:21,180 --> 00:00:23,130
+when computers normally didn't even have
+
+7
+00:00:23,130 --> 00:00:25,350
+a screen attached to it
+
+8
+00:00:25,350 --> 00:00:28,800
+and you needed to perform
+your operations line based.
+
+9
+00:00:28,800 --> 00:00:30,840
+And that is where awk is coming from.
+
+10
+00:00:30,840 --> 00:00:33,240
+So very powerful in analyzing fails
+
+11
+00:00:33,240 --> 00:00:36,420
+and performing operations
+on specific lines.
+
+12
+00:00:36,420 --> 00:00:40,800
+And these operations are
+performed based on selectors.
+
+13
+00:00:40,800 --> 00:00:43,440
+Now, there are so many things
+that you can do at awk,
+
+14
+00:00:43,440 --> 00:00:46,890
+but most of these things
+have lost their usefulness.
+
+15
+00:00:46,890 --> 00:00:49,590
+I am going to show you
+a couple of examples
+
+16
+00:00:49,590 --> 00:00:51,033
+which I consider useful.
+
+17
+00:00:53,880 --> 00:00:57,390
+Okay, our first example
+is awk minus F, a colon.
+
+18
+00:00:57,390 --> 00:01:00,180
+That's the field separator in awk,
+
+19
+00:01:00,180 --> 00:01:02,613
+and I am using print,
+
+20
+00:01:04,080 --> 00:01:09,080
+dollar four on etc passwd,
+
+21
+00:01:09,540 --> 00:01:10,650
+which is giving what?
+
+22
+00:01:10,650 --> 00:01:12,030
+Well, it's giving user IDs.
+
+23
+00:01:12,030 --> 00:01:13,773
+I'll tell you about these later.
+
+24
+00:01:14,640 --> 00:01:17,070
+Now, let me show you how
+awk can become useful
+
+25
+00:01:17,070 --> 00:01:22,070
+using awk minus F colon, and
+next between single quotes,
+
+26
+00:01:23,010 --> 00:01:27,600
+I'm putting student and
+them between curly braces,
+
+27
+00:01:27,600 --> 00:01:29,643
+print dollar four,
+
+28
+00:01:32,093 --> 00:01:35,100
+etc passedwd,
+
+29
+00:01:35,100 --> 00:01:36,180
+which is doing what?
+
+30
+00:01:36,180 --> 00:01:37,320
+It's printing dollar four
+
+31
+00:01:37,320 --> 00:01:40,230
+but only for lines at max, a text student.
+
+32
+00:01:40,230 --> 00:01:43,890
+And in fact, this is something that
+
+33
+00:01:43,890 --> 00:01:46,710
+is actually a pretty
+complex scripting operation
+
+34
+00:01:46,710 --> 00:01:49,473
+in one single line in awk.
+
+35
+00:01:50,670 --> 00:01:54,311
+Also pretty common is the NF.
+
+36
+00:01:54,311 --> 00:01:59,311
+Now what is NF, if I use awk
+print dollar NF, etc passwd.
+
+37
+00:02:03,570 --> 00:02:06,240
+Showing the last field.
+
+38
+00:02:06,240 --> 00:02:09,150
+This dollar NF is the
+last field in the line.
+
+39
+00:02:09,150 --> 00:02:10,230
+And that's very convenient
+
+40
+00:02:10,230 --> 00:02:13,143
+if you don't know exactly
+how many fields there are.

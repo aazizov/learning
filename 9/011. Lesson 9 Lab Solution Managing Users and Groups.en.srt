@@ -1,0 +1,309 @@
+1
+00:00:06,690 --> 00:00:10,470
+- All right, so let's start
+with the password option
+
+2
+00:00:10,470 --> 00:00:12,570
+which is the login.defs.
+
+3
+00:00:12,570 --> 00:00:13,890
+We already talked about it,
+
+4
+00:00:13,890 --> 00:00:16,440
+so I just have to change the 99 to 90
+
+5
+00:00:16,440 --> 00:00:18,093
+to match the requirement here.
+
+6
+00:00:19,200 --> 00:00:21,810
+Next, we need to make
+sure that the new files
+
+7
+00:00:21,810 --> 00:00:24,030
+are created to the home directory.
+
+8
+00:00:24,030 --> 00:00:27,780
+So touch/etc/skel/newfile,
+
+9
+00:00:27,780 --> 00:00:30,270
+anything in etc skel will be copied
+
+10
+00:00:30,270 --> 00:00:31,890
+to the user home directory.
+
+11
+00:00:31,890 --> 00:00:35,220
+It's mainly for configuration files
+
+12
+00:00:35,220 --> 00:00:37,113
+for the bash shell environment.
+
+13
+00:00:38,040 --> 00:00:41,730
+Then we need to create users,
+anna, audrey, linda and lisa.
+
+14
+00:00:41,730 --> 00:00:45,720
+So useradd anna, do I have to do that?
+
+15
+00:00:45,720 --> 00:00:47,518
+No, we already have an anna.
+
+16
+00:00:47,518 --> 00:00:51,630
+Useradd audrey, that's the
+user that I don't have yet.
+
+17
+00:00:51,630 --> 00:00:53,760
+How about linda?
+
+18
+00:00:53,760 --> 00:00:55,320
+Well, we can just try it.
+
+19
+00:00:55,320 --> 00:00:58,740
+We get an error if the user
+already exists and that's okay.
+
+20
+00:00:58,740 --> 00:01:01,560
+We just need to make sure
+that users are there.
+
+21
+00:01:01,560 --> 00:01:04,890
+Set password for anna
+and audrey to password.
+
+22
+00:01:04,890 --> 00:01:06,240
+Let me do something funny.
+
+23
+00:01:06,240 --> 00:01:11,240
+Echo password pipe
+passwd minus minus stdin
+
+24
+00:01:13,800 --> 00:01:16,650
+which is taking the password out of a pipe
+
+25
+00:01:16,650 --> 00:01:21,650
+for user anna and also for user audrey.
+
+26
+00:01:22,080 --> 00:01:24,120
+This is not a very secure option
+
+27
+00:01:24,120 --> 00:01:27,150
+because if you don't do anything,
+it will be kept in memory.
+
+28
+00:01:27,150 --> 00:01:29,430
+But this is definitely something cool
+
+29
+00:01:29,430 --> 00:01:30,990
+for automated solutions.
+
+30
+00:01:30,990 --> 00:01:33,570
+Now we need to disable the passwords
+
+31
+00:01:33,570 --> 00:01:35,310
+for user linda and lisa.
+
+32
+00:01:35,310 --> 00:01:38,580
+Did you know that you can
+also do that using passwd?
+
+33
+00:01:38,580 --> 00:01:40,290
+We have seen that with usermod
+
+34
+00:01:40,290 --> 00:01:42,780
+but I'm going to use passwd.
+
+35
+00:01:42,780 --> 00:01:44,730
+Lock the password for the named account.
+
+36
+00:01:44,730 --> 00:01:45,990
+That's what we need.
+
+37
+00:01:45,990 --> 00:01:50,580
+So passwd minus l linda will lock you,
+
+38
+00:01:50,580 --> 00:01:53,643
+so linda and lisa will be locked as well.
+
+39
+00:01:54,600 --> 00:01:58,920
+Then finally, we need to create
+the group profs and students
+
+40
+00:01:58,920 --> 00:02:01,350
+and make user anna and
+audrey members of profs
+
+41
+00:02:01,350 --> 00:02:03,810
+and linda and lisa members of student.
+
+42
+00:02:03,810 --> 00:02:06,840
+So groupadd profs
+
+43
+00:02:06,840 --> 00:02:10,440
+and groupadd students.
+
+44
+00:02:10,440 --> 00:02:12,960
+And then what was this nice option again?
+
+45
+00:02:12,960 --> 00:02:14,700
+Groupadd minus minus help.
+
+46
+00:02:14,700 --> 00:02:16,440
+Hey everybody, this is really something
+
+47
+00:02:16,440 --> 00:02:19,080
+that I would recommend to
+do on the exam as well.
+
+48
+00:02:19,080 --> 00:02:20,700
+On the exam, you will have these moments
+
+49
+00:02:20,700 --> 00:02:22,770
+where you think, oh, what
+was this option again?
+
+50
+00:02:22,770 --> 00:02:23,970
+You don't remember.
+
+51
+00:02:23,970 --> 00:02:25,290
+That's no problem.
+
+52
+00:02:25,290 --> 00:02:30,290
+Just use minus minus help, so
+that we see groupadd minus u
+
+53
+00:02:33,000 --> 00:02:35,110
+anna and audrey
+
+54
+00:02:38,940 --> 00:02:39,843
+on profs.
+
+55
+00:02:42,360 --> 00:02:45,630
+Oops, did I really do
+a groupadd? My mistake.
+
+56
+00:02:45,630 --> 00:02:47,250
+That should be a groupmod.
+
+57
+00:02:47,250 --> 00:02:48,753
+But hey, it's convenient to see
+
+58
+00:02:48,753 --> 00:02:51,090
+that groupadd can use the same options.
+
+59
+00:02:51,090 --> 00:02:56,090
+And now let me do an lid
+on profs to figure out
+
+60
+00:02:56,700 --> 00:02:58,803
+which users are a member.
+
+61
+00:03:02,070 --> 00:03:06,480
+And next, let me use
+an lid minus g on profs
+
+62
+00:03:06,480 --> 00:03:08,580
+to verify that this worked out all right.
+
+63
+00:03:08,580 --> 00:03:09,720
+And yeah, it did.
+
+64
+00:03:09,720 --> 00:03:11,730
+And now we can do it right from the start.
+
+65
+00:03:11,730 --> 00:03:16,730
+Groupmod minus U lisa
+and linda on students
+
+66
+00:03:18,150 --> 00:03:23,150
+and lid minus g students
+
+67
+00:03:23,700 --> 00:03:25,380
+and what do we see?
+
+68
+00:03:25,380 --> 00:03:27,900
+We see the members of this group
+
+69
+00:03:27,900 --> 00:03:30,510
+and that is how you
+could have done this lap.
+
+70
+00:03:30,510 --> 00:03:33,030
+Of course, different
+solutions are possible,
+
+71
+00:03:33,030 --> 00:03:36,180
+but in the end the only thing
+that matters is the result
+
+72
+00:03:36,180 --> 00:03:37,930
+and that's what we have right here.

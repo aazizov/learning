@@ -1,0 +1,205 @@
+1
+00:00:07,020 --> 00:00:09,720
+- The su command is used
+to switch user accounts
+
+2
+00:00:09,720 --> 00:00:11,073
+from a shell environment.
+
+3
+00:00:12,000 --> 00:00:15,300
+And you can use the su
+command with a - option,
+
+4
+00:00:15,300 --> 00:00:17,850
+which allows you to load
+the complete environment
+
+5
+00:00:17,850 --> 00:00:19,200
+of the target user as well.
+
+6
+00:00:20,155 --> 00:00:21,960
+And while using su, the password
+
+7
+00:00:21,960 --> 00:00:24,270
+of the target user is entered.
+
+8
+00:00:24,270 --> 00:00:26,190
+And if the root user has a password
+
+9
+00:00:26,190 --> 00:00:29,493
+you can use su - or su on a root as well.
+
+10
+00:00:30,780 --> 00:00:32,790
+Using su - to open a root shell
+
+11
+00:00:32,790 --> 00:00:36,843
+is considered bad practice
+however, use sudo -i instead.
+
+12
+00:00:37,920 --> 00:00:41,370
+The main benefit of sudo -i
+is that nobody has to know
+
+13
+00:00:41,370 --> 00:00:45,390
+the the root password, and
+it's for authorized uses only,
+
+14
+00:00:45,390 --> 00:00:47,460
+that makes it more secure.
+
+15
+00:00:47,460 --> 00:00:49,489
+What is convenient about su,
+
+16
+00:00:49,489 --> 00:00:53,790
+is that you can also use it for
+testing other user accounts.
+
+17
+00:00:53,790 --> 00:00:55,890
+And that is something that
+we are going to do a lot
+
+18
+00:00:55,890 --> 00:00:58,110
+in the next couple of lessons.
+
+19
+00:00:58,110 --> 00:01:00,150
+As administrator, you create a user,
+
+20
+00:01:00,150 --> 00:01:03,450
+you assign some permission,
+you wanna test use su -
+
+21
+00:01:03,450 --> 00:01:06,690
+to figure out if it works out as expected.
+
+22
+00:01:06,690 --> 00:01:07,923
+Let's do a quick demo.
+
+23
+00:01:10,710 --> 00:01:14,610
+So here I am in a shell
+as my ordinary user
+
+24
+00:01:14,610 --> 00:01:19,320
+I'm using su - anna, it's
+prompting for a password.
+
+25
+00:01:19,320 --> 00:01:20,910
+Whose password would that be?
+
+26
+00:01:20,910 --> 00:01:22,650
+Password of the target user,
+
+27
+00:01:22,650 --> 00:01:26,520
+su is always prompting for the
+password of the target user.
+
+28
+00:01:26,520 --> 00:01:29,400
+That means that if you
+are an ordinary user
+
+29
+00:01:29,400 --> 00:01:31,050
+and you want to use su a lot,
+
+30
+00:01:31,050 --> 00:01:33,183
+you need to know lots of passwords.
+
+31
+00:01:34,440 --> 00:01:36,810
+But at this moment I have a subshell
+
+32
+00:01:36,810 --> 00:01:40,170
+and in that subshell and
+whoami is going to prove it,
+
+33
+00:01:40,170 --> 00:01:42,540
+my user identity is Anna.
+
+34
+00:01:42,540 --> 00:01:45,600
+Using exit to get back
+to the student shell,
+
+35
+00:01:45,600 --> 00:01:47,250
+and then we are all done.
+
+36
+00:01:47,250 --> 00:01:50,730
+Now if I use su - as mentioned,
+
+37
+00:01:50,730 --> 00:01:53,910
+it's always recommended
+to use a minus with su.
+
+38
+00:01:53,910 --> 00:01:55,680
+It's prompting for a password, again,
+
+39
+00:01:55,680 --> 00:01:58,140
+this time the password of the root user.
+
+40
+00:01:58,140 --> 00:02:00,333
+As you can see I'm in a root shell.
+
+41
+00:02:01,200 --> 00:02:05,520
+Now the fun thing is that
+user root can su into anybody.
+
+42
+00:02:05,520 --> 00:02:08,160
+So if root would use su - anna,
+
+43
+00:02:08,160 --> 00:02:10,530
+root is not prompted
+for a password at all.
+
+44
+00:02:10,530 --> 00:02:13,170
+And that is what makes su convenient.
+
+45
+00:02:13,170 --> 00:02:15,300
+If you have administrative privileges
+
+46
+00:02:15,300 --> 00:02:17,280
+and you want to test access rights
+
+47
+00:02:17,280 --> 00:02:19,893
+for specifics users this is the way to go.

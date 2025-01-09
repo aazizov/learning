@@ -1,0 +1,270 @@
+1
+00:00:06,990 --> 00:00:09,120
+- All right, in order to do this lab,
+
+2
+00:00:09,120 --> 00:00:10,590
+we need to do two things.
+
+3
+00:00:10,590 --> 00:00:13,170
+Well in the lab, I'm
+reading default permissions.
+
+4
+00:00:13,170 --> 00:00:15,810
+And as I read default permissions,
+
+5
+00:00:15,810 --> 00:00:18,000
+I think before we do
+anything it's a good idea
+
+6
+00:00:18,000 --> 00:00:19,923
+to start with the default permissions.
+
+7
+00:00:20,790 --> 00:00:23,700
+These default permissions
+should apply to all users.
+
+8
+00:00:23,700 --> 00:00:27,060
+So etc bashrc is what we need.
+
+9
+00:00:27,060 --> 00:00:30,060
+Now, if you are going
+to modify etc bashrc,
+
+10
+00:00:30,060 --> 00:00:31,860
+then you need to be very careful
+
+11
+00:00:31,860 --> 00:00:34,860
+to do it in the right location.
+
+12
+00:00:34,860 --> 00:00:37,500
+In etc bashrc, we can see that umask
+
+13
+00:00:37,500 --> 00:00:39,513
+is set by some shell script.
+
+14
+00:00:40,470 --> 00:00:42,480
+Now this might be a little bit too much
+
+15
+00:00:42,480 --> 00:00:46,410
+to understand all the way by
+yourself but I can explain.
+
+16
+00:00:46,410 --> 00:00:50,640
+If the user ID is greater than 199,
+
+17
+00:00:50,640 --> 00:00:54,000
+then we set umask to 002.
+
+18
+00:00:54,000 --> 00:00:56,970
+And else, we set umask to 022.
+
+19
+00:00:56,970 --> 00:00:58,290
+What does that mean?
+
+20
+00:00:58,290 --> 00:01:00,480
+Well, effectively it
+means that ordinary users
+
+21
+00:01:00,480 --> 00:01:02,460
+have the umask 002.
+
+22
+00:01:02,460 --> 00:01:05,460
+The root user has the umask 022.
+
+23
+00:01:05,460 --> 00:01:08,700
+And if I want to change
+that, I can do it right here.
+
+24
+00:01:08,700 --> 00:01:11,970
+I make that umask 007.
+
+25
+00:01:11,970 --> 00:01:15,450
+So that ensures that any
+file that the user creates
+
+26
+00:01:15,450 --> 00:01:18,390
+is a readable, writeable, and executable,
+
+27
+00:01:18,390 --> 00:01:21,420
+if that applies to the
+user, as well as the group,
+
+28
+00:01:21,420 --> 00:01:23,973
+and others has no access at all.
+
+29
+00:01:25,200 --> 00:01:29,610
+So then the other part of
+the lab, for this other part,
+
+30
+00:01:29,610 --> 00:01:34,610
+we need two directories,
+mkdir -p/data/profs.
+
+31
+00:01:35,160 --> 00:01:39,150
+And we need mkdir -p/data for students.
+
+32
+00:01:39,150 --> 00:01:43,080
+You remember the minus P option
+is creating the entire path
+
+33
+00:01:43,080 --> 00:01:46,950
+and that allows you to create
+a sub directory structure,
+
+34
+00:01:46,950 --> 00:01:49,383
+even if the parent
+directly does not exist.
+
+35
+00:01:50,460 --> 00:01:52,860
+Now we need to apply some changes here.
+
+36
+00:01:52,860 --> 00:01:54,510
+So if you read it,
+
+37
+00:01:54,510 --> 00:01:56,550
+create a shared group directory structure,
+
+38
+00:01:56,550 --> 00:01:57,720
+we just did that.
+
+39
+00:01:57,720 --> 00:01:59,370
+That meets the following requirements.
+
+40
+00:01:59,370 --> 00:02:01,860
+Members of the groups have
+full read and write access
+
+41
+00:02:01,860 --> 00:02:04,950
+to their directories and others
+have no permissions at all.
+
+42
+00:02:04,950 --> 00:02:05,970
+That's pretty simple.
+
+43
+00:02:05,970 --> 00:02:10,970
+Chgrp-profs on profs and
+Chgrp students on students.
+
+44
+00:02:14,190 --> 00:02:18,210
+And let's students with an S.
+
+45
+00:02:18,210 --> 00:02:20,340
+Let's verify using ls -l.
+
+46
+00:02:20,340 --> 00:02:22,650
+We can see that the
+permissions are said correctly
+
+47
+00:02:22,650 --> 00:02:27,510
+and now we can use chmod
+770 on these directories.
+
+48
+00:02:27,510 --> 00:02:29,340
+We need to do that for students,
+
+49
+00:02:29,340 --> 00:02:32,700
+as well as for the profs directory.
+
+50
+00:02:32,700 --> 00:02:36,120
+And let's verify using ls -l
+
+51
+00:02:36,120 --> 00:02:39,450
+and there we can see that
+everything is looking all right.
+
+52
+00:02:39,450 --> 00:02:42,510
+So the profs and the students
+are owners of that directory.
+
+53
+00:02:42,510 --> 00:02:45,240
+Others is no business
+being in that directory.
+
+54
+00:02:45,240 --> 00:02:48,810
+And in case you're wonder
+about the user owner,
+
+55
+00:02:48,810 --> 00:02:51,930
+well, the user owner we really
+don't care about user owner
+
+56
+00:02:51,930 --> 00:02:53,400
+because that is a root
+
+57
+00:02:53,400 --> 00:02:57,570
+and you know the root
+user has access anyway.
+
+58
+00:02:57,570 --> 00:03:01,260
+So if the question was
+phrased like this on the exam
+
+59
+00:03:01,260 --> 00:03:04,890
+then I would say, if they don't
+ask anything about the user
+
+60
+00:03:04,890 --> 00:03:06,870
+just don't touch it, keep it as it is,
+
+61
+00:03:06,870 --> 00:03:07,713
+it'll be good.

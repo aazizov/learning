@@ -1,0 +1,163 @@
+1
+00:00:06,660 --> 00:00:10,830
+- An important property of
+the user is group membership.
+
+2
+00:00:10,830 --> 00:00:13,890
+Each user must be a member
+of at least one group.
+
+3
+00:00:13,890 --> 00:00:15,150
+That's a primary group,
+
+4
+00:00:15,150 --> 00:00:17,823
+and the primary group is
+created automatically.
+
+5
+00:00:19,020 --> 00:00:21,030
+That happens when you create a user.
+
+6
+00:00:21,030 --> 00:00:22,110
+At that moment,
+
+7
+00:00:22,110 --> 00:00:24,180
+a primary group with the
+same name of the user
+
+8
+00:00:24,180 --> 00:00:25,920
+is created as well.
+
+9
+00:00:25,920 --> 00:00:29,610
+Primary group membership is
+managed through /etc/passwd.
+
+10
+00:00:29,610 --> 00:00:31,500
+The user of primary group is so important
+
+11
+00:00:31,500 --> 00:00:35,220
+because it becomes group-owner
+if a user creates a file.
+
+12
+00:00:35,220 --> 00:00:37,560
+Additional groups can be defined as well.
+
+13
+00:00:37,560 --> 00:00:39,690
+That's a secondary group membership,
+
+14
+00:00:39,690 --> 00:00:41,310
+and the secondary group membership
+
+15
+00:00:41,310 --> 00:00:43,650
+is managed through /etc/groups.
+
+16
+00:00:43,650 --> 00:00:46,350
+Secondary group membership
+is normal, convenient.
+
+17
+00:00:46,350 --> 00:00:49,950
+If a user needs additional
+access to some functionality,
+
+18
+00:00:49,950 --> 00:00:51,870
+think of the group wheel, for instance,
+
+19
+00:00:51,870 --> 00:00:53,130
+that you would use to make sure
+
+20
+00:00:53,130 --> 00:00:55,953
+that the user can use des using sudo.
+
+21
+00:00:57,060 --> 00:01:00,300
+A user can temporarily set
+primary group membership
+
+22
+00:01:00,300 --> 00:01:02,190
+using newgrp.
+
+23
+00:01:02,190 --> 00:01:03,600
+That might be convenient
+
+24
+00:01:03,600 --> 00:01:06,240
+if you want to take some functionality
+
+25
+00:01:06,240 --> 00:01:08,100
+after your account has been changed
+
+26
+00:01:08,100 --> 00:01:09,840
+without logging in again,
+
+27
+00:01:09,840 --> 00:01:12,840
+because if properties
+of a user are changed,
+
+28
+00:01:12,840 --> 00:01:15,150
+the user needs to log in again
+
+29
+00:01:15,150 --> 00:01:16,890
+to make these properties effective.
+
+30
+00:01:16,890 --> 00:01:18,720
+That's not always convenient.
+
+31
+00:01:18,720 --> 00:01:20,700
+You are currently logged in as a user,
+
+32
+00:01:20,700 --> 00:01:22,500
+and the administrator grants you access
+
+33
+00:01:22,500 --> 00:01:24,720
+to the group wheel, for instance,
+
+34
+00:01:24,720 --> 00:01:26,733
+just type newgrp wheel.
+
+35
+00:01:27,870 --> 00:01:29,940
+The id command is convenient because
+
+36
+00:01:29,940 --> 00:01:33,000
+it will show you which
+group a user is a member of.
+
+37
+00:01:33,000 --> 00:01:33,960
+In the next video,
+
+38
+00:01:33,960 --> 00:01:37,293
+I'll demonstrate how to manage
+groups and group membership.

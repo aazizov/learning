@@ -1,0 +1,96 @@
+1
+00:00:06,630 --> 00:00:09,180
+- In this video, I'll
+tell you about ownership.
+
+2
+00:00:09,180 --> 00:00:12,330
+Ownership is very important
+in Linux permissions.
+
+3
+00:00:12,330 --> 00:00:14,940
+And that is because
+ownership is the first thing
+
+4
+00:00:14,940 --> 00:00:18,180
+to determine which permissions a user has.
+
+5
+00:00:18,180 --> 00:00:20,700
+Every file has a user-owner, a group-owner
+
+6
+00:00:20,700 --> 00:00:22,410
+and the others entity,
+
+7
+00:00:22,410 --> 00:00:24,570
+that is also granted permissions.
+
+8
+00:00:24,570 --> 00:00:26,550
+We refer to that as ugo.
+
+9
+00:00:26,550 --> 00:00:29,130
+Ugo for user group and others.
+
+10
+00:00:29,130 --> 00:00:31,530
+Linux permissions are not additive.
+
+11
+00:00:31,530 --> 00:00:32,490
+If you're the owner,
+
+12
+00:00:32,490 --> 00:00:34,560
+permissions are applied and that's all.
+
+13
+00:00:34,560 --> 00:00:37,140
+So, when you are the owner,
+
+14
+00:00:37,140 --> 00:00:39,630
+nobody looks at the
+permissions that you got
+
+15
+00:00:39,630 --> 00:00:41,733
+from possible group membership.
+
+16
+00:00:42,570 --> 00:00:45,660
+You can use ls-l to
+display current ownership
+
+17
+00:00:45,660 --> 00:00:47,790
+and associated permissions.
+
+18
+00:00:47,790 --> 00:00:50,130
+And as the best practice,
+
+19
+00:00:50,130 --> 00:00:51,960
+if you are going to set permissions,
+
+20
+00:00:51,960 --> 00:00:53,430
+first set ownership.
+
+21
+00:00:53,430 --> 00:00:55,440
+And then you modify permissions.
+
+22
+00:00:55,440 --> 00:00:57,300
+That makes it easier to keep the overview
+
+23
+00:00:57,300 --> 00:00:58,400
+of what you are doing.

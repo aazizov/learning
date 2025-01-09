@@ -1,0 +1,618 @@
+1
+00:00:06,990 --> 00:00:09,630
+- Did I already tell you
+what grep stands for?
+
+2
+00:00:09,630 --> 00:00:12,930
+It's a generic regular expression parser.
+
+3
+00:00:12,930 --> 00:00:15,330
+So, what is a regular expression?
+
+4
+00:00:15,330 --> 00:00:17,520
+Well, regular expressions
+are text patterns
+
+5
+00:00:17,520 --> 00:00:20,760
+that are used by tools
+like grep and others,
+
+6
+00:00:20,760 --> 00:00:23,280
+and they are very, very powerful.
+
+7
+00:00:23,280 --> 00:00:25,080
+Always put your regular expression,
+
+8
+00:00:25,080 --> 00:00:27,270
+or regex as it's also called,
+
+9
+00:00:27,270 --> 00:00:29,850
+between single quotes.
+
+10
+00:00:29,850 --> 00:00:33,270
+And don't confuse regular
+expressions with globbing.
+
+11
+00:00:33,270 --> 00:00:35,640
+Globbing are shell wildcards
+
+12
+00:00:35,640 --> 00:00:39,150
+and regular expressions
+are regular expressions.
+
+13
+00:00:39,150 --> 00:00:41,460
+And the confusing thing is
+that the regular expressions
+
+14
+00:00:41,460 --> 00:00:44,310
+look like file globbing,
+but they are not the same.
+
+15
+00:00:44,310 --> 00:00:45,840
+And that is why it's so important
+
+16
+00:00:45,840 --> 00:00:49,200
+to put your regular expression
+between single quotes
+
+17
+00:00:49,200 --> 00:00:51,570
+to avoid interpretation problems,
+
+18
+00:00:51,570 --> 00:00:54,630
+especially if you are going
+to use special characters,
+
+19
+00:00:54,630 --> 00:00:56,880
+as you can see in this example right here,
+
+20
+00:00:56,880 --> 00:00:59,193
+where we grep for a star in a star.
+
+21
+00:01:00,510 --> 00:01:03,420
+Now, regular expressions
+can be a bit confusing.
+
+22
+00:01:03,420 --> 00:01:05,340
+They only work with specific tools,
+
+23
+00:01:05,340 --> 00:01:08,190
+like grep, and vim, and awk, and sed.
+
+24
+00:01:08,190 --> 00:01:10,680
+And sometimes these specific tools
+
+25
+00:01:10,680 --> 00:01:13,590
+have their own subset
+of regular expressions.
+
+26
+00:01:13,590 --> 00:01:16,050
+That means that what
+might work in one tool
+
+27
+00:01:16,050 --> 00:01:18,690
+doesn't have to work the
+same way in another tool.
+
+28
+00:01:18,690 --> 00:01:21,120
+That makes it a bit confusing.
+
+29
+00:01:21,120 --> 00:01:23,010
+If you want, you can check the man page,
+
+30
+00:01:23,010 --> 00:01:25,290
+man 7 regex, for details,
+
+31
+00:01:25,290 --> 00:01:26,700
+but I can tell you,
+
+32
+00:01:26,700 --> 00:01:28,920
+that's a man page that
+is heavily overloaded
+
+33
+00:01:28,920 --> 00:01:31,440
+with information you
+don't wanna know about.
+
+34
+00:01:31,440 --> 00:01:33,900
+Maybe you're better off
+just trying to understand
+
+35
+00:01:33,900 --> 00:01:36,153
+the examples that I'm going to show you.
+
+36
+00:01:37,410 --> 00:01:39,090
+Before I'm doing that,
+
+37
+00:01:39,090 --> 00:01:43,200
+let me explain why regular
+expressions are confusing.
+
+38
+00:01:43,200 --> 00:01:46,080
+Well, the confusing part is
+that there are several sets
+
+39
+00:01:46,080 --> 00:01:48,060
+of regular expressions.
+
+40
+00:01:48,060 --> 00:01:51,210
+The basic regular expressions
+work with most tools.
+
+41
+00:01:51,210 --> 00:01:54,180
+Extended regular expressions
+don't always work
+
+42
+00:01:54,180 --> 00:01:59,180
+and use grep -E if it's an
+extended regular expression.
+
+43
+00:01:59,370 --> 00:02:01,320
+And some scripting languages, like Perl,
+
+44
+00:02:01,320 --> 00:02:03,900
+come with their own regular expressions.
+
+45
+00:02:03,900 --> 00:02:05,910
+And that's going to be problematic.
+
+46
+00:02:05,910 --> 00:02:09,270
+If you Google for a
+regular expression example,
+
+47
+00:02:09,270 --> 00:02:11,940
+and it happens to be an
+extended regular expression,
+
+48
+00:02:11,940 --> 00:02:13,110
+and you use it in a tool
+
+49
+00:02:13,110 --> 00:02:15,840
+that doesn't do extended
+regular expressions,
+
+50
+00:02:15,840 --> 00:02:17,310
+well, it's not going to work,
+
+51
+00:02:17,310 --> 00:02:19,200
+and that's confusing.
+
+52
+00:02:19,200 --> 00:02:22,050
+So here, on the slide, we
+have a couple of examples,
+
+53
+00:02:22,050 --> 00:02:24,303
+and I am just going to run these for you.
+
+54
+00:02:27,690 --> 00:02:29,760
+Okay, the best way to try to understand
+
+55
+00:02:29,760 --> 00:02:33,600
+these regular expressions is
+by having a look at a file.
+
+56
+00:02:33,600 --> 00:02:35,970
+I created this file for you.
+
+57
+00:02:35,970 --> 00:02:40,230
+So let's start with a
+simple regular expression,
+
+58
+00:02:40,230 --> 00:02:45,230
+grep single quote l on users.
+
+59
+00:02:45,840 --> 00:02:47,220
+What is this going to do?
+
+60
+00:02:47,220 --> 00:02:48,630
+Well, we just need to understand
+
+61
+00:02:48,630 --> 00:02:50,460
+what the regular expression is doing.
+
+62
+00:02:50,460 --> 00:02:53,640
+This is printing all lines
+that match the pattern l.
+
+63
+00:02:53,640 --> 00:02:56,190
+And you can see there's a couple of them.
+
+64
+00:02:56,190 --> 00:02:59,490
+Now, if we put, as we call,
+an anchor in front of it,
+
+65
+00:02:59,490 --> 00:03:02,520
+the caret, then we can
+see lines starting with.
+
+66
+00:03:02,520 --> 00:03:06,570
+So caret string is for
+lines starting with.
+
+67
+00:03:06,570 --> 00:03:11,570
+You can also do the opposite, like anna$,
+
+68
+00:03:11,610 --> 00:03:13,740
+which is for lines ending with.
+
+69
+00:03:13,740 --> 00:03:16,710
+And that is giving a
+match on leanna and anna
+
+70
+00:03:16,710 --> 00:03:18,390
+but also on bananna
+
+71
+00:03:18,390 --> 00:03:20,520
+because, in the end,
+the regular expression
+
+72
+00:03:20,520 --> 00:03:23,820
+isn't checking if it's a word or whatever.
+
+73
+00:03:23,820 --> 00:03:27,930
+Now, if it's about
+words, you might like \b.
+
+74
+00:03:27,930 --> 00:03:29,430
+So, what is that doing?
+
+75
+00:03:29,430 --> 00:03:32,953
+Well, grep anna\b
+
+76
+00:03:36,630 --> 00:03:40,720
+on users is giving a match on anna.
+
+77
+00:03:42,720 --> 00:03:44,850
+Anna is a word.
+
+78
+00:03:44,850 --> 00:03:46,680
+So, how can we see that?
+
+79
+00:03:46,680 --> 00:03:49,260
+Well, we can see that because
+annabelle is not there.
+
+80
+00:03:49,260 --> 00:03:50,970
+It's also starting with anna,
+
+81
+00:03:50,970 --> 00:03:53,370
+but there's no space
+between anna and belle,
+
+82
+00:03:53,370 --> 00:03:54,690
+and that is why.
+
+83
+00:03:54,690 --> 00:03:59,490
+Now, kind of confusing
+in regular expressions
+
+84
+00:03:59,490 --> 00:04:01,860
+are the repeating operators.
+
+85
+00:04:01,860 --> 00:04:04,160
+Let's do grep b.*t
+
+86
+00:04:08,370 --> 00:04:12,000
+on users, which is giving what?
+
+87
+00:04:12,000 --> 00:04:14,160
+Well, it's giving a lot of results,
+
+88
+00:04:14,160 --> 00:04:16,260
+but how do we explain the result?
+
+89
+00:04:16,260 --> 00:04:18,870
+Well, we have two things
+in the regular expression.
+
+90
+00:04:18,870 --> 00:04:19,770
+We have a dot.
+
+91
+00:04:19,770 --> 00:04:21,900
+The dot is for one single character.
+
+92
+00:04:21,900 --> 00:04:23,250
+And then, we have the star.
+
+93
+00:04:23,250 --> 00:04:26,130
+And the star is for zero or more times.
+
+94
+00:04:26,130 --> 00:04:30,360
+So that means that we may or
+we may not have one character,
+
+95
+00:04:30,360 --> 00:04:32,703
+and it can also be multiple characters.
+
+96
+00:04:33,630 --> 00:04:36,300
+And, in case you think
+that is too confusing,
+
+97
+00:04:36,300 --> 00:04:39,120
+let me make it a little
+bit more confusing even
+
+98
+00:04:39,120 --> 00:04:43,590
+by including bt so that we
+can see what is happening.
+
+99
+00:04:43,590 --> 00:04:45,540
+Well, bt is also included
+
+100
+00:04:45,540 --> 00:04:47,880
+because the star is the
+modifier for the dot,
+
+101
+00:04:47,880 --> 00:04:50,013
+and it stands for zero or more times.
+
+102
+00:04:51,360 --> 00:04:54,120
+Do we also have one or more times?
+
+103
+00:04:54,120 --> 00:04:56,940
+Yes, we do, and that will be the plus.
+
+104
+00:04:56,940 --> 00:04:58,290
+Hey, nothing?
+
+105
+00:04:58,290 --> 00:05:00,000
+Yes, that's right. Nothing.
+
+106
+00:05:00,000 --> 00:05:04,050
+And that is because this is an
+extended regular expression.
+
+107
+00:05:04,050 --> 00:05:07,800
+So grep -E, and now we
+can see that it works.
+
+108
+00:05:07,800 --> 00:05:09,750
+Likewise for the question mark,
+
+109
+00:05:09,750 --> 00:05:11,940
+also an extended regular expression.
+
+110
+00:05:11,940 --> 00:05:15,993
+And this question mark
+is for zero or one time.
+
+111
+00:05:18,180 --> 00:05:19,590
+Now, in regular expressions,
+
+112
+00:05:19,590 --> 00:05:22,980
+it can also be useful
+to search for characters
+
+113
+00:05:22,980 --> 00:05:26,013
+that occur a specific couple of times.
+
+114
+00:05:26,850 --> 00:05:30,930
+So let's do grep on bo
+
+115
+00:05:30,930 --> 00:05:32,850
+slash curly brace.
+
+116
+00:05:32,850 --> 00:05:34,950
+Confusing the slash,
+but that's to take away
+
+117
+00:05:34,950 --> 00:05:38,010
+the special meaning of the curly brace.
+
+118
+00:05:38,010 --> 00:05:40,530
+3, which is the repeating operator,
+
+119
+00:05:40,530 --> 00:05:43,530
+which, again, has a curly brace behind,
+
+120
+00:05:43,530 --> 00:05:48,060
+and then we have a t,
+and we do that on users.
+
+121
+00:05:48,060 --> 00:05:49,500
+And what are we getting?
+
+122
+00:05:49,500 --> 00:05:51,600
+We are getting nothing.
+
+123
+00:05:51,600 --> 00:05:53,400
+And is that something
+that we can understand?
+
+124
+00:05:53,400 --> 00:05:56,070
+Yes, we can because there was no pattern
+
+125
+00:05:56,070 --> 00:05:59,493
+matching exactly three times an o.
+
+126
+00:06:00,360 --> 00:06:03,930
+Now, one last regular expression
+that I want to show you
+
+127
+00:06:03,930 --> 00:06:07,470
+is the either/or, which is an
+extended regular expression.
+
+128
+00:06:07,470 --> 00:06:10,050
+So I'm using grep -E.
+
+129
+00:06:10,050 --> 00:06:13,170
+Between single quotes
+and curly braces again,
+
+130
+00:06:13,170 --> 00:06:14,950
+svm pipe vmx
+
+131
+00:06:18,798 --> 00:06:22,740
+on /proc/cpuinfo.
+
+132
+00:06:22,740 --> 00:06:24,750
+And, oh boy, we have neither of them.
+
+133
+00:06:24,750 --> 00:06:25,583
+What is this?
+
+134
+00:06:25,583 --> 00:06:27,780
+Well, proc/cpuinfo is a kernel file
+
+135
+00:06:27,780 --> 00:06:30,990
+in which you can see
+properties of your CPU.
+
+136
+00:06:30,990 --> 00:06:32,730
+And, with this option, I'm checking to see
+
+137
+00:06:32,730 --> 00:06:36,540
+if either the svm or the
+vmx property are available,
+
+138
+00:06:36,540 --> 00:06:38,040
+which would indicate that this system
+
+139
+00:06:38,040 --> 00:06:40,350
+is capable of virtualization.
+
+140
+00:06:40,350 --> 00:06:41,700
+Well, apparently, it's not
+
+141
+00:06:41,700 --> 00:06:43,450
+because we don't have a match here.

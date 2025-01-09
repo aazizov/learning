@@ -1,0 +1,53 @@
+1
+00:00:07,170 --> 00:00:09,450
+- Howdy! Welcome to lesson seven.
+
+2
+00:00:09,450 --> 00:00:12,480
+This lesson is all about
+managing text files.
+
+3
+00:00:12,480 --> 00:00:15,660
+I'll first tell you about
+some of the common text tools.
+
+4
+00:00:15,660 --> 00:00:17,490
+Then it's time to talk about grep,
+
+5
+00:00:17,490 --> 00:00:19,110
+one of the most important commands
+
+6
+00:00:19,110 --> 00:00:21,090
+that you'll work with on Linux.
+
+7
+00:00:21,090 --> 00:00:22,710
+Next, you'll learn how to make grep
+
+8
+00:00:22,710 --> 00:00:24,780
+and other tools even more powerful
+
+9
+00:00:24,780 --> 00:00:26,730
+by using regular expressions.
+
+10
+00:00:26,730 --> 00:00:28,620
+And after that, we'll have a look at awk
+
+11
+00:00:28,620 --> 00:00:30,390
+and the sed utility.
+
+12
+00:00:30,390 --> 00:00:31,860
+This lesson ends with the lab
+
+13
+00:00:31,860 --> 00:00:34,143
+and I'll also show you the lab solution.

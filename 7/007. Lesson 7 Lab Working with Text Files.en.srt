@@ -1,0 +1,71 @@
+1
+00:00:06,720 --> 00:00:08,880
+- Once again, we are at
+the end of the lesson.
+
+2
+00:00:08,880 --> 00:00:10,470
+Let's do a lab.
+
+3
+00:00:10,470 --> 00:00:12,120
+So to start with, use head and tail
+
+4
+00:00:12,120 --> 00:00:15,870
+to display the fifth line
+of the file /etc/passwd.
+
+5
+00:00:15,870 --> 00:00:18,900
+Next, you do something
+similar, this time using sed.
+
+6
+00:00:18,900 --> 00:00:21,540
+Then, use awk in a pipe
+to filter the last column
+
+7
+00:00:21,540 --> 00:00:24,420
+out of the results of the command ps aux.
+
+8
+00:00:24,420 --> 00:00:27,570
+Use grep to show the
+names of files in /etc
+
+9
+00:00:27,570 --> 00:00:30,780
+that have lines that contain
+the text "root" as a word.
+
+10
+00:00:30,780 --> 00:00:34,200
+And use grep to show all
+lines from all files in /etc
+
+11
+00:00:34,200 --> 00:00:37,230
+that contain exactly three characters.
+
+12
+00:00:37,230 --> 00:00:39,930
+And finally, use grep to find all files
+
+13
+00:00:39,930 --> 00:00:41,310
+that contain the string "alex"
+
+14
+00:00:41,310 --> 00:00:44,130
+but make sure that
+"alexander" is not included
+
+15
+00:00:44,130 --> 00:00:45,270
+in the result.
+
+16
+00:00:45,270 --> 00:00:46,103
+Good luck.
