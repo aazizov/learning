@@ -1,0 +1,59 @@
+1
+00:00:07,050 --> 00:00:07,883
+- All right,
+
+2
+00:00:07,883 --> 00:00:08,880
+we are at the end of this lesson.
+
+3
+00:00:08,880 --> 00:00:10,560
+Let's do a lab.
+
+4
+00:00:10,560 --> 00:00:11,850
+Here's the lab.
+
+5
+00:00:11,850 --> 00:00:13,830
+To start with, you locate the man page
+
+6
+00:00:13,830 --> 00:00:16,020
+that shows how to set a password.
+
+7
+00:00:16,020 --> 00:00:18,420
+Then use a man page for useradd
+
+8
+00:00:18,420 --> 00:00:20,730
+and create a user with the name Anna.
+
+9
+00:00:20,730 --> 00:00:24,840
+And set a password for
+user Anna to password.
+
+10
+00:00:24,840 --> 00:00:28,140
+And last, use vim to create
+a file with the name users,
+
+11
+00:00:28,140 --> 00:00:30,120
+and make sure that it contains the names
+
+12
+00:00:30,120 --> 00:00:34,050
+Alex, Alexander, Linda, and
+Belinda on separate lines.
+
+13
+00:00:34,050 --> 00:00:35,610
+This lesson is important,
+
+14
+00:00:35,610 --> 00:00:38,763
+because we are going to need
+it in one of the next lessons.

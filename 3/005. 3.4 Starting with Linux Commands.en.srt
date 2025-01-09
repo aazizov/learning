@@ -1,0 +1,235 @@
+1
+00:00:06,630 --> 00:00:07,463
+- In this video
+
+2
+00:00:07,463 --> 00:00:10,293
+I want to introduce how to
+work with Linux commands.
+
+3
+00:00:11,430 --> 00:00:14,400
+So Linux commands, there are many of them
+
+4
+00:00:14,400 --> 00:00:16,410
+and they all have common properties
+
+5
+00:00:16,410 --> 00:00:19,260
+and this video is just
+about the common properties.
+
+6
+00:00:19,260 --> 00:00:21,990
+So most commands can
+be used with arguments
+
+7
+00:00:21,990 --> 00:00:25,140
+and these arguments
+further specify the use
+
+8
+00:00:25,140 --> 00:00:26,610
+of the command.
+
+9
+00:00:26,610 --> 00:00:29,910
+Options can be used to modify
+the behavior of the commands
+
+10
+00:00:29,910 --> 00:00:32,340
+and to get a short usage overview,
+
+11
+00:00:32,340 --> 00:00:35,340
+use --help with the command.
+
+12
+00:00:35,340 --> 00:00:39,030
+And before I'm going to
+show you how to use this,
+
+13
+00:00:39,030 --> 00:00:40,020
+one more thing.
+
+14
+00:00:40,020 --> 00:00:42,870
+Linux is case sensitive.
+
+15
+00:00:42,870 --> 00:00:45,960
+Almost all of the commands
+are written in lowercase.
+
+16
+00:00:45,960 --> 00:00:47,370
+Make sure you respect the case,
+
+17
+00:00:47,370 --> 00:00:49,113
+because otherwise it won't work.
+
+18
+00:00:51,480 --> 00:00:54,240
+So, I'm on the command line right now.
+
+19
+00:00:54,240 --> 00:00:57,360
+And let's talk about ls,
+
+20
+00:00:57,360 --> 00:00:59,940
+ls is a command that lists files.
+
+21
+00:00:59,940 --> 00:01:02,393
+And if you want to know how it works,
+
+22
+00:01:02,393 --> 00:01:05,340
+use ls --help.
+
+23
+00:01:05,340 --> 00:01:07,260
+I like this --help a lot,
+
+24
+00:01:07,260 --> 00:01:09,210
+because it's showing a lot of information
+
+25
+00:01:09,210 --> 00:01:11,760
+about what you can do, sometimes so much
+
+26
+00:01:11,760 --> 00:01:13,773
+that it doesn't even fit on the screen.
+
+27
+00:01:14,820 --> 00:01:17,250
+If that happens, use a pipe sign
+
+28
+00:01:17,250 --> 00:01:19,200
+and send it to the less command.
+
+29
+00:01:19,200 --> 00:01:21,540
+We'll talk about these
+in more detail later,
+
+30
+00:01:21,540 --> 00:01:23,790
+but that allows you to
+see, screen by screen
+
+31
+00:01:23,790 --> 00:01:25,110
+what is happening.
+
+32
+00:01:25,110 --> 00:01:26,370
+And what do we see?
+
+33
+00:01:26,370 --> 00:01:30,000
+We see that ls has many,
+many options, like -a,
+
+34
+00:01:30,000 --> 00:01:32,737
+which is equivalent to --o.
+
+35
+00:01:32,737 --> 00:01:34,800
+- a is what you call the short option,
+
+36
+00:01:34,800 --> 00:01:38,340
+the --o, you guessed
+it, it's a long option.
+
+37
+00:01:38,340 --> 00:01:41,580
+They have exactly the same function.
+
+38
+00:01:41,580 --> 00:01:42,840
+So sometimes you can use
+
+39
+00:01:42,840 --> 00:01:44,820
+either the short or the long option.
+
+40
+00:01:44,820 --> 00:01:47,370
+Sometimes there is only a short option,
+
+41
+00:01:47,370 --> 00:01:50,940
+like right here for -f, or
+there's only a long option,
+
+42
+00:01:50,940 --> 00:01:54,030
+like right here for the block size.
+
+43
+00:01:54,030 --> 00:01:55,980
+The nice thing is that this help system
+
+44
+00:01:55,980 --> 00:01:57,432
+will always tell you about it.
+
+45
+00:01:57,432 --> 00:01:59,640
+So what is the result?
+
+46
+00:01:59,640 --> 00:02:03,270
+Well, if I use ls -a, I see all files.
+
+47
+00:02:03,270 --> 00:02:04,380
+And all files,
+
+48
+00:02:04,380 --> 00:02:08,190
+that includes files that have
+name starting with a dot.
+
+49
+00:02:08,190 --> 00:02:10,200
+We call those hidden files,
+
+50
+00:02:10,200 --> 00:02:12,400
+and, hey, what's the
+difference with ls --o?
+
+51
+00:02:13,590 --> 00:02:15,810
+Well, it's just more typing,
+
+52
+00:02:15,810 --> 00:02:18,600
+but for the rest of it,
+there is no difference.
+
+53
+00:02:18,600 --> 00:02:20,910
+We'll explore these
+Linux commands a lot more
+
+54
+00:02:20,910 --> 00:02:22,230
+and you will learn a lot more
+
+55
+00:02:22,230 --> 00:02:24,453
+about them in the upcoming lessons.

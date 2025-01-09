@@ -1,0 +1,43 @@
+1
+00:00:06,660 --> 00:00:09,180
+- All right, we are at the
+end of yet another lesson.
+
+2
+00:00:09,180 --> 00:00:10,830
+Let's do a quick lab.
+
+3
+00:00:10,830 --> 00:00:13,500
+In this lab, you are going
+to use the command line.
+
+4
+00:00:13,500 --> 00:00:14,490
+To start with,
+
+5
+00:00:14,490 --> 00:00:15,990
+log into the graphical system
+
+6
+00:00:15,990 --> 00:00:18,090
+using your default user account
+
+7
+00:00:18,090 --> 00:00:21,450
+and open a terminal window
+and type the who command
+
+8
+00:00:21,450 --> 00:00:23,820
+to find out which users are active.
+
+9
+00:00:23,820 --> 00:00:26,400
+And actually use who --help
+
+10
+00:00:26,400 --> 00:00:29,583
+to get a short usage
+overview for this command.

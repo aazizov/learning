@@ -1,0 +1,45 @@
+1
+00:00:06,930 --> 00:00:08,430
+- Welcome to lesson four.
+
+2
+00:00:08,430 --> 00:00:11,370
+In this lesson, you'll learn
+about a few essential tools
+
+3
+00:00:11,370 --> 00:00:13,500
+that you will be working with a lot.
+
+4
+00:00:13,500 --> 00:00:16,020
+First, we'll focus on using the man system
+
+5
+00:00:16,020 --> 00:00:17,280
+and other ways to get help
+
+6
+00:00:17,280 --> 00:00:19,620
+about all that Linux has you offer.
+
+7
+00:00:19,620 --> 00:00:21,433
+Next, you'll learn about editors.
+
+8
+00:00:21,433 --> 00:00:23,940
+I'll tell you about the different options,
+
+9
+00:00:23,940 --> 00:00:25,740
+and then we'll have a look at vim.
+
+10
+00:00:25,740 --> 00:00:26,760
+At the end of this lesson,
+
+11
+00:00:26,760 --> 00:00:29,210
+you'll find the lab, as
+well as the lab solution.

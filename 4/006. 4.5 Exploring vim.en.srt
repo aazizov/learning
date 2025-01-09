@@ -1,0 +1,518 @@
+1
+00:00:06,840 --> 00:00:10,350
+- Now, the most
+inconvenient thing about VIM
+
+2
+00:00:10,350 --> 00:00:12,480
+is that you need to learn commands.
+
+3
+00:00:12,480 --> 00:00:15,123
+Let's go check out some of
+the most common commands.
+
+4
+00:00:16,170 --> 00:00:17,100
+There is escape.
+
+5
+00:00:17,100 --> 00:00:19,320
+We talked about it, no
+matter where you are
+
+6
+00:00:19,320 --> 00:00:22,220
+press escape and you are sure
+that you're in command mode.
+
+7
+00:00:23,130 --> 00:00:27,750
+You can use I, or A if you
+want, to enter the input mode.
+
+8
+00:00:27,750 --> 00:00:30,900
+Where I is for insert and A is for append,
+
+9
+00:00:30,900 --> 00:00:34,380
+which brings you after the
+current cursor position.
+
+10
+00:00:34,380 --> 00:00:38,250
+O is also convenient, it opens
+a new line in input mode.
+
+11
+00:00:38,250 --> 00:00:41,910
+and :wq, is for write and quit.
+
+12
+00:00:41,910 --> 00:00:45,750
+Do notice the command is :wq not :qw,
+
+13
+00:00:45,750 --> 00:00:47,763
+because you can't quit and then write.
+
+14
+00:00:49,860 --> 00:00:54,860
+Also useful is :q!, which will
+quit without saving anything.
+
+15
+00:00:55,050 --> 00:00:58,710
+That's what you wanna do
+if you really are not sure
+
+16
+00:00:58,710 --> 00:00:59,970
+and the only thing you know is that
+
+17
+00:00:59,970 --> 00:01:03,390
+you wanna get out of here
+without messing anything up.
+
+18
+00:01:03,390 --> 00:01:06,240
+dd is common, it deletes a current line.
+
+19
+00:01:06,240 --> 00:01:10,350
+And yy, well, yank, which
+is copy the current line.
+
+20
+00:01:10,350 --> 00:01:12,930
+And no matter if you've
+just deleted or yanked it
+
+21
+00:01:12,930 --> 00:01:15,960
+you can use P to paste it,
+
+22
+00:01:15,960 --> 00:01:19,230
+to get it back at the current
+position of the cursor.
+
+23
+00:01:19,230 --> 00:01:22,620
+V can be useful for visual mode, press V,
+
+24
+00:01:22,620 --> 00:01:25,260
+then you move your arrow keys
+and you can make a selection.
+
+25
+00:01:25,260 --> 00:01:29,280
+And after making the selection,
+you can delete it using D
+
+26
+00:01:29,280 --> 00:01:32,070
+or copy it using Y.
+
+27
+00:01:32,070 --> 00:01:34,320
+Also very convenient is U.
+
+28
+00:01:34,320 --> 00:01:37,260
+U for undo the last operation,
+
+29
+00:01:37,260 --> 00:01:38,700
+because if you are learning VIM,
+
+30
+00:01:38,700 --> 00:01:40,590
+you will notice that every now and then
+
+31
+00:01:40,590 --> 00:01:42,090
+something magical happens.
+
+32
+00:01:42,090 --> 00:01:44,460
+And you want to get out
+of the magical environment
+
+33
+00:01:44,460 --> 00:01:46,560
+well, U, for undo.
+
+34
+00:01:46,560 --> 00:01:48,510
+Control+R is convenient as well,
+
+35
+00:01:48,510 --> 00:01:51,123
+that we will redo the last operation.
+
+36
+00:01:52,230 --> 00:01:55,980
+So, if you have undone something too much
+
+37
+00:01:55,980 --> 00:01:58,083
+use Control+R to get it back.
+
+38
+00:01:58,950 --> 00:02:01,200
+That's not all, there's a bit more.
+
+39
+00:02:01,200 --> 00:02:03,960
+Like gg, which will bring you
+to the top of the document
+
+40
+00:02:03,960 --> 00:02:07,770
+or uppercase G, which will
+go to the end of the document
+
+41
+00:02:07,770 --> 00:02:12,120
+or /text which will
+search forward for text
+
+42
+00:02:12,120 --> 00:02:15,993
+or ?text, which will
+search backwards for text.
+
+43
+00:02:17,850 --> 00:02:20,280
+Then there is caret, which
+will bring you to the start
+
+44
+00:02:20,280 --> 00:02:21,750
+of the current line
+
+45
+00:02:21,750 --> 00:02:25,110
+or $, which will bring the
+cursor to the end of the line.
+
+46
+00:02:25,110 --> 00:02:28,350
+There's also a W, which
+will move to the next word.
+
+47
+00:02:28,350 --> 00:02:33,350
+And one of my favorites is :%s/old/new/g.
+
+48
+00:02:33,690 --> 00:02:35,850
+Which is a global substitute.
+
+49
+00:02:35,850 --> 00:02:39,690
+It'll change all occurrences
+of the text, old with new.
+
+50
+00:02:39,690 --> 00:02:40,983
+Let's go check this out.
+
+51
+00:02:43,890 --> 00:02:48,070
+So, I'm using VIM, vimdemo.txt
+
+52
+00:02:49,050 --> 00:02:51,750
+And well, here we are on the top
+
+53
+00:02:51,750 --> 00:02:54,600
+and I am going to use,
+O, for open a new line,
+
+54
+00:02:54,600 --> 00:02:56,040
+just because I wanted to show you
+
+55
+00:02:56,040 --> 00:02:59,550
+that my cursor is one line lower.
+
+56
+00:02:59,550 --> 00:03:03,510
+And what do I type?
+
+57
+00:03:03,510 --> 00:03:05,580
+I don't know.
+
+58
+00:03:05,580 --> 00:03:08,400
+This is what really
+matters in demos like this.
+
+59
+00:03:08,400 --> 00:03:10,260
+This is a simple modification.
+
+60
+00:03:10,260 --> 00:03:14,610
+I'm just going to use my arrow keys to get
+
+61
+00:03:14,610 --> 00:03:17,790
+just behind the back slash
+
+62
+00:03:17,790 --> 00:03:20,790
+and I'm using backspace to remove it.
+
+63
+00:03:20,790 --> 00:03:25,470
+Now, let's go for
+something more intelligent.
+
+64
+00:03:25,470 --> 00:03:27,048
+I'm using yy.
+
+65
+00:03:27,048 --> 00:03:27,900
+What is yy?
+
+66
+00:03:27,900 --> 00:03:30,960
+Well, that is yank or a copy.
+
+67
+00:03:30,960 --> 00:03:35,550
+And then I'm using P, to paste.
+
+68
+00:03:35,550 --> 00:03:39,000
+Do notice that you can do
+that as many times as you want
+
+69
+00:03:39,000 --> 00:03:41,130
+but you don't need to
+forget to press escape
+
+70
+00:03:41,130 --> 00:03:43,170
+to get to command mode.
+
+71
+00:03:43,170 --> 00:03:45,750
+Hey, what I also like, and
+which is not on the slide,
+
+72
+00:03:45,750 --> 00:03:50,100
+is :se number, that is
+showing line numbers.
+
+73
+00:03:50,100 --> 00:03:51,510
+That can be convenient,
+
+74
+00:03:51,510 --> 00:03:53,883
+if you want to talk about specific line.
+
+75
+00:03:54,810 --> 00:03:58,680
+Now I'm going to use dd,
+dd is deleting a line.
+
+76
+00:03:58,680 --> 00:04:01,470
+And instead of deleting individual lines,
+
+77
+00:04:01,470 --> 00:04:05,130
+you can use V for visual mode,
+look at the lower left corner
+
+78
+00:04:05,130 --> 00:04:08,640
+which is showing that right
+now, I have visual mode,
+
+79
+00:04:08,640 --> 00:04:13,080
+in which I can move my arrow
+keys and press D for instance,
+
+80
+00:04:13,080 --> 00:04:16,117
+to delete everything or U, to undo,
+
+81
+00:04:16,117 --> 00:04:20,730
+if you did not want to
+delete it anyway, good.
+
+82
+00:04:20,730 --> 00:04:24,450
+Let me go to the top of
+the document using G,
+
+83
+00:04:24,450 --> 00:04:28,980
+and I need to use the G twice, so gg.
+
+84
+00:04:28,980 --> 00:04:33,980
+And next I can show you my
+favorite command, :%s/don't/do/g.
+
+85
+00:04:42,750 --> 00:04:45,480
+Do you see how nicely
+VIM is highlighting it?
+
+86
+00:04:45,480 --> 00:04:48,630
+And now you can see that
+everywhere where we had don't,
+
+87
+00:04:48,630 --> 00:04:52,350
+we now have do, and I
+think I'm happy with this.
+
+88
+00:04:52,350 --> 00:04:57,350
+So I'm pressing escape,
+:wq!, to write, quit
+
+89
+00:04:57,870 --> 00:04:59,460
+and get out of here.
+
+90
+00:04:59,460 --> 00:05:01,470
+Now, there is so much
+more that can be done
+
+91
+00:05:01,470 --> 00:05:04,770
+in a VIM environment, but
+I don't want to scare you.
+
+92
+00:05:04,770 --> 00:05:07,020
+I think this is enough for now.
+
+93
+00:05:07,020 --> 00:05:08,490
+That's one of the big risks
+
+94
+00:05:08,490 --> 00:05:11,010
+for people who are
+getting started with VIM,
+
+95
+00:05:11,010 --> 00:05:12,990
+information overload.
+
+96
+00:05:12,990 --> 00:05:14,850
+If I may give you an advice,
+
+97
+00:05:14,850 --> 00:05:17,880
+practice the commands that
+you have seen on the slides.
+
+98
+00:05:17,880 --> 00:05:19,380
+These are my favorites.
+
+99
+00:05:19,380 --> 00:05:22,950
+And apart from these comments,
+the other ones that I know,
+
+100
+00:05:22,950 --> 00:05:24,513
+I don't use them that often.
+
+101
+00:05:25,410 --> 00:05:27,480
+There's one more thing
+that I want to show you.
+
+102
+00:05:27,480 --> 00:05:29,223
+And that is VIM Tutor.
+
+103
+00:05:30,240 --> 00:05:31,260
+What is that?
+
+104
+00:05:31,260 --> 00:05:34,140
+Well, this is your online course in VIM.
+
+105
+00:05:34,140 --> 00:05:39,140
+Start reading and just do what
+the comment is telling you.
+
+106
+00:05:39,210 --> 00:05:42,180
+Like J, for instance, to
+bring your cursor down
+
+107
+00:05:42,180 --> 00:05:44,400
+and L to bring it to the right,
+
+108
+00:05:44,400 --> 00:05:48,360
+and there you are in lesson 1.2.
+
+109
+00:05:48,360 --> 00:05:51,360
+It's a good investment of
+your time to use the VIM Tutor
+
+110
+00:05:51,360 --> 00:05:56,360
+a little bit, probably if you
+use it for half an hour or so.
+
+111
+00:05:57,720 --> 00:06:01,050
+You have learned enough about
+VIM to get yourself started.
+
+112
+00:06:01,050 --> 00:06:05,160
+But hey, in the end, use
+whatever editor you like.
+
+113
+00:06:05,160 --> 00:06:06,960
+You're more comfortable with Nano?
+
+114
+00:06:06,960 --> 00:06:08,250
+That's okay as well.
+
+115
+00:06:08,250 --> 00:06:11,910
+Even if that means that you
+are probably going to miss
+
+116
+00:06:11,910 --> 00:06:14,283
+all of the powerful features of VIM.

@@ -1,0 +1,523 @@
+1
+00:00:06,840 --> 00:00:08,670
+- Now, using man is convenient,
+
+2
+00:00:08,670 --> 00:00:11,100
+but what are you going to do
+if you don't know what command
+
+3
+00:00:11,100 --> 00:00:13,710
+exactly you are looking for?
+
+4
+00:00:13,710 --> 00:00:15,570
+Well, in that case, you should know
+
+5
+00:00:15,570 --> 00:00:19,350
+that all man pages are
+indexed in the mandb
+
+6
+00:00:19,350 --> 00:00:22,650
+and you can use man -k or alternatively
+
+7
+00:00:22,650 --> 00:00:27,180
+the apropos command to search
+the mandb based on a keyword.
+
+8
+00:00:27,180 --> 00:00:29,670
+And that's convenient if you
+don't know which command to use
+
+9
+00:00:29,670 --> 00:00:31,830
+but you do know the keyword.
+
+10
+00:00:31,830 --> 00:00:34,680
+In the output, you can
+find a lot of results.
+
+11
+00:00:34,680 --> 00:00:37,020
+And if you get too many results,
+
+12
+00:00:37,020 --> 00:00:38,490
+you can use the grep command
+
+13
+00:00:38,490 --> 00:00:40,380
+in the pipe to filter the results.
+
+14
+00:00:40,380 --> 00:00:41,853
+I'll show you how that works.
+
+15
+00:00:43,170 --> 00:00:45,480
+But when working with
+mandb, you should notice
+
+16
+00:00:45,480 --> 00:00:49,230
+that mandb is built automatically
+through a scheduled task.
+
+17
+00:00:49,230 --> 00:00:52,860
+And sometimes you are looking
+for something very obvious,
+
+18
+00:00:52,860 --> 00:00:55,320
+and you don't get any results.
+
+19
+00:00:55,320 --> 00:00:57,870
+Instead, it's telling
+you nothing appropriate.
+
+20
+00:00:57,870 --> 00:01:00,420
+If that is going to happen,
+then you need to manually
+
+21
+00:01:00,420 --> 00:01:05,400
+trigger a rebuild of the
+mandb using sudo mandb.
+
+22
+00:01:05,400 --> 00:01:06,633
+Let's go check this out.
+
+23
+00:01:09,750 --> 00:01:10,583
+All right.
+
+24
+00:01:10,583 --> 00:01:12,573
+I'm using man -K user,
+
+25
+00:01:13,770 --> 00:01:15,990
+which is checking in the mandb
+
+26
+00:01:15,990 --> 00:01:19,110
+if there are any items about user.
+
+27
+00:01:19,110 --> 00:01:21,690
+Oh no, I am getting nothing appropriate.
+
+28
+00:01:21,690 --> 00:01:24,570
+Well, there's a very good
+explanation for this.
+
+29
+00:01:24,570 --> 00:01:26,880
+This is a freshly installed system,
+
+30
+00:01:26,880 --> 00:01:29,490
+and on a newly installed system
+
+31
+00:01:29,490 --> 00:01:34,410
+your mandb command
+hasn't been started yet.
+
+32
+00:01:34,410 --> 00:01:35,243
+And you know what?
+
+33
+00:01:35,243 --> 00:01:38,130
+I already told you that
+you should use sudo mandb.
+
+34
+00:01:38,130 --> 00:01:40,860
+But I think it's nice if we go check out
+
+35
+00:01:40,860 --> 00:01:42,900
+how to get to that information.
+
+36
+00:01:42,900 --> 00:01:47,280
+So, I'm using man man,
+the man page for man
+
+37
+00:01:47,280 --> 00:01:51,060
+and now I'm going to search for -k.
+
+38
+00:01:51,060 --> 00:01:54,283
+So, that would be slash, look
+at the lower left corner,
+
+39
+00:01:54,283 --> 00:01:56,730
+- k, and then I press enter
+
+40
+00:01:56,730 --> 00:01:59,490
+and it's giving me the -k in the synopsis.
+
+41
+00:01:59,490 --> 00:02:00,663
+That's not what I want.
+
+42
+00:02:01,693 --> 00:02:04,350
+What I want is what I see right here.
+
+43
+00:02:04,350 --> 00:02:07,470
+Remember, you can use N for next to repeat
+
+44
+00:02:07,470 --> 00:02:10,290
+the last search operation.
+
+45
+00:02:10,290 --> 00:02:13,380
+So, this is telling me a
+short description equivalent
+
+46
+00:02:13,380 --> 00:02:15,960
+to apropos in bold.
+
+47
+00:02:15,960 --> 00:02:17,610
+The bold typeface indicates
+
+48
+00:02:17,610 --> 00:02:19,950
+that this is probably also a command.
+
+49
+00:02:19,950 --> 00:02:23,310
+So, I'm going to use man
+apropos to get more information
+
+50
+00:02:23,310 --> 00:02:25,320
+about this apropos thing.
+
+51
+00:02:25,320 --> 00:02:26,880
+And in case you wouldn't know,
+
+52
+00:02:26,880 --> 00:02:29,820
+well, here you can see the apropos,
+
+53
+00:02:29,820 --> 00:02:32,310
+the database search by apropos is updated
+
+54
+00:02:32,310 --> 00:02:35,130
+by the mandb program.
+
+55
+00:02:35,130 --> 00:02:38,220
+And depending on the
+installation, this may be run
+
+56
+00:02:38,220 --> 00:02:43,220
+by a periodic cron job or
+need to be run manually.
+
+57
+00:02:43,320 --> 00:02:46,890
+So, that is exactly what's going on.
+
+58
+00:02:46,890 --> 00:02:48,060
+You wanna know more?
+
+59
+00:02:48,060 --> 00:02:51,990
+Type man mandb, the interesting
+information right here
+
+60
+00:02:51,990 --> 00:02:52,950
+is the eight.
+
+61
+00:02:52,950 --> 00:02:56,940
+The eight is giving that this
+is an administrator command
+
+62
+00:02:56,940 --> 00:02:58,740
+and being an administrator command,
+
+63
+00:02:58,740 --> 00:03:00,810
+I probably have to use sudo.
+
+64
+00:03:00,810 --> 00:03:02,730
+Let's try it without sudo first.
+
+65
+00:03:02,730 --> 00:03:05,460
+I'm using mandb, what do we get?
+
+66
+00:03:05,460 --> 00:03:09,787
+I am getting, oh boy,
+I get "can't create,"
+
+67
+00:03:09,787 --> 00:03:11,280
+"no such file."
+
+68
+00:03:11,280 --> 00:03:12,990
+I get lots of errors.
+
+69
+00:03:12,990 --> 00:03:15,060
+It's not so very obvious that these errors
+
+70
+00:03:15,060 --> 00:03:19,020
+are because I am not running
+this with sudo privileges
+
+71
+00:03:19,020 --> 00:03:23,070
+but here we go using it
+with sudo privileges.
+
+72
+00:03:23,070 --> 00:03:26,100
+And now we can see that it
+is updating the index case
+
+73
+00:03:26,100 --> 00:03:29,370
+for all of these man pages.
+
+74
+00:03:29,370 --> 00:03:30,630
+Can take a little bit,
+
+75
+00:03:30,630 --> 00:03:32,250
+shouldn't be taking too long.
+
+76
+00:03:32,250 --> 00:03:33,630
+And once it is done,
+
+77
+00:03:33,630 --> 00:03:37,530
+after it has generated all of
+this output, as you can see,
+
+78
+00:03:37,530 --> 00:03:41,610
+it has added almost 8,000
+different man pages.
+
+79
+00:03:41,610 --> 00:03:45,390
+So, now I can try my man -k user again
+
+80
+00:03:45,390 --> 00:03:47,370
+and that is working and, oh boy,
+
+81
+00:03:47,370 --> 00:03:49,143
+that's a lot of information.
+
+82
+00:03:50,070 --> 00:03:52,080
+But if you look at all that information,
+
+83
+00:03:52,080 --> 00:03:56,610
+you can see that we have
+results from different sections.
+
+84
+00:03:56,610 --> 00:03:59,880
+Like section two, which
+is about system calls.
+
+85
+00:03:59,880 --> 00:04:02,460
+We do not care about system calls.
+
+86
+00:04:02,460 --> 00:04:06,960
+They don't matter if you are
+into Linux administration.
+
+87
+00:04:06,960 --> 00:04:08,610
+If you wanna do administration,
+
+88
+00:04:08,610 --> 00:04:11,460
+you need to figure out what
+is it that you want to do?
+
+89
+00:04:11,460 --> 00:04:14,100
+Well, if the answer is,
+I want to create a user,
+
+90
+00:04:14,100 --> 00:04:15,810
+then you need to think a little bit.
+
+91
+00:04:15,810 --> 00:04:17,340
+Is that something that requires
+
+92
+00:04:17,340 --> 00:04:19,800
+administrative privileges or not?
+
+93
+00:04:19,800 --> 00:04:23,370
+If the answer is yes, then
+you probably need to search
+
+94
+00:04:23,370 --> 00:04:27,060
+for the appropriate command
+in section number eight.
+
+95
+00:04:27,060 --> 00:04:31,500
+So, I'm going to use man -k user again
+
+96
+00:04:31,500 --> 00:04:33,660
+and I'm using a pipe sign.
+
+97
+00:04:33,660 --> 00:04:36,330
+The pipe is taking the
+output of the first command
+
+98
+00:04:36,330 --> 00:04:38,970
+and it's sending it to the second command.
+
+99
+00:04:38,970 --> 00:04:41,570
+And the second command that
+I'm using here is grep.
+
+100
+00:04:41,570 --> 00:04:44,220
+No worries, we will talk
+about grep separately
+
+101
+00:04:44,220 --> 00:04:46,187
+in much more detail later, but for now,
+
+102
+00:04:46,187 --> 00:04:48,340
+I want to show you grep eight
+
+103
+00:04:49,440 --> 00:04:52,890
+which is going to filter
+out only those lines
+
+104
+00:04:52,890 --> 00:04:55,020
+that have an eight in the text.
+
+105
+00:04:55,020 --> 00:04:56,550
+And there we go.
+
+106
+00:04:56,550 --> 00:04:58,770
+Here we have a list only of commands
+
+107
+00:04:58,770 --> 00:05:01,530
+that have been documented
+in section eight of man.
+
+108
+00:05:01,530 --> 00:05:03,240
+And that includes useradd.
+
+109
+00:05:03,240 --> 00:05:05,400
+Well, probably that might
+be the command that you
+
+110
+00:05:05,400 --> 00:05:08,430
+were looking for and otherwise, well,
+
+111
+00:05:08,430 --> 00:05:13,430
+at least the results are a
+little bit easier to check
+
+112
+00:05:13,800 --> 00:05:15,810
+after the filtering.
+
+113
+00:05:15,810 --> 00:05:18,450
+So, that is how you can use man -k.
+
+114
+00:05:18,450 --> 00:05:21,330
+Man -k really is a convenient skill.
+
+115
+00:05:21,330 --> 00:05:24,690
+You might like having it on the RHCSA exam
+
+116
+00:05:24,690 --> 00:05:27,720
+because you know, on the RHCSA exam,
+
+117
+00:05:27,720 --> 00:05:29,940
+you don't have any internet access.
+
+118
+00:05:29,940 --> 00:05:32,730
+So, you need to get all
+the information straight
+
+119
+00:05:32,730 --> 00:05:33,750
+from your system.
+
+120
+00:05:33,750 --> 00:05:36,933
+And that is why man is
+so incredibly important.

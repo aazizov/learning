@@ -1,0 +1,210 @@
+1
+00:00:06,540 --> 00:00:07,440
+- So at this point,
+
+2
+00:00:07,440 --> 00:00:08,790
+you should have a ready
+
+3
+00:00:08,790 --> 00:00:12,600
+to be used instance of
+Red Hat enterprise Linux.
+
+4
+00:00:12,600 --> 00:00:14,010
+What are we going to do with it?
+
+5
+00:00:14,010 --> 00:00:17,073
+Well, you first need to log into it.
+
+6
+00:00:18,030 --> 00:00:19,290
+To work on Linux,
+
+7
+00:00:19,290 --> 00:00:21,270
+you need to identify yourself,
+
+8
+00:00:21,270 --> 00:00:24,570
+and you do that by logging
+in using a user account.
+
+9
+00:00:24,570 --> 00:00:25,860
+Let's know that procedure.
+
+10
+00:00:25,860 --> 00:00:28,620
+You do that on your own computer as well.
+
+11
+00:00:28,620 --> 00:00:30,330
+A user account is created when
+
+12
+00:00:30,330 --> 00:00:32,280
+the server installs.
+
+13
+00:00:32,280 --> 00:00:34,860
+Some service have a root user account
+
+14
+00:00:34,860 --> 00:00:36,990
+with unlimited access privileges,
+
+15
+00:00:36,990 --> 00:00:39,930
+and some service only have
+a regular user account
+
+16
+00:00:39,930 --> 00:00:43,530
+that can perform administrative
+tasks using sudo.
+
+17
+00:00:43,530 --> 00:00:45,750
+And some service have both.
+
+18
+00:00:45,750 --> 00:00:47,220
+The server that we have installed
+
+19
+00:00:47,220 --> 00:00:50,910
+in the previous video does
+have a root user account,
+
+20
+00:00:50,910 --> 00:00:52,500
+and a regular user account.
+
+21
+00:00:52,500 --> 00:00:54,300
+And that's exactly what I need you to have
+
+22
+00:00:54,300 --> 00:00:55,953
+at this specific moment.
+
+23
+00:00:57,120 --> 00:00:58,440
+But I can already tell you
+
+24
+00:00:58,440 --> 00:01:00,570
+before we dive into further details
+
+25
+00:01:00,570 --> 00:01:03,120
+that you should avoid logging in as root,
+
+26
+00:01:03,120 --> 00:01:04,590
+because it has a higher risk
+
+27
+00:01:04,590 --> 00:01:06,603
+of security related problems.
+
+28
+00:01:07,470 --> 00:01:09,120
+So let me show you how to log in,
+
+29
+00:01:09,120 --> 00:01:10,670
+and what you can do after that.
+
+30
+00:01:13,080 --> 00:01:15,960
+Okay, so we can see the
+student user account.
+
+31
+00:01:15,960 --> 00:01:18,450
+It's user account that I've created,
+
+32
+00:01:18,450 --> 00:01:20,160
+and you need to enter a password
+
+33
+00:01:20,160 --> 00:01:22,200
+for that student user account.
+
+34
+00:01:22,200 --> 00:01:23,370
+And that will bring you
+
+35
+00:01:23,370 --> 00:01:25,980
+into the graphical user interface.
+
+36
+00:01:25,980 --> 00:01:27,510
+For now, please ignore the message
+
+37
+00:01:27,510 --> 00:01:30,960
+about the system that
+has not been registered.
+
+38
+00:01:30,960 --> 00:01:33,423
+We are only going to do that much later.
+
+39
+00:01:34,290 --> 00:01:38,610
+So what we see here is
+what we call the GNOME
+
+40
+00:01:38,610 --> 00:01:40,440
+graphical user interface.
+
+41
+00:01:40,440 --> 00:01:42,090
+And in this interface,
+
+42
+00:01:42,090 --> 00:01:44,370
+well, there's only one
+thing that really matters,
+
+43
+00:01:44,370 --> 00:01:45,870
+and that's a terminal,
+
+44
+00:01:45,870 --> 00:01:47,040
+because in the terminal,
+
+45
+00:01:47,040 --> 00:01:49,923
+you are going to do
+everything you need for RHCSA.
+
+46
+00:01:51,720 --> 00:01:52,553
+So at this point,
+
+47
+00:01:52,553 --> 00:01:53,910
+you are ready to get started
+
+48
+00:01:53,910 --> 00:01:56,100
+with Red Hat enterprise Linux.
+
+49
+00:01:56,100 --> 00:01:57,360
+In the next lesson,
+
+50
+00:01:57,360 --> 00:01:59,673
+you will learn what to
+do once you are here.

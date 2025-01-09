@@ -1,0 +1,543 @@
+1
+00:00:09,390 --> 00:00:11,520
+- [Instructor] So once you
+have booted your machine
+
+2
+00:00:11,520 --> 00:00:15,210
+from the Red Hat Enterprise
+Linux 9 installation media,
+
+3
+00:00:15,210 --> 00:00:16,680
+this is what you get.
+
+4
+00:00:16,680 --> 00:00:19,260
+By default, it wants you
+test the installation media
+
+5
+00:00:19,260 --> 00:00:20,610
+before you can install.
+
+6
+00:00:20,610 --> 00:00:22,140
+I would suggest not to do that.
+
+7
+00:00:22,140 --> 00:00:25,980
+Just select, "Install Red
+Hat Enterprise Linux 9."
+
+8
+00:00:25,980 --> 00:00:29,280
+Now, you will see the blinking
+cursor for a few seconds
+
+9
+00:00:29,280 --> 00:00:32,013
+and then it starts loading
+the installation system.
+
+10
+00:00:35,580 --> 00:00:39,300
+And here we have access to
+the graphical installation.
+
+11
+00:00:39,300 --> 00:00:41,340
+Okay, so to start with,
+
+12
+00:00:41,340 --> 00:00:44,040
+we need to select a language, English.
+
+13
+00:00:44,040 --> 00:00:46,080
+English, United States,
+is the only language
+
+14
+00:00:46,080 --> 00:00:47,013
+that makes sense.
+
+15
+00:00:48,030 --> 00:00:50,700
+For your service, it's nice
+to know that you can install
+
+16
+00:00:50,700 --> 00:00:53,520
+in a different language, but for the exam,
+
+17
+00:00:53,520 --> 00:00:55,800
+that's really not something to do.
+
+18
+00:00:55,800 --> 00:00:58,740
+And here we can see the
+Installation Summary screen.
+
+19
+00:00:58,740 --> 00:01:01,230
+Now, the nice thing about the
+Installation Summary screen
+
+20
+00:01:01,230 --> 00:01:04,710
+is that you only have to provide choices
+
+21
+00:01:04,710 --> 00:01:06,813
+for the things that are different.
+
+22
+00:01:08,130 --> 00:01:10,590
+And if you really want to
+go for the minimal options,
+
+23
+00:01:10,590 --> 00:01:12,870
+you only have to follow the links in red.
+
+24
+00:01:12,870 --> 00:01:16,113
+So, we need to select
+Installation Destination.
+
+25
+00:01:17,220 --> 00:01:20,010
+By default, it wants to
+do automatic partitioning
+
+26
+00:01:20,010 --> 00:01:22,500
+and there's an exclamation mark here.
+
+27
+00:01:22,500 --> 00:01:23,880
+That is because the installer
+
+28
+00:01:23,880 --> 00:01:27,030
+is going to override your entire disk.
+
+29
+00:01:27,030 --> 00:01:28,800
+You can see the disk that it has found,
+
+30
+00:01:28,800 --> 00:01:31,380
+a 20 gigabyte disk in VMware,
+
+31
+00:01:31,380 --> 00:01:33,390
+which is known as sda.
+
+32
+00:01:33,390 --> 00:01:35,760
+And the storage configuration
+is set to automatic,
+
+33
+00:01:35,760 --> 00:01:36,960
+and that's perfect.
+
+34
+00:01:36,960 --> 00:01:39,210
+I just have to click "Done" here
+
+35
+00:01:39,210 --> 00:01:40,983
+to tell the software
+installer that we are good
+
+36
+00:01:40,983 --> 00:01:45,093
+and that it's okay to
+override the entire disk.
+
+37
+00:01:46,350 --> 00:01:50,610
+The next required option is
+related to the user settings.
+
+38
+00:01:50,610 --> 00:01:53,430
+This is about the root password.
+
+39
+00:01:53,430 --> 00:01:55,830
+The root is your system administrator user
+
+40
+00:01:55,830 --> 00:01:57,960
+and this user needs a password.
+
+41
+00:01:57,960 --> 00:02:00,090
+So, let me enter a password
+
+42
+00:02:00,090 --> 00:02:02,823
+and I need to enter the
+same password twice.
+
+43
+00:02:04,200 --> 00:02:06,030
+Notice that the installer has detected
+
+44
+00:02:06,030 --> 00:02:07,860
+that I have a weak password.
+
+45
+00:02:07,860 --> 00:02:09,420
+I wanna have a weak password,
+
+46
+00:02:09,420 --> 00:02:11,910
+I don't care about it
+for this demo system.
+
+47
+00:02:11,910 --> 00:02:13,950
+And that is why in the
+lower part it's telling me
+
+48
+00:02:13,950 --> 00:02:15,660
+that I need to click "Done" twice
+
+49
+00:02:15,660 --> 00:02:17,463
+to accept the weak password.
+
+50
+00:02:18,300 --> 00:02:19,380
+Also, there is an option
+
+51
+00:02:19,380 --> 00:02:21,270
+if I want to do, "Lock the root accounts,"
+
+52
+00:02:21,270 --> 00:02:24,190
+that you can only log in
+using an administrative user
+
+53
+00:02:25,110 --> 00:02:27,360
+and an option that you need to separately
+
+54
+00:02:27,360 --> 00:02:31,620
+specify to allow a root
+SSH login with password.
+
+55
+00:02:31,620 --> 00:02:34,470
+By default, the root user
+cannot use Secure Shell
+
+56
+00:02:34,470 --> 00:02:35,883
+to connect to your server.
+
+57
+00:02:37,110 --> 00:02:39,660
+I am going to click
+done twice because this
+
+58
+00:02:39,660 --> 00:02:42,120
+is exactly matching what I need.
+
+59
+00:02:42,120 --> 00:02:45,690
+And then I will have a quick
+look at three other options.
+
+60
+00:02:45,690 --> 00:02:48,120
+There are many more options available,
+
+61
+00:02:48,120 --> 00:02:51,300
+but only a few more that matter.
+
+62
+00:02:51,300 --> 00:02:52,773
+To start with the networking,
+
+63
+00:02:53,610 --> 00:02:56,580
+we can see that my wired
+network connection is connected
+
+64
+00:02:56,580 --> 00:02:58,860
+and that's all that I want to verify.
+
+65
+00:02:58,860 --> 00:03:02,640
+I obtained an IP address
+from the DHCP server.
+
+66
+00:03:02,640 --> 00:03:06,030
+My server is connected,
+so I'm clicking "Done."
+
+67
+00:03:06,030 --> 00:03:08,430
+You don't even have to set a host name,
+
+68
+00:03:08,430 --> 00:03:10,590
+we'll take care of that later.
+
+69
+00:03:10,590 --> 00:03:13,353
+The next option is the Software Selection,
+
+70
+00:03:14,250 --> 00:03:16,140
+where it is going to select server
+
+71
+00:03:16,140 --> 00:03:19,020
+with graphical user interface.
+
+72
+00:03:19,020 --> 00:03:21,810
+I think that's the option
+you wanna use as well
+
+73
+00:03:21,810 --> 00:03:24,840
+in order to get familiar with
+Red Hat Enterprise Linux.
+
+74
+00:03:24,840 --> 00:03:28,530
+But very commonly used
+are the Server option
+
+75
+00:03:28,530 --> 00:03:30,390
+and the Minimal installation,
+
+76
+00:03:30,390 --> 00:03:31,650
+which don't offer you access
+
+77
+00:03:31,650 --> 00:03:33,990
+to any graphical user interface.
+
+78
+00:03:33,990 --> 00:03:36,810
+But here, we are just going
+to keep it for while it is.
+
+79
+00:03:36,810 --> 00:03:40,140
+And about the choice
+for additional software,
+
+80
+00:03:40,140 --> 00:03:42,240
+that's not something
+you have to worry about.
+
+81
+00:03:42,240 --> 00:03:43,920
+We can do that later.
+
+82
+00:03:43,920 --> 00:03:45,450
+So let me click "Done."
+
+83
+00:03:45,450 --> 00:03:49,290
+And last but not least, the time zone.
+
+84
+00:03:49,290 --> 00:03:51,570
+America, Chicago time zone.
+
+85
+00:03:51,570 --> 00:03:54,300
+Well, depends on where you are.
+
+86
+00:03:54,300 --> 00:03:56,010
+It is nice to set your server
+
+87
+00:03:56,010 --> 00:03:59,130
+to a time that matches
+your local time zone.
+
+88
+00:03:59,130 --> 00:04:02,010
+So let me do that and then click "Done."
+
+89
+00:04:02,010 --> 00:04:05,190
+And next, we can click
+"Begin Installation,"
+
+90
+00:04:05,190 --> 00:04:07,050
+which is starting the installation.
+
+91
+00:04:07,050 --> 00:04:11,343
+And this is the part that
+takes at least five minutes.
+
+92
+00:04:12,480 --> 00:04:14,310
+Alright, the installation is now done.
+
+93
+00:04:14,310 --> 00:04:17,100
+So let's click "Reboot System," to reboot.
+
+94
+00:04:17,100 --> 00:04:18,690
+One of the first things that you will see
+
+95
+00:04:18,690 --> 00:04:21,570
+after rebooting is the GRUB boot loader.
+
+96
+00:04:21,570 --> 00:04:22,710
+In this GRUB boot loader,
+
+97
+00:04:22,710 --> 00:04:25,440
+you can see your current kernel version
+
+98
+00:04:25,440 --> 00:04:27,360
+and there's also a rescue system.
+
+99
+00:04:27,360 --> 00:04:29,400
+We're not going to use a rescue system,
+
+100
+00:04:29,400 --> 00:04:33,900
+so I'm just going to press
+enter on the default selection.
+
+101
+00:04:33,900 --> 00:04:37,500
+This GRUB boot loader is going
+to be very important later on
+
+102
+00:04:37,500 --> 00:04:41,610
+because you can use it to
+pass specific boot options,
+
+103
+00:04:41,610 --> 00:04:43,740
+which can be useful if
+anything doesn't work out
+
+104
+00:04:43,740 --> 00:04:45,840
+the way you expect it to be.
+
+105
+00:04:45,840 --> 00:04:48,633
+So, here we can see the set of wizards.
+
+106
+00:04:49,560 --> 00:04:53,130
+You need to go through it and
+indicate what you wanna do.
+
+107
+00:04:53,130 --> 00:04:56,070
+There's not much
+interesting happening here
+
+108
+00:04:56,070 --> 00:04:57,900
+apart from the "About You."
+
+109
+00:04:57,900 --> 00:05:01,680
+This is where you create a
+user account for yourself.
+
+110
+00:05:01,680 --> 00:05:03,930
+I like using a user
+with the name "Student,"
+
+111
+00:05:03,930 --> 00:05:05,730
+and I suggest you do the same
+
+112
+00:05:05,730 --> 00:05:08,490
+because throughout the
+exercises in this course,
+
+113
+00:05:08,490 --> 00:05:11,760
+I will refer to the user account as well.
+
+114
+00:05:11,760 --> 00:05:16,710
+This user will be provided
+with pseudo privileges as well.
+
+115
+00:05:16,710 --> 00:05:19,950
+And it means that this
+user will have options
+
+116
+00:05:19,950 --> 00:05:22,590
+to do administrative work.
+
+117
+00:05:22,590 --> 00:05:23,580
+So, that's all.
+
+118
+00:05:23,580 --> 00:05:26,520
+Now you click "Start Using
+Red Hat Enterprise Linux,"
+
+119
+00:05:26,520 --> 00:05:29,793
+and that'll bring you into the
+main application interface.
+
+120
+00:05:31,500 --> 00:05:33,870
+I would suggest you to say, "No, thanks,"
+
+121
+00:05:33,870 --> 00:05:37,380
+on Take Tour to get access to your system.
+
+122
+00:05:37,380 --> 00:05:40,050
+We'll take care of the
+registration later on as well.
+
+123
+00:05:40,050 --> 00:05:41,493
+For now, we are all good.

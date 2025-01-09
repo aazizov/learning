@@ -1,0 +1,36 @@
+1
+00:00:07,260 --> 00:00:09,270
+- Hi, welcome to module two,
+
+2
+00:00:09,270 --> 00:00:11,730
+getting started with basic tasks.
+
+3
+00:00:11,730 --> 00:00:14,910
+This module introduces
+you to working with Linux.
+
+4
+00:00:14,910 --> 00:00:18,000
+We'll start exploring how
+to work on the command line.
+
+5
+00:00:18,000 --> 00:00:19,950
+Next, you'll learn about
+the essential tools
+
+6
+00:00:19,950 --> 00:00:23,190
+that are typically used
+when working with Linux.
+
+7
+00:00:23,190 --> 00:00:24,900
+In the last lesson in this module,
+
+8
+00:00:24,900 --> 00:00:27,150
+you'll learn how to work
+with the bash shell.

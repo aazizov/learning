@@ -1,0 +1,62 @@
+1
+00:00:06,690 --> 00:00:09,180
+- So at this point, you
+know how to install RHEL.
+
+2
+00:00:09,180 --> 00:00:11,943
+Well, I would say let's
+practice that in a lab.
+
+3
+00:00:12,930 --> 00:00:15,120
+In this lab, please install a RHEL server
+
+4
+00:00:15,120 --> 00:00:17,220
+that meets a couple of requirements.
+
+5
+00:00:17,220 --> 00:00:19,710
+A graphical user interface is installed.
+
+6
+00:00:19,710 --> 00:00:21,840
+You'll have a 10 gigabyte root partition,
+
+7
+00:00:21,840 --> 00:00:23,733
+and one gigabyte swap partition.
+
+8
+00:00:24,570 --> 00:00:27,000
+You need to make sure that
+at least four gigabyte
+
+9
+00:00:27,000 --> 00:00:29,343
+of disc space remains as unused.
+
+10
+00:00:30,210 --> 00:00:31,920
+Set the root password to password,
+
+11
+00:00:31,920 --> 00:00:34,380
+and create a user student with a password,
+
+12
+00:00:34,380 --> 00:00:35,730
+also set to password,
+
+13
+00:00:35,730 --> 00:00:37,500
+and configure the network interface
+
+14
+00:00:37,500 --> 00:00:39,960
+to contact DHCP server.
+
+15
+00:00:39,960 --> 00:00:40,793
+Good luck.

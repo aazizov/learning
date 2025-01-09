@@ -1,0 +1,76 @@
+1
+00:00:07,440 --> 00:00:08,760
+- Welcome to lesson two,
+
+2
+00:00:08,760 --> 00:00:11,640
+installing Red Hat
+Enterprise Linux server.
+
+3
+00:00:11,640 --> 00:00:13,350
+In this lesson, you'll
+learn what is needed
+
+4
+00:00:13,350 --> 00:00:16,770
+to install Red Hat Enterprise
+Linux in your environment.
+
+5
+00:00:16,770 --> 00:00:20,010
+I'll first explain what is
+needed to install RHEL nine.
+
+6
+00:00:20,010 --> 00:00:23,430
+After which, we can cover the
+actual installation itself.
+
+7
+00:00:23,430 --> 00:00:25,410
+I'll cover all the
+parameters that are needed
+
+8
+00:00:25,410 --> 00:00:27,030
+to set up a basic system,
+
+9
+00:00:27,030 --> 00:00:28,620
+which also includes an installation
+
+10
+00:00:28,620 --> 00:00:30,309
+with custom partitioning.
+
+11
+00:00:30,309 --> 00:00:32,760
+You'll also learn how to deploy a Red Hat
+
+12
+00:00:32,760 --> 00:00:34,080
+in a Cloud environment.
+
+13
+00:00:34,080 --> 00:00:36,300
+And when we reach the end of this lesson,
+
+14
+00:00:36,300 --> 00:00:39,050
+you'll have your own environment
+that is ready for use.
+
+15
+00:00:40,112 --> 00:00:42,420
+At the end of this
+lesson, you'll find a lab
+
+16
+00:00:42,420 --> 00:00:44,490
+that allows you to
+practice RHEL installation,
+
+17
+00:00:44,490 --> 00:00:45,993
+as well as the lab solution.

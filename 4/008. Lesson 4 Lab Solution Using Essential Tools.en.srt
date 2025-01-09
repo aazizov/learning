@@ -1,0 +1,337 @@
+1
+00:00:07,620 --> 00:00:11,610
+- Okay, so if you need to find a man page,
+
+2
+00:00:11,610 --> 00:00:14,550
+man -k is probably what you want to know.
+
+3
+00:00:14,550 --> 00:00:17,880
+man -k password, is that
+bringing what we want?
+
+4
+00:00:17,880 --> 00:00:20,790
+Oh boy, that's a lot of information,
+
+5
+00:00:20,790 --> 00:00:23,460
+and in this lot of information
+
+6
+00:00:23,460 --> 00:00:26,130
+can we filter it down in a convenient way?
+
+7
+00:00:26,130 --> 00:00:28,770
+I think so, let's use Q to get out,
+
+8
+00:00:28,770 --> 00:00:30,993
+and let's use grep 1,
+
+9
+00:00:31,830 --> 00:00:34,770
+because changing a password, well,
+
+10
+00:00:34,770 --> 00:00:39,570
+that might be something that
+relates to section number one.
+
+11
+00:00:39,570 --> 00:00:41,310
+And I don't see anything
+
+12
+00:00:41,310 --> 00:00:44,400
+that looks like what I'm looking for,
+
+13
+00:00:44,400 --> 00:00:48,000
+so maybe we need to look
+in section number eight.
+
+14
+00:00:48,000 --> 00:00:49,200
+Does that make sense?
+
+15
+00:00:49,200 --> 00:00:52,920
+Well, maybe this command
+that I'm looking for
+
+16
+00:00:52,920 --> 00:00:55,493
+is a command that works for the root user
+
+17
+00:00:55,493 --> 00:00:57,900
+as well as an ordinary user.
+
+18
+00:00:57,900 --> 00:01:00,060
+Now, what do we see here?
+
+19
+00:01:00,060 --> 00:01:01,770
+Well, you see something nasty
+
+20
+00:01:01,770 --> 00:01:06,750
+and that is that man -k in this
+case is not so very useful,
+
+21
+00:01:06,750 --> 00:01:09,990
+because I don't know if
+you see any useful command
+
+22
+00:01:09,990 --> 00:01:12,600
+but I don't see the command
+that I'm looking for.
+
+23
+00:01:12,600 --> 00:01:16,950
+So let me cheat and show you man passwd.
+
+24
+00:01:16,950 --> 00:01:18,240
+What do we see?
+
+25
+00:01:18,240 --> 00:01:21,577
+We see that the man passwd's showing,
+
+26
+00:01:21,577 --> 00:01:24,450
+"update users authentication token".
+
+27
+00:01:24,450 --> 00:01:27,390
+Now, you know what, man -k is looking
+
+28
+00:01:27,390 --> 00:01:29,640
+in the line that I have
+highlighted right here.
+
+29
+00:01:29,640 --> 00:01:32,100
+And do you see the word password? I don't.
+
+30
+00:01:32,100 --> 00:01:35,220
+And that's why we don't see
+it in the results either.
+
+31
+00:01:35,220 --> 00:01:39,332
+But if I would use man -k authentication,
+
+32
+00:01:39,332 --> 00:01:42,210
+(computer keyboard clacking)
+
+33
+00:01:42,210 --> 00:01:43,740
+then this is what we get.
+
+34
+00:01:43,740 --> 00:01:48,570
+And in man -k authentication,
+yeah, there we see passwd.
+
+35
+00:01:48,570 --> 00:01:51,810
+Anyway, passwd is what we want.
+
+36
+00:01:51,810 --> 00:01:53,550
+Then use the man page for useradd,
+
+37
+00:01:53,550 --> 00:01:55,983
+and create a user with the name anna.
+
+38
+00:01:57,240 --> 00:01:58,950
+So man useradd,
+
+39
+00:01:58,950 --> 00:02:03,450
+here we can see this, the
+description, the synopsis,
+
+40
+00:02:03,450 --> 00:02:06,180
+and in the synopsis, we
+see the different users.
+
+41
+00:02:06,180 --> 00:02:09,270
+So I need useradd LOGIN.
+
+42
+00:02:09,270 --> 00:02:10,680
+Now what this is LOGIN?
+
+43
+00:02:10,680 --> 00:02:11,913
+Well, if you don't know,
+
+44
+00:02:13,019 --> 00:02:13,860
+you can get it from the description.
+
+45
+00:02:13,860 --> 00:02:16,953
+It will create a user
+with a specific name.
+
+46
+00:02:18,180 --> 00:02:22,620
+Do notice that useradd
+is in section eight,
+
+47
+00:02:22,620 --> 00:02:27,620
+so that means that useradd anna
+is not going to be working,
+
+48
+00:02:28,230 --> 00:02:30,090
+permission denied.
+
+49
+00:02:30,090 --> 00:02:31,860
+We need to repeat that last command.
+
+50
+00:02:31,860 --> 00:02:33,900
+Let me do that by
+pressing the up arrow key,
+
+51
+00:02:33,900 --> 00:02:37,050
+Control + A to bring
+my cursor to the front,
+
+52
+00:02:37,050 --> 00:02:39,390
+and then I'm using sudo useradd anna
+
+53
+00:02:39,390 --> 00:02:41,520
+and that's doing so much better.
+
+54
+00:02:41,520 --> 00:02:45,120
+At least, after entering
+the appropriate password.
+
+55
+00:02:45,120 --> 00:02:48,480
+So I created the user and likewise,
+
+56
+00:02:48,480 --> 00:02:52,260
+I'm going to use sudo passwd anna.
+
+57
+00:02:52,260 --> 00:02:53,160
+Why is that?
+
+58
+00:02:53,160 --> 00:02:55,170
+Well, do you really
+think that ordinary users
+
+59
+00:02:55,170 --> 00:02:57,180
+can change one another's password?
+
+60
+00:02:57,180 --> 00:03:01,140
+Of course not, that's why we
+need sudo superpowers here.
+
+61
+00:03:01,140 --> 00:03:03,390
+So it's prompting for the new password,
+
+62
+00:03:03,390 --> 00:03:05,130
+going once, going twice,
+
+63
+00:03:05,130 --> 00:03:08,970
+and now all authentication
+tokens updated successfully.
+
+64
+00:03:08,970 --> 00:03:10,800
+That's good news.
+
+65
+00:03:10,800 --> 00:03:12,630
+The last part of this exercise,
+
+66
+00:03:12,630 --> 00:03:15,810
+use VIM to create a file
+with the name users.
+
+67
+00:03:15,810 --> 00:03:17,850
+I'm using I for input mode
+
+68
+00:03:17,850 --> 00:03:21,360
+and I'm entering "alex" and "alexander"
+
+69
+00:03:21,360 --> 00:03:24,750
+and "linda" and "belinda".
+
+70
+00:03:24,750 --> 00:03:27,870
+And that is all that we need for now.
+
+71
+00:03:27,870 --> 00:03:29,850
+So I'm pressing Escape,
+
+72
+00:03:29,850 --> 00:03:33,630
+and after pressing Escape, I'm using :wq!.
+
+73
+00:03:35,820 --> 00:03:39,127
+Well, let me tell you, I'm
+going to use a shortcut.
+
+74
+00:03:39,127 --> 00:03:42,540
+"ZZ", which will do exactly the same.
+
+75
+00:03:42,540 --> 00:03:44,940
+Now my file is written, committed to disc,
+
+76
+00:03:44,940 --> 00:03:49,710
+and we can see that right
+here when I'm using ls -l.
+
+77
+00:03:49,710 --> 00:03:53,730
+Vim users, there we go,
+here is the users file.
+
+78
+00:03:53,730 --> 00:03:56,073
+And that's all for this
+lab, let's continue.

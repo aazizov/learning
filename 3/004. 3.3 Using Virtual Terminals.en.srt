@@ -1,0 +1,335 @@
+1
+00:00:06,558 --> 00:00:09,480
+- In this video, I will tell
+you about a special feature
+
+2
+00:00:09,480 --> 00:00:11,940
+in Linux, the virtual terminal.
+
+3
+00:00:11,940 --> 00:00:13,560
+So what is a terminal?
+
+4
+00:00:13,560 --> 00:00:15,977
+Well, a terminal is the
+most important environment
+
+5
+00:00:15,977 --> 00:00:17,640
+that you are going to use.
+
+6
+00:00:17,640 --> 00:00:20,130
+It's the environment that runs a shell.
+
+7
+00:00:20,130 --> 00:00:22,650
+In a graphical environment,
+multiple terminals
+
+8
+00:00:22,650 --> 00:00:24,600
+can be used on the same screen.
+
+9
+00:00:24,600 --> 00:00:27,630
+And that is why, even
+if it's not very useful,
+
+10
+00:00:27,630 --> 00:00:32,073
+most Linux administrates like
+graphical environments anyway.
+
+11
+00:00:32,073 --> 00:00:34,110
+In a text based environment,
+
+12
+00:00:34,110 --> 00:00:37,080
+only one terminal is
+started from the console.
+
+13
+00:00:37,080 --> 00:00:40,230
+And that means that you can
+see one thing at a time.
+
+14
+00:00:40,230 --> 00:00:42,600
+That's inconvenient
+and that is why we have
+
+15
+00:00:42,600 --> 00:00:44,670
+virtual terminals.
+
+16
+00:00:44,670 --> 00:00:46,650
+Virtual terminals can be used to start
+
+17
+00:00:46,650 --> 00:00:49,590
+additional terminal sessions
+and they are accessible
+
+18
+00:00:49,590 --> 00:00:53,400
+by using Ctrl[-Alt]-Fn
+key keyboard sequences.
+
+19
+00:00:53,400 --> 00:00:55,170
+Like Ctrl[-Alt]-F2,
+
+20
+00:00:55,170 --> 00:00:57,690
+which is where your
+graphical interface is hiding
+
+21
+00:00:57,690 --> 00:01:00,793
+or Ctrl[-Alt]-F3 up to F6
+
+22
+00:01:00,793 --> 00:01:04,503
+where you have some text
+based terminals hiding.
+
+23
+00:01:05,970 --> 00:01:08,580
+Now, how do we work with
+these virtual terminals>
+
+24
+00:01:08,580 --> 00:01:11,340
+Well you use the who or the w command
+
+25
+00:01:11,340 --> 00:01:14,280
+to see which users currently
+are active on which terminals?
+
+26
+00:01:14,280 --> 00:01:17,879
+And you can use chvt for
+change virtual terminal
+
+27
+00:01:17,879 --> 00:01:20,430
+to change between virtual terminals
+
+28
+00:01:20,430 --> 00:01:23,550
+or obviously you use the key sequences.
+
+29
+00:01:23,550 --> 00:01:24,480
+But in particular,
+
+30
+00:01:24,480 --> 00:01:26,760
+if you are in a virtualized environment
+
+31
+00:01:26,760 --> 00:01:29,970
+these key sequences are
+not always accessible.
+
+32
+00:01:29,970 --> 00:01:31,233
+Let's go check this out.
+
+33
+00:01:34,080 --> 00:01:37,110
+All right, let me start by typing who,
+
+34
+00:01:37,110 --> 00:01:41,793
+where I can see that I'm user
+student connected to tty2.
+
+35
+00:01:42,710 --> 00:01:45,630
+Tty is the name of the terminal.
+
+36
+00:01:45,630 --> 00:01:48,990
+Devices in Linux always
+have a device name and tty2
+
+37
+00:01:48,990 --> 00:01:53,070
+happens to be the device name
+for your standard terminal.
+
+38
+00:01:53,070 --> 00:01:57,030
+Now, if I would use chvt 3,
+
+39
+00:01:57,030 --> 00:01:58,620
+now what is going to happen?
+
+40
+00:01:58,620 --> 00:02:00,696
+Oh, something nasty has happened.
+
+41
+00:02:00,696 --> 00:02:04,590
+Couldn't get a file descriptor
+referring to the console.
+
+42
+00:02:04,590 --> 00:02:05,933
+And you know why that is?
+
+43
+00:02:05,933 --> 00:02:08,250
+That is because I'm running this command
+
+44
+00:02:08,250 --> 00:02:10,113
+without root privileges.
+
+45
+00:02:11,460 --> 00:02:13,140
+We'll cover it later in more detail,
+
+46
+00:02:13,140 --> 00:02:17,307
+but already I want to tell you about sudo,
+
+47
+00:02:17,307 --> 00:02:19,020
+but before I type sudo,
+
+48
+00:02:19,020 --> 00:02:21,180
+I need to type sudo in
+front of the command.
+
+49
+00:02:21,180 --> 00:02:23,760
+And now my cursor is to
+the end of the command.
+
+50
+00:02:23,760 --> 00:02:26,670
+I like using the control 'A' key sequence
+
+51
+00:02:26,670 --> 00:02:29,580
+which brings my cursor to
+the front of the command
+
+52
+00:02:29,580 --> 00:02:31,650
+which allows for easy editing.
+
+53
+00:02:31,650 --> 00:02:35,700
+And now I'm using sudo
+chvt for super use sudo.
+
+54
+00:02:35,700 --> 00:02:39,390
+So with root privileges, run this command.
+
+55
+00:02:39,390 --> 00:02:41,160
+So here is my other terminal.
+
+56
+00:02:41,160 --> 00:02:44,970
+I use my username and password to log in,
+
+57
+00:02:44,970 --> 00:02:48,120
+and now I type who to
+see who is logged in.
+
+58
+00:02:48,120 --> 00:02:51,420
+And there I can see that
+I'm logged in on tty2
+
+59
+00:02:51,420 --> 00:02:53,100
+as well tty3.
+
+60
+00:02:53,100 --> 00:02:57,510
+And you know what, if
+I do a sudo chvt again
+
+61
+00:02:57,510 --> 00:02:59,982
+to change to terminal four,
+
+62
+00:02:59,982 --> 00:03:03,570
+then it's asking for my password again.
+
+63
+00:03:03,570 --> 00:03:05,220
+And I have new login prompt.
+
+64
+00:03:05,220 --> 00:03:08,520
+And this new login prompt
+is where I'm going to log in
+
+65
+00:03:08,520 --> 00:03:11,340
+as root and as root I'm going to type
+
+66
+00:03:11,340 --> 00:03:14,400
+the shortest command available, w.
+
+67
+00:03:14,400 --> 00:03:17,820
+'W' is giving kind of the same information
+
+68
+00:03:17,820 --> 00:03:20,430
+as the who command but
+it's not only telling you
+
+69
+00:03:20,430 --> 00:03:22,980
+who is logged in and
+where they are logged in.
+
+70
+00:03:22,980 --> 00:03:25,710
+It's also giving some more
+environmental information
+
+71
+00:03:25,710 --> 00:03:27,660
+about these users.
+
+72
+00:03:27,660 --> 00:03:30,345
+Next I'm going to use chvt 2
+
+73
+00:03:30,345 --> 00:03:34,320
+and chvt 2 is bringing me
+back to the graphical screen.
+
+74
+00:03:34,320 --> 00:03:35,700
+That's where it all started.
+
+75
+00:03:35,700 --> 00:03:37,110
+And this is all you need to know
+
+76
+00:03:37,110 --> 00:03:38,973
+about these virtual terminals.

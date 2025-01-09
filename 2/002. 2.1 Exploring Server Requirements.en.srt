@@ -1,0 +1,105 @@
+1
+00:00:06,570 --> 00:00:07,403
+- All right.
+
+2
+00:00:07,403 --> 00:00:09,450
+Let's talk about server requirements.
+
+3
+00:00:09,450 --> 00:00:11,190
+So, what you are going to need
+
+4
+00:00:11,190 --> 00:00:14,730
+to install Red Hat Enterprise
+Linux really depends
+
+5
+00:00:14,730 --> 00:00:17,640
+on the type of insulation
+that you are going to do.
+
+6
+00:00:17,640 --> 00:00:20,981
+So, is it a physical, a cloud,
+or a virtual insulation?
+
+7
+00:00:20,981 --> 00:00:24,810
+Are you going to use a
+graphical user interface or not?
+
+8
+00:00:24,810 --> 00:00:27,690
+And what exactly are you
+going to do with the server?
+
+9
+00:00:27,690 --> 00:00:29,733
+And if you have the
+answers to all of these,
+
+10
+00:00:29,733 --> 00:00:33,360
+then you can talk about your requirements.
+
+11
+00:00:33,360 --> 00:00:36,120
+Now for this class, we
+will make it really simple.
+
+12
+00:00:36,120 --> 00:00:38,140
+I recommend you use a virtual machine
+
+13
+00:00:38,140 --> 00:00:40,740
+with the following specs.
+
+14
+00:00:40,740 --> 00:00:42,000
+So, here are the requirements
+
+15
+00:00:42,000 --> 00:00:44,490
+for installation in this class.
+
+16
+00:00:44,490 --> 00:00:47,340
+To start with, you need at
+least two gigabytes of RAM.
+
+17
+00:00:47,340 --> 00:00:49,710
+You are going to need a
+graphical user interface,
+
+18
+00:00:49,710 --> 00:00:52,889
+and that doesn't work well if
+you only have one gigabyte.
+
+19
+00:00:52,889 --> 00:00:56,820
+Make sure you have 20
+gigabytes of disk space.
+
+20
+00:00:56,820 --> 00:00:59,730
+Also, make sure you have
+a network connection
+
+21
+00:00:59,730 --> 00:01:03,300
+and an optical drive
+or access to a DVD ISO.
+
+22
+00:01:03,300 --> 00:01:04,260
+In the next video,
+
+23
+00:01:04,260 --> 00:01:06,813
+you will learn how to
+perform a basic installation.

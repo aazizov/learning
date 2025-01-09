@@ -1,0 +1,351 @@
+1
+00:00:06,720 --> 00:00:10,113
+- All right, let's talk
+about the other editor, vim.
+
+2
+00:00:11,010 --> 00:00:13,140
+Now what's so special about vim.
+
+3
+00:00:13,140 --> 00:00:16,200
+Well, vim is vi improved,
+
+4
+00:00:16,200 --> 00:00:21,200
+and vi was introduced in 1976
+as a screen oriented editor
+
+5
+00:00:21,330 --> 00:00:24,453
+which was pretty new in that time.
+
+6
+00:00:25,320 --> 00:00:28,470
+So vim is the improved version of vi
+
+7
+00:00:28,470 --> 00:00:31,203
+and it has replaced the
+original vi command.
+
+8
+00:00:32,340 --> 00:00:35,790
+Some additions to vim, you can
+use arrow keys, for instance.
+
+9
+00:00:35,790 --> 00:00:38,700
+In the original vi you
+couldn't use arrow keys because
+
+10
+00:00:38,700 --> 00:00:41,793
+these were not common in 1976.
+
+11
+00:00:42,900 --> 00:00:45,870
+Now, because command
+line work in the 1970s
+
+12
+00:00:45,870 --> 00:00:48,750
+was line oriented, and
+not screen oriented,
+
+13
+00:00:48,750 --> 00:00:51,060
+vi was developed with advanced features
+
+14
+00:00:51,060 --> 00:00:54,120
+to program text file modifications.
+
+15
+00:00:54,120 --> 00:00:57,390
+And especially because of
+these advanced features
+
+16
+00:00:57,390 --> 00:01:00,093
+vim is still the most
+commonly used editor.
+
+17
+00:01:01,440 --> 00:01:04,050
+True, nano is a lot easier,
+
+18
+00:01:04,050 --> 00:01:06,990
+but vim is so much more powerful
+
+19
+00:01:06,990 --> 00:01:09,480
+that if you end up being
+a Linux professional,
+
+20
+00:01:09,480 --> 00:01:12,360
+you should learn about vim anyway.
+
+21
+00:01:12,360 --> 00:01:14,160
+If I may give you a suggestion,
+
+22
+00:01:14,160 --> 00:01:17,130
+for best practice use
+nano to edit text files
+
+23
+00:01:17,130 --> 00:01:18,180
+in an easy way.
+
+24
+00:01:18,180 --> 00:01:21,900
+Use vim if you want to get
+respect in the Linux community
+
+25
+00:01:21,900 --> 00:01:25,020
+and the full power that
+you can get from an editor.
+
+26
+00:01:25,020 --> 00:01:28,770
+In the end, once you are
+used to working with vim,
+
+27
+00:01:28,770 --> 00:01:30,480
+things will go faster.
+
+28
+00:01:30,480 --> 00:01:33,420
+And that is why for all of
+the demos I'm doing throughout
+
+29
+00:01:33,420 --> 00:01:37,260
+this course, you will only see
+one editor and that is vim.
+
+30
+00:01:37,260 --> 00:01:38,910
+Now, in order to work with vim
+
+31
+00:01:38,910 --> 00:01:41,790
+there's a few things that you should know.
+
+32
+00:01:41,790 --> 00:01:42,623
+To start with,
+
+33
+00:01:42,623 --> 00:01:45,120
+different modes are available in vim.
+
+34
+00:01:45,120 --> 00:01:46,080
+There's a command mode
+
+35
+00:01:46,080 --> 00:01:48,630
+which is a default mode after opening
+
+36
+00:01:48,630 --> 00:01:53,040
+and use command mode to
+enter editing commands.
+
+37
+00:01:53,040 --> 00:01:55,890
+You get to the command mode
+by pressing the escape key
+
+38
+00:01:55,890 --> 00:01:57,990
+if you're not currently
+in the command mode.
+
+39
+00:01:57,990 --> 00:02:01,710
+And in case of doubt, you can
+also press the escape key.
+
+40
+00:02:01,710 --> 00:02:04,410
+The insert mode is where
+you can enter text.
+
+41
+00:02:04,410 --> 00:02:07,440
+You can press 'i', or some
+of the alternative commands
+
+42
+00:02:07,440 --> 00:02:09,840
+that I will tell you
+about in just a minute
+
+43
+00:02:09,840 --> 00:02:11,550
+to enter the insert mode.
+
+44
+00:02:11,550 --> 00:02:14,610
+And after inserting text,
+don't forget to get back
+
+45
+00:02:14,610 --> 00:02:18,420
+to command mode, to
+save your text and exit.
+
+46
+00:02:18,420 --> 00:02:20,493
+Let me show you how this works.
+
+47
+00:02:24,150 --> 00:02:27,420
+So I am going to create a new file.
+
+48
+00:02:27,420 --> 00:02:29,763
+Hello.txt.
+
+49
+00:02:31,170 --> 00:02:34,350
+I'm using .txt, that
+looks like an extension.
+
+50
+00:02:34,350 --> 00:02:36,810
+Notice that extensions on
+Linux have no function.
+
+51
+00:02:36,810 --> 00:02:39,240
+It's just for the
+convenience of the users.
+
+52
+00:02:39,240 --> 00:02:43,920
+It makes it easier to identify
+what kind of file this is.
+
+53
+00:02:43,920 --> 00:02:46,620
+At this point, I am in the command mode.
+
+54
+00:02:46,620 --> 00:02:49,140
+So this is the vim command
+mode in which I can type all
+
+55
+00:02:49,140 --> 00:02:50,280
+of these commands.
+
+56
+00:02:50,280 --> 00:02:54,453
+But that only makes sense if
+I've typed a little bit before.
+
+57
+00:02:55,290 --> 00:02:58,860
+So I am going to press 'i' for insert.
+
+58
+00:02:58,860 --> 00:03:00,270
+Look at the lower left corner,
+
+59
+00:03:00,270 --> 00:03:01,890
+this is what it looks like now.
+
+60
+00:03:01,890 --> 00:03:05,010
+Now I'm pressing 'i', and it reads insert
+
+61
+00:03:05,010 --> 00:03:08,010
+which is indicating that
+I'm in the insert mode,
+
+62
+00:03:08,010 --> 00:03:11,280
+and I am typing my text
+and then I'm ready.
+
+63
+00:03:11,280 --> 00:03:13,230
+Now, once you are ready,
+you need to go back
+
+64
+00:03:13,230 --> 00:03:16,020
+to the command mode to use
+the appropriate command
+
+65
+00:03:16,020 --> 00:03:17,520
+and the appropriate command
+
+66
+00:03:17,520 --> 00:03:19,830
+in this case would be escape first
+
+67
+00:03:19,830 --> 00:03:23,580
+and then :wq!
+
+68
+00:03:23,580 --> 00:03:28,140
+I'll tell you about that
+command later, but colon is just
+
+69
+00:03:28,140 --> 00:03:31,650
+because command starts with
+a colon, W is for write,
+
+70
+00:03:31,650 --> 00:03:34,410
+Q is for quit, and exclamation mark is for
+
+71
+00:03:34,410 --> 00:03:37,620
+don't ask any smart questions, just do it.
+
+72
+00:03:37,620 --> 00:03:40,500
+So that concludes our
+first session in vim.
+
+73
+00:03:40,500 --> 00:03:42,450
+My file has now been written.
+
+74
+00:03:42,450 --> 00:03:45,300
+And if you want to, you can
+quickly check the contents
+
+75
+00:03:45,300 --> 00:03:47,367
+of the file by using cat.
+
+76
+00:03:47,367 --> 00:03:51,210
+Cat is for dumping the contents
+of a text file on screen.
+
+77
+00:03:51,210 --> 00:03:53,490
+And look at that, it reads 'Hello World',
+
+78
+00:03:53,490 --> 00:03:55,503
+so we probably did something right.

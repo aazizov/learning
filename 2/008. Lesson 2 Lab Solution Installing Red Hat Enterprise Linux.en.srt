@@ -1,0 +1,259 @@
+1
+00:00:07,050 --> 00:00:09,180
+- All right, so to start with,
+
+2
+00:00:09,180 --> 00:00:12,600
+you need to select, Install
+Red Hat Enterprise Linux 9.0.
+
+3
+00:00:12,600 --> 00:00:15,180
+If you don't, doesn't really change a lot
+
+4
+00:00:15,180 --> 00:00:18,060
+but you will need to
+wait a little bit longer
+
+5
+00:00:18,060 --> 00:00:22,470
+while the integrity of the
+installation media is verified.
+
+6
+00:00:22,470 --> 00:00:25,320
+So, you need to select
+the installation language,
+
+7
+00:00:25,320 --> 00:00:26,820
+set to English.
+
+8
+00:00:26,820 --> 00:00:29,070
+And then one of the most important option
+
+9
+00:00:29,070 --> 00:00:31,290
+is the Installation Destination.
+
+10
+00:00:31,290 --> 00:00:36,120
+We are not going to use
+the automatic installation,
+
+11
+00:00:36,120 --> 00:00:37,200
+we need custom.
+
+12
+00:00:37,200 --> 00:00:38,400
+So you select Custom.
+
+13
+00:00:38,400 --> 00:00:39,400
+Then you click Done.
+
+14
+00:00:40,290 --> 00:00:44,910
+Next, you select Standard
+Partitioning and you click +.
+
+15
+00:00:44,910 --> 00:00:48,990
+So, the Mount Point that
+must be /boot to start with.
+
+16
+00:00:48,990 --> 00:00:53,190
+And I know that wasn't
+even asked for in the lab,
+
+17
+00:00:53,190 --> 00:00:55,290
+so we don't do /boot.
+
+18
+00:00:55,290 --> 00:00:58,113
+We just do a 10 gigabyte root partition.
+
+19
+00:00:59,640 --> 00:01:01,440
+So, you click at Mount Point
+
+20
+00:01:01,440 --> 00:01:03,780
+and then you repeat the procedure
+
+21
+00:01:03,780 --> 00:01:07,710
+by creating a one gigabyte swap partition.
+
+22
+00:01:07,710 --> 00:01:11,790
+You will learn all about why
+this might be useful later
+
+23
+00:01:11,790 --> 00:01:16,680
+in this course, for this
+moment you just need to do it.
+
+24
+00:01:16,680 --> 00:01:19,680
+So, I'm already done in the partitioning
+
+25
+00:01:19,680 --> 00:01:21,810
+which means I can click Done.
+
+26
+00:01:21,810 --> 00:01:24,480
+And have a look at the
+overview of the changes
+
+27
+00:01:24,480 --> 00:01:28,143
+and if that looks okay,
+click Accept Changes.
+
+28
+00:01:29,160 --> 00:01:30,930
+Next, we need to make sure that
+
+29
+00:01:30,930 --> 00:01:33,000
+server with GUI is installed.
+
+30
+00:01:33,000 --> 00:01:34,560
+That automatically happens.
+
+31
+00:01:34,560 --> 00:01:36,960
+So, no changes needed here.
+
+32
+00:01:36,960 --> 00:01:38,160
+You need to make sure
+
+33
+00:01:38,160 --> 00:01:42,720
+that your server is
+connected to a network.
+
+34
+00:01:42,720 --> 00:01:44,820
+As you can see my network card
+
+35
+00:01:44,820 --> 00:01:47,310
+which is named ens160 is connected
+
+36
+00:01:47,310 --> 00:01:49,050
+and it already has an IP address.
+
+37
+00:01:49,050 --> 00:01:50,400
+So that's good.
+
+38
+00:01:50,400 --> 00:01:52,590
+Also, no changes needed here
+
+39
+00:01:52,590 --> 00:01:57,510
+and we need to set a
+password for the root user.
+
+40
+00:01:57,510 --> 00:02:00,750
+So, going once, going twice
+
+41
+00:02:00,750 --> 00:02:03,600
+and I'm clicking Done and Done again
+
+42
+00:02:03,600 --> 00:02:07,440
+because the password is too
+simple, that's on purpose.
+
+43
+00:02:07,440 --> 00:02:11,010
+And then we need to wait until
+the installation is done.
+
+44
+00:02:11,010 --> 00:02:12,150
+After the installation
+
+45
+00:02:12,150 --> 00:02:15,630
+you can create a user account to be used
+
+46
+00:02:15,630 --> 00:02:16,953
+throughout this course.
+
+47
+00:02:19,500 --> 00:02:21,060
+Okay, at this point
+
+48
+00:02:21,060 --> 00:02:23,430
+the installer is prompting
+to reboot the system.
+
+49
+00:02:23,430 --> 00:02:25,233
+So, let's reboot the system.
+
+50
+00:02:26,070 --> 00:02:28,140
+Okay, so here we can see the last bit,
+
+51
+00:02:28,140 --> 00:02:30,120
+that's the get started,
+
+52
+00:02:30,120 --> 00:02:34,060
+where you click yes and Next
+and Next to accept many things
+
+53
+00:02:35,250 --> 00:02:37,740
+but you still need to create your account.
+
+54
+00:02:37,740 --> 00:02:40,290
+So, let's see About You part,
+
+55
+00:02:40,290 --> 00:02:42,780
+where you provide your username,
+
+56
+00:02:42,780 --> 00:02:45,210
+the password that you want to use.
+
+57
+00:02:45,210 --> 00:02:47,100
+And after creating that user account
+
+58
+00:02:47,100 --> 00:02:50,400
+you can start using Red
+Hat Enterprise Linux.
+
+59
+00:02:50,400 --> 00:02:52,680
+So, in the next lesson, you will learn
+
+60
+00:02:52,680 --> 00:02:55,773
+all about what you can do on
+this Red Hat Enterprise Linux.

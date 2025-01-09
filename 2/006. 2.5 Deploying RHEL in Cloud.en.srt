@@ -1,0 +1,80 @@
+1
+00:00:06,510 --> 00:00:07,770
+- Okay, before we continue,
+
+2
+00:00:07,770 --> 00:00:11,321
+I want to talk a little bit
+about using RHEL in Cloud.
+
+3
+00:00:11,321 --> 00:00:14,040
+The most important thing
+that you should notice
+
+4
+00:00:14,040 --> 00:00:17,163
+is that using RHEL in Cloud is different.
+
+5
+00:00:18,013 --> 00:00:22,320
+To start with, in Cloud, RHEL
+is deployed, not installed.
+
+6
+00:00:22,320 --> 00:00:24,810
+And also, a very important difference
+
+7
+00:00:24,810 --> 00:00:28,980
+is that the Cloud provides
+the boot procedure, not Linux.
+
+8
+00:00:28,980 --> 00:00:30,780
+And different procedures are used
+
+9
+00:00:30,780 --> 00:00:32,880
+by different Cloud providers.
+
+10
+00:00:32,880 --> 00:00:36,150
+And because of all these
+differences, in this class,
+
+11
+00:00:36,150 --> 00:00:39,600
+you should not be using a Cloud instance.
+
+12
+00:00:39,600 --> 00:00:41,760
+If you want to become an RHCSA,
+
+13
+00:00:41,760 --> 00:00:44,580
+you need to be able to access
+your booting RHEL system
+
+14
+00:00:44,580 --> 00:00:47,940
+if anything goes wrong in the
+boot, in the boot procedure.
+
+15
+00:00:47,940 --> 00:00:50,126
+So, you need access to a grip boot prompt,
+
+16
+00:00:50,126 --> 00:00:54,000
+and in most cases, in
+Cloud, that is not the case.
+
+17
+00:00:54,000 --> 00:00:57,600
+So, really, using a RHEL instance in Cloud
+
+18
+00:00:57,600 --> 00:01:01,173
+is not a good idea to
+get you ready for RHCSA.

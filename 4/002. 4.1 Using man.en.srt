@@ -1,0 +1,853 @@
+1
+00:00:06,900 --> 00:00:07,770
+- In the last lesson,
+
+2
+00:00:07,770 --> 00:00:10,770
+you have learned about Linux commands.
+
+3
+00:00:10,770 --> 00:00:13,170
+Now there are so many
+Linux commands available
+
+4
+00:00:13,170 --> 00:00:14,730
+that sometimes it's difficult
+
+5
+00:00:14,730 --> 00:00:16,740
+to find out how to use them.
+
+6
+00:00:16,740 --> 00:00:18,390
+In order to get more information
+
+7
+00:00:18,390 --> 00:00:20,190
+about these Linux commands,
+
+8
+00:00:20,190 --> 00:00:21,390
+there is man,
+
+9
+00:00:21,390 --> 00:00:22,950
+which is also a command.
+
+10
+00:00:22,950 --> 00:00:23,970
+And it's the best source
+
+11
+00:00:23,970 --> 00:00:26,163
+to get extensive usage information.
+
+12
+00:00:27,180 --> 00:00:30,570
+A manual of sections that
+define command types.
+
+13
+00:00:30,570 --> 00:00:33,660
+And many man pages also have examples.
+
+14
+00:00:33,660 --> 00:00:37,140
+And you can search in
+man pages using slash.
+
+15
+00:00:37,140 --> 00:00:39,060
+Now, man is not the only option.
+
+16
+00:00:39,060 --> 00:00:41,310
+There are other documentation solutions,
+
+17
+00:00:41,310 --> 00:00:43,293
+but you won't be using them as much.
+
+18
+00:00:44,430 --> 00:00:49,350
+Known for interest has full
+documentation available in info.
+
+19
+00:00:49,350 --> 00:00:52,200
+And pinfo is an easy way to navigate,
+
+20
+00:00:52,200 --> 00:00:54,330
+much easier than info,
+
+21
+00:00:54,330 --> 00:00:57,480
+but you will only use
+them in exceptional cases.
+
+22
+00:00:57,480 --> 00:01:00,750
+I would suggest you focus on learning man.
+
+23
+00:01:00,750 --> 00:01:01,860
+It's really important.
+
+24
+00:01:01,860 --> 00:01:02,763
+Let me show you.
+
+25
+00:01:05,400 --> 00:01:09,030
+All right, let me start by using man
+
+26
+00:01:09,030 --> 00:01:11,460
+on the who command, for instance.
+
+27
+00:01:11,460 --> 00:01:13,740
+That's a nice and simple
+command to get started with
+
+28
+00:01:13,740 --> 00:01:16,410
+and to explore the structure of man.
+
+29
+00:01:16,410 --> 00:01:18,030
+So on the top line,
+
+30
+00:01:18,030 --> 00:01:19,980
+you can see the name of the command
+
+31
+00:01:19,980 --> 00:01:21,693
+with the section number behind it.
+
+32
+00:01:22,530 --> 00:01:23,363
+Now you might wonder,
+
+33
+00:01:23,363 --> 00:01:25,200
+"Hey, if Linux is case sensitive,
+
+34
+00:01:25,200 --> 00:01:26,640
+then why on the top line
+
+35
+00:01:26,640 --> 00:01:28,890
+do we have who in uppercase?"
+
+36
+00:01:28,890 --> 00:01:31,380
+Well, that's because
+of respect for history.
+
+37
+00:01:31,380 --> 00:01:34,170
+The very first man pages that were created
+
+38
+00:01:34,170 --> 00:01:37,140
+long, long time ago in the early 1970s,
+
+39
+00:01:37,140 --> 00:01:40,080
+and which by the way are kept in a museum
+
+40
+00:01:40,080 --> 00:01:43,200
+of computer history in
+Mountain View, California.
+
+41
+00:01:43,200 --> 00:01:45,000
+They had this header line
+
+42
+00:01:45,000 --> 00:01:47,520
+on every single printed page
+
+43
+00:01:47,520 --> 00:01:49,950
+where you had the command in uppercase.
+
+44
+00:01:49,950 --> 00:01:52,290
+And that's why, out of respect for history
+
+45
+00:01:52,290 --> 00:01:53,553
+that never went away.
+
+46
+00:01:54,450 --> 00:01:57,420
+I'll tell you about these
+section numbers later.
+
+47
+00:01:57,420 --> 00:01:58,920
+But section 1,
+
+48
+00:01:58,920 --> 00:02:00,330
+that is where you find commands
+
+49
+00:02:00,330 --> 00:02:02,820
+that can be used by ordinary users.
+
+50
+00:02:02,820 --> 00:02:05,220
+Now we have short
+description of the command,
+
+51
+00:02:05,220 --> 00:02:06,300
+the name of the command,
+
+52
+00:02:06,300 --> 00:02:09,720
+and short explanation what it is doing.
+
+53
+00:02:09,720 --> 00:02:12,780
+The synopsis, which is
+telling you how to use it.
+
+54
+00:02:12,780 --> 00:02:15,210
+In this synopsis, we
+find different elements
+
+55
+00:02:15,210 --> 00:02:17,730
+that are quite, quite common.
+
+56
+00:02:17,730 --> 00:02:19,980
+Here we have the element
+between square brackets,
+
+57
+00:02:19,980 --> 00:02:22,410
+that means that it is optional.
+
+58
+00:02:22,410 --> 00:02:24,120
+So you don't have to.
+
+59
+00:02:24,120 --> 00:02:25,350
+Here we have the three dots.
+
+60
+00:02:25,350 --> 00:02:27,000
+The three dots is a repeater
+
+61
+00:02:27,000 --> 00:02:28,770
+from the previous elements.
+
+62
+00:02:28,770 --> 00:02:30,630
+So you may use an option.
+
+63
+00:02:30,630 --> 00:02:32,250
+And the three dots is indicating
+
+64
+00:02:32,250 --> 00:02:35,190
+that you can even use multiple options.
+
+65
+00:02:35,190 --> 00:02:38,520
+And then we can specify
+a file or arguments,
+
+66
+00:02:38,520 --> 00:02:41,760
+and well, that's between square brackets,
+
+67
+00:02:41,760 --> 00:02:43,683
+so that means it's also optional.
+
+68
+00:02:44,700 --> 00:02:47,370
+Notice the use of the pipe sign here.
+
+69
+00:02:47,370 --> 00:02:50,880
+The pipe sign is used as an or indicator.
+
+70
+00:02:50,880 --> 00:02:52,680
+So you use either a file,
+
+71
+00:02:52,680 --> 00:02:54,900
+or you use one or more arguments,
+
+72
+00:02:54,900 --> 00:02:56,970
+but you can't use both.
+
+73
+00:02:56,970 --> 00:02:58,860
+Then, and that's what's so cool about man.
+
+74
+00:02:58,860 --> 00:02:59,970
+You can see a description
+
+75
+00:02:59,970 --> 00:03:01,410
+of all these different options.
+
+76
+00:03:01,410 --> 00:03:02,407
+And in case you are wondering,
+
+77
+00:03:02,407 --> 00:03:06,120
+"Hey, didn't we see them
+with --help as well?"
+
+78
+00:03:06,120 --> 00:03:07,620
+Yes, you did,
+
+79
+00:03:07,620 --> 00:03:09,540
+but not as much information.
+
+80
+00:03:09,540 --> 00:03:11,730
+And that's what you use man for.
+
+81
+00:03:11,730 --> 00:03:14,849
+Man is giving so much information.
+
+82
+00:03:14,849 --> 00:03:16,860
+At the moment you are done,
+
+83
+00:03:16,860 --> 00:03:18,720
+Use Q to get out of here.
+
+84
+00:03:18,720 --> 00:03:21,300
+Now let me use man on a command
+
+85
+00:03:21,300 --> 00:03:23,460
+that has a little bit more,
+
+86
+00:03:23,460 --> 00:03:24,420
+more information,
+
+87
+00:03:24,420 --> 00:03:26,013
+like man on RPM.
+
+88
+00:03:26,970 --> 00:03:30,060
+RPM is a Red Hat Package Manager.
+
+89
+00:03:30,060 --> 00:03:31,590
+And there, you can see it starts
+
+90
+00:03:31,590 --> 00:03:32,850
+with the synopsis as well.
+
+91
+00:03:32,850 --> 00:03:35,700
+And this synopsis is a lot longer.
+
+92
+00:03:35,700 --> 00:03:37,650
+And you can use the Space bar
+
+93
+00:03:37,650 --> 00:03:39,900
+to scroll through the man page
+
+94
+00:03:39,900 --> 00:03:41,970
+and get to the next page.
+
+95
+00:03:41,970 --> 00:03:45,690
+And as you can see, there is a lot here.
+
+96
+00:03:45,690 --> 00:03:47,760
+Now, if man pages are big,
+
+97
+00:03:47,760 --> 00:03:49,560
+and sometimes they are,
+
+98
+00:03:49,560 --> 00:03:51,000
+then you can easily search
+
+99
+00:03:51,000 --> 00:03:53,580
+in the man page using a slash.
+
+100
+00:03:53,580 --> 00:03:55,620
+Let me use slash
+
+101
+00:03:55,620 --> 00:03:59,490
+and let me find on query for instance.
+
+102
+00:03:59,490 --> 00:04:01,980
+You can see in the lower
+left corner while I'm typing.
+
+103
+00:04:01,980 --> 00:04:03,120
+And I'm typing query,
+
+104
+00:04:03,120 --> 00:04:04,920
+and it highlights the first time
+
+105
+00:04:04,920 --> 00:04:08,580
+from that current position on
+where it has found the word
+
+106
+00:04:08,580 --> 00:04:09,753
+that I'm looking for.
+
+107
+00:04:10,620 --> 00:04:12,180
+If you are searching for something,
+
+108
+00:04:12,180 --> 00:04:13,680
+use N for next.
+
+109
+00:04:13,680 --> 00:04:16,650
+So you can do that as
+many times as you want,
+
+110
+00:04:16,650 --> 00:04:18,660
+to see all the different query options
+
+111
+00:04:18,660 --> 00:04:20,910
+that are available.
+
+112
+00:04:20,910 --> 00:04:23,550
+I also like uppercase G in man,
+
+113
+00:04:23,550 --> 00:04:25,950
+because uppercase G brings you
+
+114
+00:04:25,950 --> 00:04:28,560
+all the way to the end of the man page,
+
+115
+00:04:28,560 --> 00:04:32,430
+where you have see also,
+and sometimes even examples.
+
+116
+00:04:32,430 --> 00:04:34,740
+The see also is for related commands.
+
+117
+00:04:34,740 --> 00:04:38,850
+And the examples, well,
+that is for your examples.
+
+118
+00:04:38,850 --> 00:04:40,860
+No matter how big a man page is,
+
+119
+00:04:40,860 --> 00:04:45,030
+as you can see, 730 lines in this case,
+
+120
+00:04:45,030 --> 00:04:46,983
+use Q to get out of there.
+
+121
+00:04:50,430 --> 00:04:53,850
+So in Linux, there are so
+many commands available.
+
+122
+00:04:53,850 --> 00:04:57,000
+And because there are so
+many commands available,
+
+123
+00:04:57,000 --> 00:04:58,440
+the documentation in man
+
+124
+00:04:58,440 --> 00:05:01,200
+is organized in different sections.
+
+125
+00:05:01,200 --> 00:05:03,300
+And for administration,
+
+126
+00:05:03,300 --> 00:05:05,910
+there are three sections that matter most.
+
+127
+00:05:05,910 --> 00:05:08,820
+Section number 1 is
+for executable programs
+
+128
+00:05:08,820 --> 00:05:10,140
+or shell commands.
+
+129
+00:05:10,140 --> 00:05:13,650
+Section number 5 is for file
+formats and conventions.
+
+130
+00:05:13,650 --> 00:05:16,680
+You will use it for configuration
+files, for instance.
+
+131
+00:05:16,680 --> 00:05:20,610
+And section number 8 is for
+system administration commands.
+
+132
+00:05:20,610 --> 00:05:23,280
+That's indicating that you
+need a root superpowers
+
+133
+00:05:23,280 --> 00:05:26,640
+in order to use the command completely.
+
+134
+00:05:26,640 --> 00:05:28,500
+And all sections are described
+
+135
+00:05:28,500 --> 00:05:30,090
+in a man page for man,
+
+136
+00:05:30,090 --> 00:05:31,350
+man man.
+
+137
+00:05:31,350 --> 00:05:33,060
+And if you want an introduction
+
+138
+00:05:33,060 --> 00:05:36,060
+to what a specific section
+number is all about,
+
+139
+00:05:36,060 --> 00:05:38,310
+use man followed by the section number,
+
+140
+00:05:38,310 --> 00:05:39,960
+followed by an intro.
+
+141
+00:05:39,960 --> 00:05:40,863
+Let me show you.
+
+142
+00:05:43,470 --> 00:05:46,920
+Okay. So we were just in man for who.
+
+143
+00:05:46,920 --> 00:05:49,053
+Oh! No manual entry for whoa.
+
+144
+00:05:50,100 --> 00:05:51,090
+Just who.
+
+145
+00:05:51,090 --> 00:05:52,650
+And here you can see who
+
+146
+00:05:52,650 --> 00:05:55,680
+with a 1 behind it,
+
+147
+00:05:55,680 --> 00:05:57,210
+in braces.
+
+148
+00:05:57,210 --> 00:05:58,230
+That's a section number.
+
+149
+00:05:58,230 --> 00:06:01,593
+And a section number is in
+all man pages, to the top.
+
+150
+00:06:02,670 --> 00:06:04,440
+Man RPM, for instance,
+
+151
+00:06:04,440 --> 00:06:07,260
+you can see section number 8.
+
+152
+00:06:07,260 --> 00:06:09,300
+For a full description
+of the section numbers,
+
+153
+00:06:09,300 --> 00:06:10,560
+use man man.
+
+154
+00:06:10,560 --> 00:06:14,163
+And you can see the
+description right here.
+
+155
+00:06:15,780 --> 00:06:17,370
+For an RHCSA level,
+
+156
+00:06:17,370 --> 00:06:20,160
+you only care about section 1, 5, and 8.
+
+157
+00:06:20,160 --> 00:06:21,120
+But if you get deeper
+
+158
+00:06:21,120 --> 00:06:22,950
+to the Linux operating system,
+
+159
+00:06:22,950 --> 00:06:24,090
+you might get interested
+
+160
+00:06:24,090 --> 00:06:25,980
+in other sections as well.
+
+161
+00:06:25,980 --> 00:06:28,560
+Like system calls, and library calls,
+
+162
+00:06:28,560 --> 00:06:32,280
+and kernel routines, and other options.
+
+163
+00:06:32,280 --> 00:06:35,070
+Now, if you want more information
+
+164
+00:06:35,070 --> 00:06:37,380
+about what section it's doing,
+
+165
+00:06:37,380 --> 00:06:40,110
+you use man followed
+by the section number.
+
+166
+00:06:40,110 --> 00:06:42,090
+And now you type the word intro.
+
+167
+00:06:42,090 --> 00:06:44,340
+This works for all of the sections.
+
+168
+00:06:44,340 --> 00:06:45,810
+So here you can see
+
+169
+00:06:45,810 --> 00:06:48,663
+that it's providing an
+introduction to system calls.
+
+170
+00:06:50,430 --> 00:06:52,860
+Now also interesting to know is
+
+171
+00:06:52,860 --> 00:06:55,620
+if you type man passwd,
+
+172
+00:06:55,620 --> 00:06:57,520
+what's so special about passwd?
+
+173
+00:06:57,520 --> 00:07:00,990
+Well, passwd happens to be an item
+
+174
+00:07:00,990 --> 00:07:03,630
+that is documented in multiple sections.
+
+175
+00:07:03,630 --> 00:07:06,030
+So I'm typing man passwd,
+
+176
+00:07:06,030 --> 00:07:08,760
+and it will show me the
+first that it has found.
+
+177
+00:07:08,760 --> 00:07:11,730
+And if I get out of there using Q,
+
+178
+00:07:11,730 --> 00:07:12,780
+then it's done.
+
+179
+00:07:12,780 --> 00:07:14,850
+If you wanna make sure
+you don't miss anything,
+
+180
+00:07:14,850 --> 00:07:16,590
+type man -a.
+
+181
+00:07:16,590 --> 00:07:19,950
+Man -a is for all section numbers.
+
+182
+00:07:19,950 --> 00:07:23,040
+Here I'm in passwd section 1 again.
+
+183
+00:07:23,040 --> 00:07:24,330
+I'm pressing Q.
+
+184
+00:07:24,330 --> 00:07:25,357
+And it's telling us,
+
+185
+00:07:25,357 --> 00:07:29,610
+"Hey, I found another one, passwd 1ossl.
+
+186
+00:07:29,610 --> 00:07:31,350
+Do you want to view?"
+
+187
+00:07:31,350 --> 00:07:32,730
+No, I want to skip.
+
+188
+00:07:32,730 --> 00:07:34,110
+So Control + D.
+
+189
+00:07:34,110 --> 00:07:37,860
+And then, I found another one, passwd 5.
+
+190
+00:07:37,860 --> 00:07:38,693
+And if you think,
+
+191
+00:07:38,693 --> 00:07:40,470
+"Well, 5, that's about config files.
+
+192
+00:07:40,470 --> 00:07:41,303
+I like that."
+
+193
+00:07:41,303 --> 00:07:42,136
+You press Enter,
+
+194
+00:07:42,136 --> 00:07:43,530
+and you can see it.
+
+195
+00:07:43,530 --> 00:07:45,030
+And once you are done again,
+
+196
+00:07:45,030 --> 00:07:46,080
+you press Q.
+
+197
+00:07:46,080 --> 00:07:48,510
+And this seems to be the last one.
+
+198
+00:07:48,510 --> 00:07:50,580
+Last thing that I want
+to tell you about this.
+
+199
+00:07:50,580 --> 00:07:52,350
+If there are different numbers
+
+200
+00:07:52,350 --> 00:07:55,140
+where your command can be documented,
+
+201
+00:07:55,140 --> 00:07:57,630
+then you can pass a
+section number immediately.
+
+202
+00:07:57,630 --> 00:08:00,420
+So if you type man 5 passwd,
+
+203
+00:08:00,420 --> 00:08:03,210
+you immediately had hit section number 5.
+
+204
+00:08:03,210 --> 00:08:06,153
+If that is where you need to
+be, can be quite convenient.
